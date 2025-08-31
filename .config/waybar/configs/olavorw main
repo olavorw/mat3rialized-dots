@@ -1,0 +1,44 @@
+{
+	"include": [
+	  "$HOME/.config/waybar/workspace-modules",
+	  "$HOME/.config/waybar/custom-modules",
+	  "$HOME/.config/waybar/group-modules",
+	  ],
+	"layer": "bottom",
+	"exclusive": true,
+	"passthrough": false,
+	"position": "top",
+	"spacing": 4,
+	"fixed-center": true,
+	"ipc": true,
+	"margin-top": 3,
+	"margin-left": 8,
+	"margin-right": 8,
+	
+	"modules-left": [
+		"clock",
+		"custom/separator#blank",
+		"tray",
+		],
+	
+	"modules-center": [
+		"group/app_drawer",
+		"custom/separator#dot-line",
+		"hyprland/workspaces#numbers",
+		"custom/separator#dot-line",
+		"group/notify",	
+		],
+	
+	"modules-right": [
+		"group/laptop",
+		"custom/separator#blank",
+		"group/mobo_drawer",
+		"custom/separator#line",  
+		"group/audio",
+		"custom/separator#dot-line",
+		"custom/separator#blank", 
+		"group/status",
+		],
+	}
+	
+	

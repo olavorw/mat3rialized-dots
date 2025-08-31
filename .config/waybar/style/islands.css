@@ -1,4 +1,5 @@
 @import "colors.css";
+@import "acrylic.css";
 
 
 * {
@@ -109,7 +110,7 @@ tooltip label{
 }
 
 #custom-swaync {
-  background-color: alpha(@surface_container, 0.75);
+  background-color: @background_surface;
  /* border: 1px solid @surface_container; */
   border-radius: 20px;
 	padding-top: 8px;
@@ -174,7 +175,7 @@ tooltip label{
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
 #custom-weather.sunnyDay {
-  background-color: alpha(@surface_container, 0.75);
+  background-color: @background_surface;
  /* border: 1px solid @surface_container; */
   border-radius: 20px;
 	padding-top: 8px;
