@@ -3,6 +3,7 @@
 	  "$HOME/.config/waybar/workspace-modules",
 	  "$HOME/.config/waybar/custom-modules",
 	  "$HOME/.config/waybar/group-modules",
+    "$HOME/.config/waybar/modules",
 	  ],
 	"layer": "bottom",
 	"exclusive": true,

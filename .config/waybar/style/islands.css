@@ -120,6 +120,7 @@ tooltip label{
 	margin: 0 0 0 5px;
 }
 
+#custom-acrylicctl,
 #backlight,
 #backlight-slider,
 #battery,
@@ -206,6 +207,7 @@ tooltip label{
 #battery.critical:not(.charging) {
 	color: #f53c3c;
 }
+
 
 #backlight-slider slider,
 #pulseaudio-slider slider {

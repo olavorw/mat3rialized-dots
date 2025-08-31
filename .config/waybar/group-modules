@@ -14,11 +14,9 @@
         },
 	"modules": [
 		"custom/menu",
+		"custom/acrylicctl",
 		"custom/light_dark",
-		"custom/file_manager",
-		"custom/tty",
-		"custom/browser",
-		"custom/settings",
+
 	]
 },
 "group/motherboard": {

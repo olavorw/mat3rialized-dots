@@ -1,19 +1,17 @@
-
-
 {
-"custom/acrylicctl": {
-  "format": " {icon} {text}",
-  "exec": "~/.scripts/acrylicctl.sh get",
-  "interval": 2,
 
-  // Scroll to adjust blur
-  "on-scroll-up": "~/.scripts/acrylicctl.sh blur $((`grep BLUR ~/.config/hypr/acrylic_state | cut -d= -f2` + 1))",
-  "on-scroll-down": "~/.scripts/acrylicctl.sh blur $((`grep BLUR ~/.config/hypr/acrylic_state | cut -d= -f2` - 1))",
-	
-  // Click to cycle transparency presets
-  "on-click": "~/.scripts/acrylicctl.sh trans 0.8",
-  "on-click-right": "~/.scripts/acrylicctl.sh trans 0.9",
-  "on-click-middle": "~/.scripts/acrylicctl.sh trans 0.7"
+
+"custom/acrylicctl": {
+  "format": "󰂵",
+  "tooltip": true,
+  "tooltip-format": "Transparency & Blur\n{text}\nScroll: Blur\n LMB & RMB: Blur",
+  "exec": "~/.scripts/acrylicctl.sh get-values",
+
+  "on-scroll-up": "~/.scripts/acrylicctl.sh trans+",
+  "on-scroll-down": "~/.scripts/acrylicctl.sh trans-",
+  
+  "on-click": "~/.scripts/acrylicctl.sh blur+",
+  "on-click-right": "~/.scripts/acrylicctl.sh blur-",
 },
 
 "custom/weather": {

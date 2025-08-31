@@ -15,10 +15,8 @@
 	//"thermal-zone": 0,
 	"critical-threshold": 82,
 	"format-critical": "{temperatureC}°C {icon}",
-	"format": "{temperatureC}°C {icon}",
-	"format-icons": [
-		"󰈸"
-	],
+	"format": "{temperatureC}°C",
+
 	"on-click-right": "$HOME/.scripts/WaybarScripts.sh --nvtop"
 },
 
@@ -376,7 +374,7 @@
 
 "tray": {
 	"icon-size": 20,
-	"spacing": 4,
+	"spacing": 2,
 },
 
 "wireplumber": {
