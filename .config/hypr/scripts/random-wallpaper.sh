@@ -2,7 +2,7 @@
 
 # --- CONFIGURATION ---
 # Directory where your wallpapers are stored
-WALLPAPER_DIR="$HOME/Pictures/Wallpapers/Active"
+WALLPAPER_DIR="$HOME/Pictures/Wallpapers/Active Random"
 
 # 1. Select and set a new wallpaper
 WALLPAPER_PATH=$(find "$WALLPAPER_DIR" -type f | shuf -n 1)

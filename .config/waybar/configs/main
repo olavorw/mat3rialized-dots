@@ -1,20 +1,14 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-
-/* My Mostly Used waybar config incase you wonder :) */
 {
 "include": [
-  "$HOME/.config/waybar/Modules",
-  "$HOME/.config/waybar/ModulesWorkspaces",
-  "$HOME/.config/waybar/ModulesCustom",
-  "$HOME/.config/waybar/ModulesGroups",
-  "$HOME/.config/waybar/UserModules",
+  "$HOME/.config/waybar/workspace-modules",
+  "$HOME/.config/waybar/custom-modules",
+  "$HOME/.config/waybar/group-modules",
   ],
 "layer": "bottom",
-//"mode": "dock",
 "exclusive": true,
 "passthrough": false,
 "position": "top",
-"spacing": 3,
+"spacing": 4,
 "fixed-center": true,
 "ipc": true,
 "margin-top": 3,
@@ -36,8 +30,6 @@
 	],
 
 "modules-right": [
-        //"mpris",
-        //"custom/separator#dot-line",
 	"group/laptop",
 	"custom/separator#blank",
 	"group/mobo_drawer",

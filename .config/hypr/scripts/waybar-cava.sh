@@ -2,6 +2,8 @@
 # /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # Not my own work. This was added through Github PR. Credit to original author
 
+# Only works on 1 monitor
+
 #----- Optimized bars animation without much CPU usage increase --------
 bar="▁▂▃▄▅▆▇█"
 dict="s/;//g"
