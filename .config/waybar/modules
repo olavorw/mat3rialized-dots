@@ -79,7 +79,7 @@
 	"tooltip": true,
 	"tooltip-format": "{timeTo} {power}w",
 	"on-click-middle": "$HOME/.scripts/ChangeBlur.sh",
-	"on-click-right": "$HOME/.scripts/Wlogout.sh",
+	"on-click-right": "wlogout",
 },
 
 "bluetooth": {
@@ -332,8 +332,8 @@
 		],
 	},
 	"scroll-step": 5.0,
-	"on-click": "$HOME/.scripts/volume.sh --toggle",
-	"on-click-right": "pavucontrol -t 3",
+	"on-click-right": "easyeffects",
+	"on-click": "pavucontrol -t 3",
 	"on-scroll-up": "$HOME/.scripts/volume.sh --inc",
 	"on-scroll-down": "$HOME/.scripts/volume.sh --dec",
 	"tooltip-format": "{icon} {desc} | {volume}%",
@@ -354,8 +354,8 @@
       "car": "",
       "default": ["", "", ""]
     },
-  "on-click": "pamixer --toggle-mute",
-  "on-click-right": "pavucontrol -t 3",
+  "on-click-right": "easyeffects",
+	"on-click": "pavucontrol -t 3",
   "tooltip": true,
   "tooltip-format": "{icon} {desc} | {volume}%",
 },
