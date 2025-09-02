@@ -27,7 +27,7 @@
 		"group/app_drawer",
 		"custom/separator#dot-line",
     "mpris",
-    "cava_mviz",
+    "custom/cava_mviz",
 		"custom/separator#dot-line",
 		"group/notify",	
 		],
