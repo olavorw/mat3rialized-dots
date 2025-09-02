@@ -7,7 +7,7 @@ IFS=$'\n\t'
 # Define directories
 waybar_layouts="$HOME/.config/waybar/configs"
 waybar_config="$HOME/.config/waybar/config"
-SCRIPTSDIR="$HOME/.config/hypr/scripts"
+SCRIPTSDIR="$HOME/.scripts"
 rofi_config="$HOME/.config/rofi/config.rasi"
 msg=' Choose Waybar Layout '
 

@@ -27,6 +27,7 @@
 		"group/app_drawer",
 		"custom/separator#dot-line",
     "mpris",
+    "cava_mviz"
 		"custom/separator#dot-line",
 		"group/notify",	
 		],
@@ -36,7 +37,7 @@
 		"custom/separator#blank",
 		"group/mobo_drawer",
 		"custom/separator#line",  
-		"group/audio",
+		"pulseaudio",
 		"custom/separator#dot-line",
 		"custom/separator#blank", 
 		"group/status",
