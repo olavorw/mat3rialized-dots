@@ -332,7 +332,7 @@
 		],
 	},
 	"scroll-step": 5.0,
-	"on-click-right": "easyeffects",
+	"on-click-right": "flatpak run com.github.wwmm.easyeffects",
 	"on-click": "pavucontrol -t 3",
 	"on-scroll-up": "$HOME/.scripts/volume.sh --inc",
 	"on-scroll-down": "$HOME/.scripts/volume.sh --dec",
@@ -354,7 +354,7 @@
       "car": "",
       "default": ["", "", ""]
     },
-  "on-click-right": "easyeffects",
+  "on-click-right": "flatpak run com.github.wwmm.easyeffects",
 	"on-click": "pavucontrol -t 3",
   "tooltip": true,
   "tooltip-format": "{icon} {desc} | {volume}%",
