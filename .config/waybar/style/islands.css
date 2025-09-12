@@ -1,6 +1,6 @@
 @import "colors.css";
-@import "acrylic.css";
 
+@define-color background_surface alpha(@surface_container, .5);
 
 * {
 	font-family: "JetBrainsMono Nerd Font Propo";
