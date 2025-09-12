@@ -7,8 +7,9 @@ WAYBAR_OUT="$HOME/.config/waybar/acrylic.css"
 STATE_FILE="$HOME/.config/hypr/acrylic_state"
 
 # === DEFAULTS ===
-BLUR=5
+BLUR=15
 TRANS=0.8
+BRIGHTNESS=0.5
 
 # Load previous state if exists
 if [ -f "$STATE_FILE" ]; then
@@ -26,6 +27,7 @@ write_files() {
 \$blur_size = $BLUR
 \$active_opacity = $ACTIVE
 \$inactive_opacity = $INACTIVE
+\$brightness = $BRIGHTNESS
 EOF
 
   # Waybar snippet
@@ -38,12 +40,13 @@ EOF
   # Save state
   echo "BLUR=$BLUR" >"$STATE_FILE"
   echo "TRANS=$TRANS" >>"$STATE_FILE"
+  echo "BRIGHTNESS=$BRIGHTNESS" >>"$STATE_FILE"
 }
 
 # === COMMANDS ===
 case "$1" in
 get)
-  echo "Blur: $BLUR | Transparency: $TRANS"
+  echo "Blur: $BLUR | Transparency: $TRANS | Brightness: $BRIGHTNESS"
   ;;
 get-transparency)
   echo "$TRANS"
@@ -51,8 +54,11 @@ get-transparency)
 get-blur)
   echo "$BLUR"
   ;;
+get-brightness)
+  echo "$BRIGHTNESS"
+  ;;
 get-values)
-  echo "$TRANS $BLUR"
+  echo "$TRANS $BLUR $BRIGHTNESS"
   ;;
 blur)
   BLUR=$2
@@ -61,6 +67,11 @@ blur)
   ;;
 trans)
   TRANS=$2
+  hyprctl reload
+  ~/.scripts/wbrestart.sh
+  ;;
+brightness)
+  BRIGHTNESS=$2
   hyprctl reload
   ~/.scripts/wbrestart.sh
   ;;
@@ -77,10 +88,22 @@ trans-)
 blur+)
   BLUR=$(awk "BEGIN {print $BLUR + 1}")
   hyprctl reload
+  ~/.scripts/wbrestart.sh
   ;;
 blur-)
   BLUR=$(awk "BEGIN {print $BLUR - 1}")
   hyprctl reload
+  ~/.scripts/wbrestart.sh
+  ;;
+brightness+)
+  BRIGHTNESS=$(awk "BEGIN {print $BRIGHTNESS + 0.1}")
+  hyprctl reload
+  ~/.scripts/wbrestart.sh
+  ;;
+brightness-)
+  BRIGHTNESS=$(awk "BEGIN {print $BRIGHTNESS - 0.1}")
+  hyprctl reload
+  ~/.scripts/wbrestart.sh
   ;;
 
 *)

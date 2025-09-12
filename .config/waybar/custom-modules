@@ -4,14 +4,14 @@
 "custom/acrylicctl": {
   "format": "󰂵",
   "tooltip": true,
-  "tooltip-format": "Transparency & Blur\n{text}\nScroll: Blur\n LMB & RMB: Blur",
+  "tooltip-format": "Scroll: Blur\nMouse Buttons: Blur Brightness",
   "exec": "~/.scripts/acrylicctl.sh get-values",
 
   "on-scroll-up": "~/.scripts/acrylicctl.sh trans+",
   "on-scroll-down": "~/.scripts/acrylicctl.sh trans-",
   
-  "on-click": "~/.scripts/acrylicctl.sh blur+",
-  "on-click-right": "~/.scripts/acrylicctl.sh blur-",
+  "on-click": "~/.scripts/acrylicctl.sh brightness+",
+  "on-click-right": "~/.scripts/acrylicctl.sh brightness-",
 },
 
 "custom/weather": {
