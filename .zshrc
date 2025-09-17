@@ -115,3 +115,9 @@ source $ZSH/oh-my-zsh.sh
 
 
 fastfetch
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/olavorw/.dart-cli-completion/zsh-config.zsh ]] && . /home/olavorw/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
