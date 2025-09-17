@@ -1,9 +1,19 @@
+/* To install SF Pro Display,
+
+git clone https://aur.archlinux.org/otf-apple-sf-pro.git
+cd otf-apple-sf-pro
+makepkg -g >> PKGBUILD   # updates sha256sums in-place
+makepkg -si
+fc-cache -fv
+
+ */
+
 @import "colors.css";
 
 @define-color background_surface alpha(@surface_container, .5);
 
 * {
-	font-family: "JetBrainsMono Nerd Font Propo";
+	font-family: "SF Pro Display", "JetBrainsMono Nerd Font Propo";
 	font-weight: bold;
 	min-height: 0;
 	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */

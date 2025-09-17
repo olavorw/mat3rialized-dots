@@ -7,7 +7,9 @@ configuration {
 	display-window: "Windows";
 	display-run: "Run";
 	drun-display-format: "{icon} {name}";
-	font: "JetBrainsMono Nerd Font 10";
+  font: "SF Pro Display 11";
+  font-weight: bold;
+	/*font: "JetBrainsMono Nerd Font 10";*/
 	show-icons: true;
 	icon-theme: "Colloid";
 }
@@ -71,7 +73,7 @@ inputbar {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         "  ";
+    /*str:                         "  ";*/
     background-color:            inherit;
     text-color:                  inherit;
 }
