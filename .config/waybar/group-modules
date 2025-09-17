@@ -16,6 +16,7 @@
 		"custom/menu",
 		"custom/acrylicctl",
 		"custom/light_dark",
+    "custom/wbrestart",
 
 	]
 },

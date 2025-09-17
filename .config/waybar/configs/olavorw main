@@ -35,6 +35,7 @@
 		"custom/separator#blank",
 		"group/mobo_drawer",
 		"custom/separator#line",  
+    "mpris",
 		"group/audio",
 		"custom/separator#dot-line",
 		"custom/separator#blank", 

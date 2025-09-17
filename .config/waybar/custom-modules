@@ -1,5 +1,11 @@
 {
 
+"custom/wbrestart": {
+    "format": "󰜉",
+    "tooltip": true,
+    "tooltip-format": "Runs the wbrestart script",
+    "on-click": "~/.scripts/wbrestart.sh",
+  },
 
 "custom/acrylicctl": {
   "format": "󰂵",
