@@ -5,7 +5,7 @@
 @define-color text-color @foreground;
 
 * {
-    font-family: "SF Pro Display";
+    font-family: "JetBrains Mono Nerd Font";
     font-weight: bold;
 }
 
