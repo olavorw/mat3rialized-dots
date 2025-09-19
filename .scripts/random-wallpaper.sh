@@ -2,7 +2,7 @@
 
 # === CONFIG ===
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers/Active Random"
-SYMLINK_PATH="$HOME/.config/hypr/current_wallpaper"
+SYMLINK_PATH="$HOME/.config/themes/current-statics/.current_wallpaper"
 
 cd "$WALLPAPER_DIR" || exit 1
 

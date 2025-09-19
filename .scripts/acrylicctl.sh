@@ -4,7 +4,7 @@
 # === CONFIG PATHS ===
 HYPR_OUT="$HOME/.config/hypr/acrylic.conf"
 WAYBAR_OUT="$HOME/.config/waybar/acrylic.css"
-STATE_FILE="$HOME/.config/hypr/acrylic_state"
+STATE_FILE="$HOME/.config/themes/current-statics/.acrylic_state"
 
 # === DEFAULTS ===
 BLUR=15
