@@ -1557,6 +1557,7 @@ searchbar > revealer > box {
   background-color: #0F0F0F;
   color: white;
   border-radius: 14px 14px 0 0;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
 }
 
 .titlebar:disabled {
@@ -1611,10 +1612,6 @@ searchbar > revealer > box {
 .titlebar button.suggested-action:disabled, .titlebar button.destructive-action:disabled {
   background-color: rgba(255, 255, 255, 0.04);
   color: rgba(255, 255, 255, 0.5);
-}
-
-.titlebar stackswitcher {
-  border: 2px solid #E0E0E0;
 }
 
 .titlebar stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action).text-button:active {
@@ -1709,6 +1706,7 @@ searchbar > revealer > box {
 .titlebar.default-decoration {
   min-height: 24px;
   padding: 6px;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
   border-radius: 14px 14px 0 0;
 }
 
@@ -2063,7 +2061,8 @@ menu,
   background-color: #121212;
   background-clip: border-box;
   border-radius: 14px;
-  border: 2px solid #E0E0E0;
+  border: 1px solid #2e2e2e;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
 }
 
 .csd menu, .csd .menu, .csd .context-menu {
@@ -2215,8 +2214,12 @@ popover.background {
 }
 
 popover.background, .csd popover.background {
-  border: 2px solid #E0E0E0;
-  box-shadow: none;
+  border: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.14), 0 1px 6px rgba(0, 0, 0, 0.12);
+}
+
+popover.background:backdrop, .csd popover.background:backdrop {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24), 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
 popover.background > stack {
@@ -4148,17 +4151,13 @@ colorchooser .popover.osd:backdrop {
 decoration {
   transition: none;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2), 0 10px 18px rgba(0, 0, 0, 0.14), 0 8px 24px rgba(0, 0, 0, 0.12), 0 0 50px transparent;
-  border-radius: 16px;
-  border: 2px solid #E0E0E0;
-  background-clip: border-box;
+  border-radius: 14px;
   margin: 10px;
 }
 
 decoration:backdrop {
   transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.14), 0 1px 6px rgba(0, 0, 0, 0.12), 0 0 50px transparent;
-  border: 2px solid #E0E0E0;
-  background-clip: border-box;
 }
 
 .maximized decoration, .fullscreen decoration, .tiled decoration, .tiled-top decoration, .tiled-right decoration, .tiled-bottom decoration, .tiled-left decoration {
@@ -4171,16 +4170,12 @@ decoration:backdrop {
 
 .ssd decoration {
   margin: 0;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 0 0 2px #E0E0E0;
-  border: none;
-  border-radius: 14px 14px 0 0;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
 }
 
 .csd.popup decoration {
   border-radius: 14px;
-  border-radius: 16px;
-  border: 2px solid #E0E0E0;
-  background-clip: border-box;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.14), 0 1px 6px rgba(0, 0, 0, 0.12);
 }
 
 tooltip.csd decoration {
@@ -4195,7 +4190,7 @@ tooltip.csd decoration {
   border-radius: 0;
   box-shadow: none;
   background-color: #0F0F0F;
-  border: 2px solid #E0E0E0;
+  border: 1px solid #2e2e2e;
 }
 
 .solid-csd decoration:backdrop {
@@ -4270,18 +4265,14 @@ cursor-handle.insertion-cursor:dir(ltr), cursor-handle.insertion-cursor:dir(rtl)
 stackswitcher {
   min-height: 0;
   border-radius: 9999px;
-  padding: 2px;
-  margin: 6px 0;
-  background-color: transparent;
-  border: 2px solid #E0E0E0;
+  padding: 0;
+  background-color: alpha(currentColor, 0.05);
 }
 
 stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {
   margin: 0 0;
   border-radius: 9999px;
   background-color: transparent;
-  min-height: 20px;
-  padding: 5px 10px;
 }
 
 stackswitcher.linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action).text-button {
@@ -5748,7 +5739,7 @@ window.background.csd evview.view.content-view {
  * Terminal *
  ************/
 terminal-window decoration {
-  border-radius: 16px 16px 0 0;
+  border-radius: 14px 14px 0 0;
 }
 
 terminal-window.background.csd, terminal-window.background.csd.maximized {
@@ -6050,7 +6041,7 @@ window.background.csd > stack > box > .sidebar > scrolledwindow > viewport > lis
  * Dialogs *
  ***********/
 dialog.background.csd > headerbar.titlebar {
-  box-shadow: inset 0 -1px rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 -1px rgba(255, 255, 255, 0.12), inset 0 1px rgba(255, 255, 255, 0.1);
 }
 
 dialog.background.csd > box.vertical.dialog-vbox > grid.horizontal > scrolledwindow.frame > viewport.frame list:first-child {
@@ -6112,18 +6103,14 @@ window.background.csd.unified headerbar.selection-mode {
   box-shadow: none;
 }
 
+window.background.csd.unified > decoration-overlay {
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
+}
+
 window.background.csd.unified,
 window.background.csd.unified > decoration,
 window.background.csd.unified > decoration-overlay {
   border-radius: 14px;
-  border: none;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.14), 0 1px 6px rgba(0, 0, 0, 0.12), 0 0 0 2px #E0E0E0, 0 0 16px transparent;
-}
-
-window.background.csd.unified:backdrop,
-window.background.csd.unified > decoration:backdrop,
-window.background.csd.unified > decoration-overlay:backdrop {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), 0 2px 3px rgba(0, 0, 0, 0.17), 0 0 0 2px #E0E0E0, 0 0 16px transparent;
 }
 
 window.background.csd.unified.tiled > decoration-overlay, window.background.csd.unified.tiled-top > decoration-overlay, window.background.csd.unified.tiled-right > decoration-overlay, window.background.csd.unified.tiled-bottom > decoration-overlay, window.background.csd.unified.tiled-left > decoration-overlay, window.background.csd.unified.maximized > decoration-overlay, window.background.csd.unified.fullscreen > decoration-overlay {
@@ -6501,8 +6488,8 @@ window.background.csd > box.vertical > overlay > stack > box.vertical > box.hori
  ***********/
 #gnc-id-main-window gnc-id-sheet-list > scrolledwindow {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.14), 0 1px 6px rgba(0, 0, 0, 0.12);
-  margin-top: -2px;
-  border: 2px solid #E0E0E0;
+  margin-top: -1px;
+  border: 1px solid #2e2e2e;
 }
 
 #gnc-id-main-window treeview.view {

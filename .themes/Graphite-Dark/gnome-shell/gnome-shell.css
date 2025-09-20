@@ -418,8 +418,8 @@ StEntry StLabel.hint-text, .search-entry StLabel.hint-text {
   padding: 6px;
   spacing: 6px;
   background-clip: padding-box;
-  border: 2px solid #E0E0E0;
-  border-radius: 16px;
+  border: none;
+  border-radius: 14px;
 }
 
 .candidate-index {
@@ -656,7 +656,7 @@ StEntry StLabel.hint-text, .search-entry StLabel.hint-text {
 
 .login-dialog .user-icon.user-avatar,
 .unlock-dialog .user-icon.user-avatar {
-  border: 2px solid #E0E0E0 !important;
+  border: none;
 }
 
 .login-dialog {
@@ -681,7 +681,7 @@ StEntry StLabel.hint-text, .search-entry StLabel.hint-text {
 }
 
 .login-dialog .user-icon.user-avatar {
-  border: 2px solid #E0E0E0 !important;
+  border: none;
 }
 
 .unlock-dialog {
@@ -702,7 +702,7 @@ StEntry StLabel.hint-text, .search-entry StLabel.hint-text {
 }
 
 .unlock-dialog .user-icon.user-avatar {
-  border: 2px solid #e0e0e0 !important;
+  border: none;
 }
 
 .unlock-dialog .user-widget-label {
@@ -867,7 +867,7 @@ StEntry StLabel.hint-text, .search-entry StLabel.hint-text {
   border-radius: 14px;
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.25);
   color: white !important;
-  border: 2px solid #E0E0E0;
+  border: none;
 }
 
 #LookingGlassDialog > #Toolbar {
@@ -992,7 +992,7 @@ StEntry StLabel.hint-text, .search-entry StLabel.hint-text {
   color: white !important;
   padding: 12px;
   box-shadow: none;
-  border: 2px solid #E0E0E0;
+  border: none;
 }
 
 .lg-extension-name {
@@ -1068,7 +1068,7 @@ StEntry StLabel.hint-text, .search-entry StLabel.hint-text {
 }
 
 .user-icon.user-avatar {
-  border: 2px solid #E0E0E0;
+  border: none;
 }
 
 .user-widget.vertical .user-icon {
@@ -1502,8 +1502,8 @@ StEntry StLabel.hint-text, .search-entry StLabel.hint-text {
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.15);
   margin: 4px 10px 12px;
   font-weight: normal;
-  border: 2px solid #E0E0E0;
-  border-radius: 16px;
+  border: none;
+  border-radius: 14px;
 }
 
 .popup-menu .popup-menu-item {
@@ -2041,7 +2041,7 @@ StWidget.focused .app-grid-running-dot {
   padding: 12px;
   box-shadow: none;
   background-color: #0F0F0F;
-  border: 2px solid #e0e0e0;
+  border: none;
 }
 
 .app-folder-dialog .folder-name-container {
@@ -2592,8 +2592,8 @@ StWidget.focused .app-grid-running-dot {
   background-color: #0F0F0F;
   box-shadow: 3px 3px 8px -5px rgba(0, 0, 0, 0.35);
   margin: 15px;
-  border: 2px solid #E0E0E0;
-  border-radius: 19px;
+  border: none;
+  border-radius: 17px;
 }
 
 .modal-dialog .modal-dialog-button-box .modal-dialog-button {
@@ -3878,7 +3878,7 @@ StWidget.focused .app-grid-running-dot {
   padding-bottom: 12px;
   margin-bottom: 4em;
   spacing: 12px;
-  border: 2px solid #e0e0e0;
+  border: none;
 }
 
 .screenshot-ui-close-button {
