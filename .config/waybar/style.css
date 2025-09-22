@@ -1,1 +1,203 @@
-/home/olavorw/.config/waybar/style/islands.css
+/* ===== IMPORTS & VARIABLES ===== */
+@import "colors.css";
+
+@define-color background_surface alpha(@background, 1);
+
+/* ===== GLOBAL STYLES ===== */
+* {
+  font-family: "SF Pro Display", "JetBrainsMono Nerd Font Propo";
+  font-weight: bold;
+  min-height: 0;
+  font-size: 100%; /* set to 100% if font scaling is 1.00 using nwg-look */
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+}
+
+/* ===== WINDOW STYLES ===== */
+window#waybar,
+window#waybar.empty,
+window#waybar.empty #window {
+  background-color: transparent;
+  padding: 0px;
+  border: 0px;
+}
+
+/* ===== TOOLTIPS ===== */
+tooltip {
+  color: @inverse_surface;
+  background: alpha(@background, 0.7);
+  border-radius: 6px;
+}
+
+tooltip label {
+  color: @inverse_surface;
+}
+
+/* ===== MODULE GROUPS ===== */
+.modules-left,
+.modules-center,
+.modules-right {
+  color: @secondary;
+  padding: 2px 4px;
+}
+
+/* ===== WORKSPACE & TASKBAR BUTTONS ===== */
+#taskbar button,
+#workspaces button {
+  color: @outline;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 1px 4px 0px 4px;
+  border-radius: 9px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#taskbar button:hover,
+#workspaces button:hover {
+  color: @primary;
+  border-radius: 20px;
+  padding-left: 2px;
+  padding-right: 2px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#taskbar button.active,
+#workspaces button.active {
+  color: @background;
+  font-weight: bold;
+  background-color: alpha(@primary_fixed, 0.75);
+  padding: 0px 15px;
+  border-radius: 6px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#workspaces button.urgent {
+  color: @primary;
+  border-radius: 10px;
+}
+
+#workspaces button.persistent {
+  border-radius: 10px;
+}
+
+/* ===== INDIVIDUAL MODULES ===== */
+#backlight,
+#backlight-slider,
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#custom-acrylicctl,
+#custom-backlight,
+#custom-browser,
+#custom-cava_mviz,
+#custom-cycle_wall,
+#custom-dot_update,
+#custom-file_manager,
+#custom-hint,
+#custom-hypridle,
+#custom-keybinds,
+#custom-keyboard,
+#custom-launcher,
+#custom-lock,
+#custom-media,
+#custom-menu,
+#custom-playerctl,
+#custom-power,
+#custom-power_vertical,
+#custom-quit,
+#custom-reboot,
+#custom-settings,
+#custom-spotify,
+#custom-swaync,
+#custom-tty,
+#custom-updater,
+#custom-vpn,
+#custom-wbrestart,
+#custom-weather,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.default,
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.severe,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.sunnyDay,
+#custom-yubilock,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mode,
+#mpris,
+#network,
+#power-profiles-daemon,
+#privacy,
+#pulseaudio,
+#pulseaudio-slider,
+#taskbar,
+#temperature,
+#tray,
+#window,
+#wireplumber,
+#workspaces {
+  background-color: @background_surface;
+  border-radius: 20px;
+  padding: 8px 15px;
+  margin: 0 0 0 8px;
+}
+
+/* ===== MODULE-SPECIFIC OVERRIDES ===== */
+
+/* ===== STATE INDICATORS ===== */
+#custom-hypridle.notactive,
+#idle_inhibitor.activated {
+  color: #39ff14;
+}
+
+#pulseaudio.muted {
+  color: #cc3436;
+}
+
+#temperature.critical {
+  color: red;
+}
+
+#battery.critical:not(.charging) {
+  color: #f53c3c;
+}
+
+/* ===== SLIDER STYLES ===== */
+#backlight-slider slider,
+#pulseaudio-slider slider {
+  min-width: 0px;
+  min-height: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+
+#backlight-slider trough,
+#pulseaudio-slider trough {
+  min-width: 80px;
+  min-height: 5px;
+  border-radius: 5px;
+}
+
+#backlight-slider highlight,
+#pulseaudio-slider highlight {
+  min-height: 10px;
+  border-radius: 5px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes blink {
+  to {
+    color: #000000;
+  }
+}

@@ -1,9 +1,9 @@
 @import "colors.css";
 
-@define-color background_surface alpha(@surface_container, .5);
+@define-color background_surface alpha(@background, 1);
 
 * {
-	font-family: "JetBrainsMono Nerd Font Propo";
+	font-family: "SF Pro Display", "JetBrainsMono Nerd Font Propo";
 	font-weight: bold;
 	min-height: 0;
 	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
@@ -120,6 +120,11 @@ tooltip label{
 	margin: 0 0 0 5px;
 }
 
+#custom-launcher,
+#custom-yubilock,
+#privacy,
+#custom-vpn,
+#custom-media,
 #custom-wbrestart,
 #custom-acrylicctl,
 #backlight,
@@ -232,3 +237,4 @@ tooltip label{
 	min-height: 10px;
 	border-radius: 5px;
 }
+

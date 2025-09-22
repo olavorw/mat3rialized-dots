@@ -1,56 +1,51 @@
-//* ---- 💫 https://github.com/JaKooLit 💫 ---- *//
-/* Waybar Modules - Groups Modules */
-/* Basically created to reduce the lines in Waybar Modules bank */
-/* NOTE: This is only for Groups */
-
 {
-// GROUPS
-"group/app_drawer": {
+"group/arch_drawer": {
 	"orientation": "inherit",
 	"drawer": {
 		"transition-duration": 500,
-		"children-class": "custom/menu",
+		"children-class": "custom/launcher",
 		"transition-left-to-right": true
         },
 	"modules": [
+    "custom/launcher",
 		"custom/menu",
 		"custom/acrylicctl",
-		"custom/light_dark",
     "custom/wbrestart",
+    "custom/updater",
 
 	]
 },
-"group/motherboard": {
+
+"group/performance": {
 	"orientation": "horizontal",
 	"modules": [
 		"cpu",
-		"power-profiles-daemon",
 		"memory",
 		"temperature",
 		"disk",
 	]
 },
 
-"group/mobo_drawer": {
+"group/performance_drawer": {
 	"orientation": "inherit",
 	"drawer": {
 		"transition-duration": 500,
 		"children-class": "cpu",
 		"transition-left-to-right": true
-        },
+  },
 	"modules": [
 		"temperature",		
 		"cpu",
-		"power-profiles-daemon",	
 		"memory",
 		"disk",
 	]
 },
-"group/laptop": {
+"group/laptop_modules": {
 	"orientation": "inherit",
 	"modules": [
 		"backlight",
 		"battery",
+    "power-profiles-daemon",
 	]
 },
 "group/audio": {
@@ -66,7 +61,7 @@
 	]
 },
 
-"group/connections": {
+"group/wireless_connections": {
 	"orientation": "inherit",
 	"drawer": {
 		"transition-duration": 500,
@@ -75,6 +70,7 @@
         },
 	"modules": [
 		"network",
+    "custom/vpn",
 		"bluetooth",
 	]
 },
@@ -117,7 +113,6 @@
         "custom/reboot"
       ]
 },
-// groups for vertical
 "group/power#vert": {
      "orientation": "inherit",
      "drawer": {

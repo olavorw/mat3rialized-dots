@@ -9,8 +9,8 @@ color:            @text;
 
 
 all: unset;
-font-size: 14px;
-font-family: "JetBrains Mono Nerd Font";
+font-size: 16px;
+font-family: "SF Pro Display", "JetBrains Mono Nerd Font Propo";
 transition: 200ms;
 
 
