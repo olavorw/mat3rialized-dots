@@ -1,3 +1,4 @@
+@import 'colors.css';
 @keyframes ripple {
   from {
     background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.1) 30%, transparent 0%);

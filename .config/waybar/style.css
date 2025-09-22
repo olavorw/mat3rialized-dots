@@ -151,6 +151,19 @@ tooltip label {
   margin: 0 0 0 8px;
 }
 
+/* ===== SEPARATORS ===== */
+#custom-separator.dot-line,
+#custom-separator.dot,
+#custom-separator.line,
+#custom-separator.blank,
+#custom-separator.blank_2,
+#custom-separator.blank_3,
+#custom-arrow1,
+#custom-arrow2 {
+  margin: 0 0 0 8px;
+}
+
+
 /* ===== MODULE-SPECIFIC OVERRIDES ===== */
 #clock {
 background-color: @background_surface;

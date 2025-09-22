@@ -26,6 +26,4 @@ ln -sf "$SELECTED_PATH" "$SYMLINK_PATH"
 # === RELOAD COMPONENTS ===
 echo "Reloading Hyprland and Waybar..."
 hyprctl reload
-~/.scripts/wbrestart.sh
-
 echo "--- Theme Update Complete ---"
