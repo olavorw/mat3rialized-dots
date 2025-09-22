@@ -1,5 +1,5 @@
 /* ===== IMPORTS & VARIABLES ===== */
-@import "colors.css";
+@import "./colors/matugen.css";
 
 @define-color background_surface alpha(@background, 1);
 
@@ -36,8 +36,8 @@ tooltip label {
 .modules-left,
 .modules-center,
 .modules-right {
-  color: @secondary;
-  padding: 2px 4px;
+  color: @primary;
+  padding: 10px 10px 2px;
 }
 
 /* ===== WORKSPACE & TASKBAR BUTTONS ===== */
@@ -64,17 +64,18 @@ tooltip label {
 
 #taskbar button.active,
 #workspaces button.active {
-  color: @background;
+  color: @surface;
   font-weight: bold;
-  background-color: alpha(@primary_fixed, 0.75);
+  background-color: @primary;
   padding: 0px 15px;
-  border-radius: 6px;
+  border-radius: 5px;
   animation: gradient_f 20s ease-in infinite;
   transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #workspaces button.urgent {
-  color: @primary;
+  background-color: @error;
+  color: @surface;
   border-radius: 10px;
 }
 
@@ -87,7 +88,6 @@ tooltip label {
 #backlight-slider,
 #battery,
 #bluetooth,
-#clock,
 #cpu,
 #custom-acrylicctl,
 #custom-backlight,
@@ -152,6 +152,11 @@ tooltip label {
 }
 
 /* ===== MODULE-SPECIFIC OVERRIDES ===== */
+#clock {
+background-color: @background_surface;
+  border-radius: 20px;
+  padding: 8px 15px;
+}
 
 /* ===== STATE INDICATORS ===== */
 #custom-hypridle.notactive,
