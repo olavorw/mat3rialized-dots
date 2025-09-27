@@ -2,12 +2,12 @@
 @import "colors.rasi"
 
 configuration {
-	modi: "window,run,drun";
+	modi: "window,run,drun,ssh";
 	display-drun: "Applications";
 	display-window: "Windows";
 	display-run: "Run";
 	drun-display-format: "{icon} {name}";
-	font: "JetBrainsMono Nerd Font 10";
+	font: "SF Pro Display 11";
 	show-icons: true;
 	icon-theme: "Colloid";
 }
@@ -18,14 +18,15 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       1000px;
+    // 1000 for imagebox + listbox, and 600 for listbox-standalone
+    width:                       600px;
     x-offset:                    0px;
     y-offset:                    0px;
 
     /* properties for all widgets */
     enabled:                     true;
-    border:			 2px solid;
-    border-color:		 @secondary-container;
+    border:                      2px solid;
+    border-color:                @secondary-container;
     border-radius:               15px;
     cursor:                      "default";
     background-color:            @on-primary-fixed;
@@ -36,7 +37,7 @@ mainbox {
     spacing:                     0px;
     background-color:            transparent;
     orientation:                 horizontal;
-    children:                    [ "imagebox", "listbox" ];
+    children:                    [ "listbox-standalone" ];
 }
 
 imagebox {
@@ -46,6 +47,15 @@ imagebox {
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }
+
+listbox-standalone {
+    spacing:                     20px;
+    padding:                     20px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "message", "listview" ];
+}
+
 
 listbox {
     spacing:                     20px;
@@ -64,12 +74,12 @@ inputbar {
     spacing:                     10px;
     padding:                     15px;
     border-radius:               10px;
-    background-color:		 @on-primary;
-    text-color:			 @on-surface;
+    background-color:	           @on-primary;
+    text-color:                  @on-surface;
     children:                    [ "textbox-prompt-colon", "entry" ];
 }
 textbox-prompt-colon {
-    enabled:                     true;
+    enabled:                     false;
     expand:                      false;
     str:                         "  ";
     background-color:            inherit;
