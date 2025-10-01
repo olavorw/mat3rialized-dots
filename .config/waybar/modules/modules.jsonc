@@ -78,7 +78,6 @@
     "tooltip": true,
     "tooltip-format": "{timeTo} {power}w",
     "on-click-middle": "$HOME/.scripts/ChangeBlur.sh",
-    "on-click-right": "wlogout",
   },
   "bluetooth": {
     "format": "󰂯",

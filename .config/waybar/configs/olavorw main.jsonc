@@ -20,7 +20,6 @@
     "clock",
     // "custom/separator#blank",
     "tray",
-    "custom/yubilock",
   ],
   "modules-center": [
     "group/arch_drawer",
