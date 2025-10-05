@@ -31,10 +31,8 @@ input_path = './templates/gtk-colors.css'
 output_path = '~/.config/gtk-4.0/colors.css'
 
 [templates.rofi]
-# input_path = './templates/rofi-colors.rasi'
-# output_path = '~/.config/rofi/colors.rasi'
-input_path = './templates/rofi.rasi'
-output_path = '~/.config/rofi/launchers/type-7/style-3.rasi'
+input_path = './templates/rofi-colors.rasi'
+output_path = '~/.config/rofi/launchers/shared/matugen.rasi'
 
 [templates.cava]
 input_path = '~/.config/matugen/templates/cava-colors.ini'
