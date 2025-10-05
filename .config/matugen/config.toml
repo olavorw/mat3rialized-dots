@@ -8,17 +8,23 @@ set = true
 [templates.waybar]
 input_path = './templates/colors.css'
 output_path = '~/.config/waybar/colors/matugen.css'
-pre_hook = 'killall -9 waybar swaync'
-post_hook = 'waybar & swaync &'
+pre_hook = 'killall -9 waybar'
+post_hook = 'waybar &'
+
+[templates.swaync]
+input_path = './templates/colors.css'
+output_path = '~/.config/swaync/colors/matugen.css'
+pre_hook = 'killall -9 swaync'
+post_hook = 'swaync &'
 
 [templates.hyprland]
 input_path = './templates/hyprland-colors.conf'
-output_path = '~/.config/hypr/colors/matugen.conf'
+output_path = '~/.config/hypr/colors/custom/matugen.conf'
 post_hook = 'hyprctl reload'
 
 [templates.kitty]
 input_path = './templates/kitty-colors.conf'
-output_path = '~/.config/kitty/colors.conf'
+output_path = '~/.config/kitty/custom/matugen.conf'
 post_hook = 'pkill -SIGUSR1 kitty'
 
 [templates.gtk3]
