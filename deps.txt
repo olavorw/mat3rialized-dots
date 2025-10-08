@@ -1,0 +1,5 @@
+hyprland waybar rofi nwg-look kvantum qt5ct fastfetch matugen kitty swaync wlogout hyprlock
+
+themes:
+
+graphite (in .themes), kvantum, libadwaita
