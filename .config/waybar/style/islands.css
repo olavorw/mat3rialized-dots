@@ -1,7 +1,7 @@
 /* ===== IMPORTS & VARIABLES ===== */
 @import "./colors/matugen.css";
 
-@define-color background_surface alpha(@background, 1);
+@define-color background_surface alpha(@background, 0.9);
 
 /* ===== GLOBAL STYLES ===== */
 * {
