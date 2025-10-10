@@ -77,7 +77,11 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 # Plugin Edit
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 
-alias dots='git --git-dir=/home/olavorw/.dotfiles/ --work-tree /home/olavorw'
+# Example Alias
+# alias dots='git --git-dir=/home/olavorw/.dotfiles/ --work-tree /home/olavorw'
+
+# FE (File Explorer)
+alias fe='thunar . & disown'
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,7 +115,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
 
 fastfetch
 

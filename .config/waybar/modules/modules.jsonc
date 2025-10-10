@@ -284,6 +284,7 @@
     "tooltip-format-ethernet": "{ifname} 󰌘",
     "tooltip-format-disconnected": "󰌙 Disconnected",
     "max-length": 30,
+    "on-click": "kitty --hold nmtui",
     "format-icons": [
       "󰤯 ",
       "󰤟 ",
