@@ -1,130 +1,122 @@
 {
-"group/arch_drawer": {
-	"orientation": "inherit",
-	"drawer": {
-		"transition-duration": 500,
-		"children-class": "custom/launcher",
-		"transition-left-to-right": true
-        },
-	"modules": [
-    "custom/launcher",
-		"custom/menu",
-		"custom/acrylicctl",
-    "custom/wbrestart",
-    "custom/updater",
-
-	]
-},
-
-"group/performance": {
-	"orientation": "horizontal",
-	"modules": [
-		"cpu",
-		"memory",
-		"temperature",
-		"disk",
-	]
-},
-
-"group/performance_drawer": {
-	"orientation": "inherit",
-	"drawer": {
-		"transition-duration": 500,
-		"children-class": "cpu",
-		"transition-left-to-right": true
-  },
-	"modules": [
-		"temperature",		
-		"cpu",
-		"memory",
-		"disk",
-	]
-},
-"group/laptop_modules": {
-	"orientation": "inherit",
-	"modules": [
-		"backlight",
-		"battery",
-    "power-profiles-daemon",
-	]
-},
-"group/audio": {
-	"orientation": "inherit",
-	"drawer": {
-		"transition-duration": 500,
-		"children-class": "pulseaudio",
-		"transition-left-to-right": true
-        },
-	"modules": [
-		"pulseaudio",
-    "custom/cava_mviz",
-	]
-},
-
-"group/wireless_connections": {
-	"orientation": "inherit",
-	"drawer": {
-		"transition-duration": 500,
-		"children-class": "bluetooth",
-		"transition-left-to-right": true
-        },
-	"modules": [
-		"network",
-    "custom/vpn",
-		"bluetooth",
-	]
-},
-
-"group/status": {
-	"orientation": "inherit",
-	"drawer": {
-		"transition-duration": 500,
-		"children-class": "custom/power",
-		"transition-left-to-right": false
-        },
-	"modules": [
-		"custom/power",
-		"custom/lock",
-	]
-},
-"group/notify": {
-	"orientation": "inherit",
-	"drawer": {
-		"transition-duration": 500,
-		"children-class": "custom/swaync",
-		"transition-left-to-right": false
-        },
-	"modules": [
-		"custom/swaync",
-	]
-},
-
-"group/power": {
+  "group/arch_drawer": {
     "orientation": "inherit",
     "drawer": {
-        "transition-duration": 500,
-        "children-class": "drawer-child",
-        "transition-left-to-right": false
-      },
+      "transition-duration": 500,
+      "children-class": "custom/launcher",
+      "transition-left-to-right": true
+    },
     "modules": [
-        "custom/power",
-        "custom/quit",
-        "custom/lock",
-        "custom/reboot"
-      ]
-},
-"group/power#vert": {
-     "orientation": "inherit",
-     "drawer": {
-        "transition-duration": 300,
-        "children-class": "not-memory",
-        "transition-left-to-right": false
-       },
-     "modules": [
-        "custom/power",
-        "custom/lock",
-        "custom/logout",
-        "custom/reboot"
-      ]
-},
+      "custom/launcher",
+      "custom/hyprmenu",
+      "custom/waybar",
+      "custom/updater",
+    ]
+  },
+  "group/performance": {
+    "orientation": "horizontal",
+    "modules": [
+      "cpu",
+      "memory",
+      "temperature",
+      "disk",
+    ]
+  },
+  "group/performance_drawer": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "cpu",
+      "transition-left-to-right": true
+    },
+    "modules": [
+      "temperature",
+      "cpu",
+      "memory",
+      "disk",
+    ]
+  },
+  "group/laptop_modules": {
+    "orientation": "inherit",
+    "modules": [
+      "backlight",
+      "battery",
+      "power-profiles-daemon",
+    ]
+  },
+  "group/audio": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "pulseaudio",
+    },
+    "modules": [
+      "pulseaudio",
+      "custom/cava_mviz",
+    ]
+  },
+  "group/wireless_connections": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "bluetooth",
+      "transition-left-to-right": true
+    },
+    "modules": [
+      "network",
+      "custom/vpn",
+      "bluetooth",
+    ]
+  },
+  "group/status": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "custom/power",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/power",
+      "custom/lock",
+    ]
+  },
+  "group/notify": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "custom/swaync",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/swaync",
+    ]
+  },
+  "group/power": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "drawer-child",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/power",
+      "custom/quit",
+      "custom/lock",
+      "custom/reboot"
+    ]
+  },
+  "group/power#vert": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "not-memory",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/power",
+      "custom/lock",
+      "custom/logout",
+      "custom/reboot"
+    ]
+  },
 }

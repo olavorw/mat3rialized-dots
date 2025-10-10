@@ -1,35 +1,30 @@
 #!/bin/bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
-# Script for waybar layout or configs
-
 IFS=$'\n\t'
 
 # Define directories
-waybar_layouts="$HOME/.config/waybar/configs"
-waybar_config="$HOME/.config/waybar/config"
-SCRIPTSDIR="$HOME/.scripts"
-rofi_config="$HOME/.config/rofi/config.rasi"
-msg=' Choose Waybar Layout '
+waybar_styles="$HOME/.config/waybar/styles"
+waybar_style="$HOME/.config/waybar/style.css"
+waybar_scripts="$HOME/.config/waybar/scripts"
 
 # Function to display menu options
 menu() {
   options=()
   while IFS= read -r file; do
     options+=("$(basename "$file")")
-  done < <(find -L "$waybar_layouts" -maxdepth 1 -type f -exec basename {} \; | sort)
+  done < <(find -L "$waybar_styles" -maxdepth 1 -type f -exec basename {} \; | sort)
 
   printf '%s\n' "${options[@]}"
 }
 
 # Apply selected configuration
 apply_config() {
-  ln -sf "$waybar_layouts/$1" "$waybar_config"
-  "${SCRIPTSDIR}/wbrestart.sh" &
+  ln -sf "$waybar_styles/$1" "$waybar_style"
+  "${waybar_scripts}/launch.sh" &
 }
 
 # Main function
 main() {
-  choice=$(menu | rofi -i -dmenu -config "$rofi_config" -mesg "$msg")
+  choice=$(menu | rofi -theme "$HOME/.config/rofi/launchers/type-2/style-1.rasi" -dmenu -p "WB Styles")
 
   if [[ -z "$choice" ]]; then
     echo "No option selected. Exiting."

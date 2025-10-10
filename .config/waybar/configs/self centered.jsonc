@@ -20,6 +20,7 @@
     "clock",
     // "custom/separator#blank",
     "tray",
+    "mpris",
   ],
   "modules-center": [
     "group/arch_drawer",
@@ -34,7 +35,6 @@
     // "custom/separator#blank",
     // "group/performance_drawer",
     // "custom/separator#line",
-    "mpris",
     "group/audio",
     // "custom/separator#dot-line",
     // "custom/separator#blank",

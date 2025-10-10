@@ -14,31 +14,23 @@
       "inactive": "",
     },
   },
-  "custom/wbrestart": {
-    "format": "󰜉",
+  "custom/waybar": {
+    "format": "󱔓",
     "tooltip": true,
-    "tooltip-format": "Runs the wbrestart script",
-    "on-click": "~/.scripts/wbrestart.sh",
+    "tooltip-format": "LMB: Waybar layouts\nRMB: Waybar styles",
+    "on-click": "$HOME/.config/waybar/scripts/select_layout.sh",
+    "on-click-right": "$HOME/.config/waybar/scripts/select_style.sh"
   },
-  "custom/acrylicctl": {
-    "format": "󰂵",
-    "tooltip": true,
-    "tooltip-format": "Scroll: Blur\nMouse Buttons: Blur Brightness",
-    "exec": "~/.scripts/acrylicctl.sh get-values",
-    "on-scroll-up": "~/.scripts/acrylicctl.sh trans+",
-    "on-scroll-down": "~/.scripts/acrylicctl.sh trans-",
-    "on-click": "~/.scripts/acrylicctl.sh brightness+",
-    "on-click-right": "~/.scripts/acrylicctl.sh brightness-",
-  },
+  // TODO: Make these scripts
   "custom/keyboard": {
     "exec": "~/.config/waybar/scripts/keyboard_lang.sh",
     "interval": 1,
     "format": "{}",
     "tooltip": true,
-    "on-click": "~/.config/waybar/scripts/toggle_input.sh"
+    "on-click": "~/.config/waybar/scripts/cycle_input.sh"
   },
   "custom/weather": {
-    "exec": "${HOME}/.config/waybar/scripts/get_weather.sh Fremont+USA",
+    "exec": "${HOME}/.config/waybar/scripts/get_weather.sh",
     "return-type": "json",
     "format": "{}",
     "tooltip": true,
@@ -46,46 +38,38 @@
   },
   "custom/file_manager": {
     "format": "",
-    "on-click": "thunar &",
+    "on-click": "thunar & disown",
     "tooltip": true,
-    "tooltip-format": "File Manager",
+    "tooltip-format": "Launch thunar",
   },
   "custom/tty": {
     "format": "",
-    "on-click": "kitty &",
+    "on-click": "kitty & disown",
     "tooltip": true,
-    "tooltip-format": "Launch Terminal",
+    "tooltip-format": "Launch kitty",
   },
   "custom/browser": {
-    "format": "",
+    "format": "󰾔",
     "on-click": "xdg-open https://",
     "tooltip": true,
-    "tooltip-format": "Launch Browser",
+    "tooltip-format": "Launch browser",
   },
-  "custom/cycle_wall": {
+  "custom/theming": {
     "format": "",
-    "on-click": "$HOME/.scripts/wallpaper-picker.sh",
-    "on-click-right": "$HOME/.scripts/random-wallpaper.sh",
-    // "on-click-middle": "$HOME/.scripts/theme_switcher.sh"
+    "on-click": "$HOME/.local/bin/walset.sh",
+    // "on-click-middle": "$HOME/.config/colorschemes/change-theme.sh"
     "tooltip": true,
-    "tooltip-format": "LMB: Wallpaper menu\nMMB: Theme Switcher\nRMB: Random wallpaper",
+    "tooltip-format": "LMB: Wallpaper menu",
   },
-  "custom/hint": {
-    "format": "󰺁 HINT!",
-    "on-click": "$HOME/.scripts/key-hints.sh",
-    "on-click-right": "$HOME/.scripts/KeyBinds.sh",
-    "tooltip": true,
-    "tooltip-format": "Left Click: Quick Tips\nRight Click: Keybinds",
-  },
-  // Hypridle inhibitor
+  // TODO: Hypridle inhibitor
   "custom/hypridle": {
     "format": "󱫗",
     "return-type": "json",
     "escape": true,
     "exec-on-event": true,
     "interval": 60,
-    "exec": "$HOME/.scripts/Hypridle.sh status",
-    "on-click": "$HOME/.scripts/Hypridle.sh toggle",
+    "exec": "",
+    "on-click": "",
     "on-click-right": "hyprlock"
   },
   "custom/lock": {
@@ -94,17 +78,18 @@
     "tooltip": true,
     "tooltip-format": "󰷛 Screen Lock",
   },
-  "custom/menu": {
+  // TODO: This hyprmenu
+  "custom/hyprmenu": {
     "format": "",
-    "on-click": "pkill rofi || rofi -show drun -modi run,drun,window",
-    "on-click-middle": "$HOME/.scripts/wallpaper-picker.sh",
-    "on-click-right": "$HOME/.scripts/select-waybar-layout.sh",
+    "on-click": "",
+    "on-click-middle": "",
+    "on-click-right": "",
     "tooltip": true,
-    "tooltip-format": "LMB: Rofi\nRMB: Waybar Layout Menu",
+    "tooltip-format": "",
   },
   // This is a custom cava visualizer
   "custom/cava_mviz": {
-    "exec": "$HOME/.scripts/waybarcava.sh",
+    "exec": "$HOME/.config/waybar/scripts/cava.sh",
     "format": "{}"
   },
   "custom/playerctl": {
@@ -213,75 +198,4 @@
     "tooltip": true,
     "tooltip-format": "Update System",
   },
-  // Separators
-  "custom/separator#dot": {
-    "format": "",
-    "interval": "once",
-    "tooltip": false
-  },
-  "custom/separator#dot-line": {
-    "format": "",
-    "interval": "once",
-    "tooltip": false
-  },
-  "custom/separator#line": {
-    "format": "|",
-    "interval": "once",
-    "tooltip": false
-  },
-  "custom/separator#blank": {
-    "format": "",
-    "interval": "once",
-    "tooltip": false
-  },
-  "custom/separator#blank_2": {
-    "format": "  ",
-    "interval": "once",
-    "tooltip": false
-  },
-  "custom/separator#blank_3": {
-    "format": "   ",
-    "interval": "once",
-    "tooltip": false
-  },
-  "custom/arrow1": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/arrow2": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/arrow3": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/arrow4": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/arrow5": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/arrow6": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/arrow7": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/arrow8": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/arrow9": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/arrow10": {
-    "format": "",
-    "tooltip": false
-  }
 }
