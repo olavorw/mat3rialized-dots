@@ -1,7 +1,7 @@
 /* ===== IMPORTS & VARIABLES ===== */
 @import "./colors/matugen.css";
 
-@define-color background_surface alpha(@background, 0.9);
+@define-color background_surface alpha(@background, 0.7);
 
 /* ===== GLOBAL STYLES ===== */
 * {
@@ -54,8 +54,8 @@ tooltip label {
 
 #taskbar button,
 #workspaces button {
-  background-color: @on_secondary;
-  color: @on_secondary;
+  background-color: alpha(@secondary, 0.1);
+  color: alpha(@secondary, 0);
   box-shadow: none;
   text-shadow: none;
   margin: 0px 3px;
