@@ -285,6 +285,7 @@
     "tooltip-format-disconnected": "󰌙 Disconnected",
     "max-length": 30,
     "on-click": "kitty --hold nmtui",
+    "on-click-right": "nm-connection-editor",
     "format-icons": [
       "󰤯 ",
       "󰤟 ",
