@@ -1,8 +1,12 @@
 * {
-  background: rgba(16, 20, 23, 0.8);
-  background-alt: #41474d;
-  foreground: #e0e3e8;
-  selected: #96cdf8;
-  active: #96cdf8;
+  background: rgba(24, 18, 11, 0.8);
+  background-alt: #4f4539;
+  foreground: #ede0d4;
+  selected: #f4bd6e;
+  active: #f4bd6e;
   urgent: #ffb4ab;
+}
+
+inputbar {
+    background-image: url("/home/olavorw/Pictures/Wallpapers/Golden Hour/a_group_of_birds_flying_in_the_sky_over_a_city.jpg", width);
 }

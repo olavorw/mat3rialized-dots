@@ -6,3 +6,7 @@
   active: {{colors.primary.default.hex}};
   urgent: {{colors.error.default.hex}};
 }
+
+inputbar {
+    background-image: url("{{image}}", width);
+i}

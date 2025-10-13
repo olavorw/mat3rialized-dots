@@ -47,6 +47,7 @@ mainbox {
     padding:                     50px;
     border:                      0px solid;
     border-radius:               0px 0px 0px 0px;
+    background-image:            none;
     border-color:                @selected;
     background-color:            transparent;
     children:                    [ "inputbar", "listview" ];
