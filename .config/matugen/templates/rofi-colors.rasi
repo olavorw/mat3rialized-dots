@@ -9,4 +9,4 @@
 
 inputbar {
     background-image: url("{{image}}", width);
-i}
+}
