@@ -63,6 +63,7 @@ inputbar {
     border-radius:               0px;
     border-color:                @selected;
     background-color:            transparent;
+    background-image:            none;
     text-color:                  @foreground;
     children:                    [ "prompt", "entry" ];
 }
