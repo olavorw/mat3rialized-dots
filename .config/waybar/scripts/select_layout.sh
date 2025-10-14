@@ -33,7 +33,7 @@ main() {
 
   case $choice in
   "no panel")
-    pgrep -x "waybar" && pkill waybar || true
+    # pgrep -x "waybar" && pkill waybar || true
     ;;
   *)
     apply_config "$choice"
