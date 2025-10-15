@@ -1,12 +1,12 @@
 * {
-  background: rgba(16, 20, 23, 0.8);
-  background-alt: #41474d;
-  foreground: #e0e3e8;
-  selected: #96cdf8;
-  active: #96cdf8;
+  background: rgba(19, 20, 12, 0.8);
+  background-alt: #47483b;
+  foreground: #e5e3d6;
+  selected: #c5cc7a;
+  active: #c5cc7a;
   urgent: #ffb4ab;
 }
 
 inputbar {
-    background-image: url("/home/olavorw/Pictures/Wallpapers/Golden Hour/a_train_on_the_tracks.jpg", width);
+    background-image: url("/home/olavorw/Pictures/Wallpapers/Day/dawn-apple-trees.jpg", width);
 }
