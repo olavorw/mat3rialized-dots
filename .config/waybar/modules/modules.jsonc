@@ -269,7 +269,7 @@
     "format-ethernet": "󰈀",
     "format-disconnected": "󰌙",
     "tooltip-format": "{ipaddr}  {bandwidthUpBits}  {bandwidthDownBits}",
-    "format-linked": "󰒄 VPN",
+    "format-linked": "󰌘 Linked",
     "tooltip-format-wifi": "{signalStrength}%",
     "tooltip-format-ethernet": "{ifname} 󰌘",
     "tooltip-format-disconnected": "󰌙 Disconnected",
