@@ -180,16 +180,6 @@
     "format": "<span style=\"italic\">  {}</span>", // Icon: expand-arrows-alt
     "tooltip": false,
   },
-  "idle_inhibitor": {
-    "tooltip": true,
-    "tooltip-format-activated": "Idle_inhibitor active",
-    "tooltip-format-deactivated": "Idle_inhibitor not active",
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "󰒲",
-      "deactivated": "󰒳",
-    }
-  },
   "keyboard-state": {
     //"numlock": true,
     "capslock": true,

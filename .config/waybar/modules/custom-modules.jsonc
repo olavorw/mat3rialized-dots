@@ -61,22 +61,12 @@
     "tooltip": true,
     "tooltip-format": "LMB: Wallpaper menu",
   },
-  // TODO: Hypridle inhibitor
   "custom/hypridle": {
-    "format": "󱫗",
-    "return-type": "json",
-    "escape": true,
-    "exec-on-event": true,
-    "interval": 60,
-    "exec": "",
-    "on-click": "",
-    "on-click-right": "hyprlock"
-  },
-  "custom/lock": {
-    "format": "󰌾",
-    "on-click": "hyprlock",
-    "tooltip": true,
-    "tooltip-format": "󰷛 Screen Lock",
+    "exec": "sh -c 'pgrep -x hypridle >/dev/null && echo \"󰒲\" || echo \"󰒳\"'",
+    "format": "{text}",
+    "interval": 5,
+    "on-click": "sh -c 'pkill -x hypridle || (hypridle >/dev/null 2>&1 & disown)'",
+    "tooltip": false
   },
   // TODO: This hyprmenu
   "custom/hyprmenu": {

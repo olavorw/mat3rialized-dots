@@ -27,7 +27,7 @@
     // "custom/separator#dot-line",
     "hyprland/workspaces#numbers",
     // "custom/separator#dot-line",
-    "group/notify",
+    "custom/swaync",
   ],
   "modules-right": [
     "network",
@@ -38,6 +38,6 @@
     "group/audio",
     // "custom/separator#dot-line",
     // "custom/separator#blank",
-    "group/status",
+    "custom/power",
   ],
 }

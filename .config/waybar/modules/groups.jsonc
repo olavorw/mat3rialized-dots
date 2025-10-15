@@ -10,6 +10,7 @@
       "custom/launcher",
       "custom/hyprmenu",
       "custom/waybar",
+      "custom/hypridle",
       "custom/updater",
     ]
   },
@@ -66,29 +67,6 @@
       "network",
       "custom/vpn",
       "bluetooth",
-    ]
-  },
-  "group/status": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 500,
-      "children-class": "custom/power",
-      "transition-left-to-right": false
-    },
-    "modules": [
-      "custom/power",
-      "custom/lock",
-    ]
-  },
-  "group/notify": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 500,
-      "children-class": "custom/swaync",
-      "transition-left-to-right": false
-    },
-    "modules": [
-      "custom/swaync",
     ]
   },
   "group/power": {
