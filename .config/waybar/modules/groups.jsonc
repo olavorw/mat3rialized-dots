@@ -60,12 +60,12 @@
     "orientation": "inherit",
     "drawer": {
       "transition-duration": 500,
-      "children-class": "bluetooth",
+      "children-class": "network",
       "transition-left-to-right": true
     },
     "modules": [
       "network",
-      "custom/vpn",
+      "custom/protonvpn",
       "bluetooth",
     ]
   },

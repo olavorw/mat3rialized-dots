@@ -158,12 +158,11 @@
     "on-click-right": "swaync-client -d -sw",
     "escape": true
   },
-  "custom/vpn": {
-    "format": "VPN ",
-    "exec": "echo '{\"class\": \"connected\"}'",
-    "exec-if": "test -d /proc/sys/net/ipv4/conf/tun0",
+  "custom/protonvpn": {
+    "exec": "$HOME/.config/waybar/scripts/protonvpn.sh",
     "return-type": "json",
-    "interval": 5
+    "interval": 5,
+    "on-click": "protonvpn-app",
   },
   "custom/media": {
     "format": "{}",
