@@ -30,7 +30,7 @@
     "custom/swaync",
   ],
   "modules-right": [
-    "group/wireless_connections",
+    "network",
     "group/laptop_modules",
     // "custom/separator#blank",
     // "group/performance_drawer",
