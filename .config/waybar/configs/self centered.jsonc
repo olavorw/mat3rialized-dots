@@ -4,7 +4,7 @@
     "$HOME/.config/waybar/modules/separators.jsonc",
     "$HOME/.config/waybar/modules/modules.jsonc",
     "$HOME/.config/waybar/modules/groups.jsonc",
-    "$HOME/.config/waybar/modules/custom-modules.jsonc",
+    "$HOME/.config/waybar/modules/custom-modules.jsonc"
   ],
   "layer": "bottom",
   "exclusive": true,
@@ -20,14 +20,14 @@
     "clock",
     // "custom/separator#blank",
     "tray",
-    "mpris",
+    "mpris"
   ],
   "modules-center": [
     "group/arch_drawer",
     // "custom/separator#dot-line",
     "hyprland/workspaces#numbers",
     // "custom/separator#dot-line",
-    "custom/swaync",
+    "custom/swaync"
   ],
   "modules-right": [
     "network",
@@ -35,9 +35,9 @@
     // "custom/separator#blank",
     // "group/performance_drawer",
     // "custom/separator#line",
-    "group/audio",
+    "group/audio"
     // "custom/separator#dot-line",
     // "custom/separator#blank",
-    "custom/power",
-  ],
+    // "custom/power",
+  ]
 }

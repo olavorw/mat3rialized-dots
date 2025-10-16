@@ -158,7 +158,7 @@
       "▇",
       "█"
     ],
-    "on-click-right": "gnome-system-monitor",
+    "on-click": "kitty -o confirm_os_window_close=0 --detach btop",
   },
   "disk": {
     "interval": 30,
