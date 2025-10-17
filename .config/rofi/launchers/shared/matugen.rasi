@@ -1,12 +1,12 @@
 * {
-  background: rgba(19, 20, 12, 0.8);
-  background-alt: #47483b;
-  foreground: #e5e3d6;
-  selected: #c5cc7a;
-  active: #c5cc7a;
+  background: rgba(15, 21, 17, 0.8);
+  background-alt: #414942;
+  foreground: #dfe4dd;
+  selected: #94d5a8;
+  active: #94d5a8;
   urgent: #ffb4ab;
 }
 
 inputbar {
-    background-image: url("/home/olavorw/Pictures/Wallpapers/Day/dawn-apple-trees.jpg", width);
+    background-image: url("/home/olavorw/Pictures/Wallpapers/Aurora/aurora-glaciers.jpg", width);
 }
