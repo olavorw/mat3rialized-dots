@@ -1,12 +1,12 @@
 * {
-  background: rgba(15, 21, 17, 0.8);
-  background-alt: #414942;
-  foreground: #dfe4dd;
-  selected: #94d5a8;
-  active: #94d5a8;
+  background: rgba(16, 20, 23, 0.8);
+  background-alt: #41474d;
+  foreground: #e0e3e8;
+  selected: #96cdf8;
+  active: #96cdf8;
   urgent: #ffb4ab;
 }
 
 inputbar {
-    background-image: url("/home/olavorw/Pictures/Wallpapers/Aurora/aurora-glaciers.jpg", width);
+    background-image: url("/home/olavorw/Pictures/Wallpapers/Norge/wallhaven-mdd8x9.jpg", width);
 }
