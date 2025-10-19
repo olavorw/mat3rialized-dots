@@ -20,7 +20,7 @@ post_hook = 'swaync &'
 [templates.hyprland]
 input_path = './templates/hyprland-colors.conf'
 output_path = '~/.config/hypr/colors/custom/matugen.conf'
-post_hook = 'hyprctl reload'
+post_hook = 'hyprctl reload & hyprshade auto'
 
 [templates.kitty]
 input_path = './templates/kitty-colors.conf'
@@ -30,8 +30,9 @@ post_hook = 'pkill -SIGUSR1 kitty'
 [templates.gtk3]
 input_path = './templates/gtk-colors.css'
 output_path = '~/.config/gtk-3.0/colors.css'
-pre_hook = 'killall -9 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1'
-post_hook = '/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &'
+# We would need the following two hooks if we were using polkit-gnome-authentication-agent-1 but we are using hyprpolkitagent, so they are unnecassary
+# pre_hook = 'killall -9 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1'
+# post_hook = '/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &'
 # post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
 
 [templates.gtk4]
