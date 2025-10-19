@@ -33,7 +33,7 @@
   outline-width: 2px;
   outline-color: transparent;
   outline-offset: -4px;
-  -gtk-outline-radius: 8;
+  -gtk-outline-radius: 6px;
   -gtk-secondary-caret-color: #333333;
 }
 
@@ -63,17 +63,17 @@ entry selection, label selection, textview text selection:focus, textview text s
 }
 
 .linked:not(.vertical) > button:first-child, .linked:not(.vertical) > spinbutton.vertical:first-child, .linked:not(.vertical) > spinbutton:first-child:not(.vertical), .linked:not(.vertical) > entry:first-child {
-  border-top-left-radius: 8;
-  border-bottom-left-radius: 8;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
 .linked:not(.vertical) > button:last-child, .linked:not(.vertical) > spinbutton.vertical:last-child, .linked:not(.vertical) > spinbutton:last-child:not(.vertical), .linked:not(.vertical) > entry:last-child {
-  border-top-right-radius: 8;
-  border-bottom-right-radius: 8;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .linked:not(.vertical) > button:only-child, .linked:not(.vertical) > spinbutton.vertical:only-child, .linked:not(.vertical) > spinbutton:only-child:not(.vertical), .linked:not(.vertical) > entry:only-child {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 .linked.vertical > button, .linked.vertical > spinbutton.vertical, .linked.vertical > spinbutton:not(.vertical), .linked.vertical > entry {
@@ -81,17 +81,17 @@ entry selection, label selection, textview text selection:focus, textview text s
 }
 
 .linked.vertical > button:first-child, .linked.vertical > spinbutton.vertical:first-child, .linked.vertical > spinbutton:first-child:not(.vertical), .linked.vertical > entry:first-child {
-  border-top-left-radius: 8;
-  border-top-right-radius: 8;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 .linked.vertical > button:last-child, .linked.vertical > spinbutton.vertical:last-child, .linked.vertical > spinbutton:last-child:not(.vertical), .linked.vertical > entry:last-child {
-  border-bottom-left-radius: 8;
-  border-bottom-right-radius: 8;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .linked.vertical > button:only-child, .linked.vertical > spinbutton.vertical:only-child, .linked.vertical > spinbutton:only-child:not(.vertical), .linked.vertical > entry:only-child {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 /***************
@@ -103,7 +103,7 @@ entry selection, label selection, textview text selection:focus, textview text s
 }
 
 .background.csd {
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 .background.tiled .background.maximized, .background.solid-csd {
@@ -157,7 +157,7 @@ entry selection, label selection, textview text selection:focus, textview text s
 }
 
 window.background.csd > stack.view {
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 textview text {
@@ -170,7 +170,7 @@ textview border {
 }
 
 iconview:hover, iconview:selected {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 .rubberband,
@@ -400,7 +400,7 @@ treeview.view flowbox .content-view .rubberband,
 
 flowbox flowboxchild {
   padding: 4px;
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 .content-view .tile:selected {
@@ -424,8 +424,8 @@ headerbar label:disabled, tab label:disabled, button label:disabled {
 }
 
 label.osd {
-  border-radius: 8;
-  background-color: rgba(10, 10, 10, 0.9);
+  border-radius: 6px;
+  background-color: rgba(52, 52, 52, 0.9);
   color: white;
 }
 
@@ -479,7 +479,7 @@ spinbutton.vertical, spinbutton:not(.vertical),
 entry {
   min-height: 36px;
   padding: 0 8px;
-  border-radius: 8;
+  border-radius: 6px;
   caret-color: currentColor;
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 2px transparent;
@@ -618,7 +618,7 @@ entry progress {
 }
 
 .gedit-search-slider .linked:not(.vertical) > entry {
-  border-radius: 8;
+  border-radius: 6px;
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   border-image: none;
   box-shadow: inset 0 0 0 2px transparent;
@@ -855,7 +855,7 @@ button {
   min-height: 24px;
   min-width: 16px;
   padding: 6px 10px;
-  border-radius: 8;
+  border-radius: 6px;
   font-weight: 500;
 }
 
@@ -969,13 +969,13 @@ button.image-button {
 }
 
 button.image-button.destructive-action {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 button.text-button.image-button {
   min-width: 24px;
   padding: 6px;
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 button.text-button.image-button label:first-child {
@@ -999,7 +999,7 @@ button.text-button.image-button image:not(:only-child) {
 }
 
 .linked:not(.vertical) > button.flat:not(:only-child), .linked.vertical > button.flat:not(:only-child) {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 .linked:not(.vertical) > button.flat:not(:only-child).image-button:not(.text-button), .linked.vertical > button.flat:not(:only-child).image-button:not(.text-button) {
@@ -1168,7 +1168,7 @@ modelbutton.flat,
 .menuitem.button.flat {
   min-height: 28px;
   padding: 0 8px;
-  border-radius: 8;
+  border-radius: 6px;
   color: rgba(0, 0, 0, 0.87);
 }
 
@@ -1322,7 +1322,7 @@ combobox.linked button:nth-child(2):dir(rtl) {
 }
 
 combobox > .linked:not(.vertical) > entry:not(:only-child) {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 combobox > .linked:not(.vertical) > entry:not(:only-child):first-child {
@@ -1340,7 +1340,7 @@ combobox > .linked:not(.vertical) > button:not(:only-child) {
   min-width: 16px;
   margin: 6px;
   padding: 4px;
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 .linked:not(.vertical) > combobox:not(:first-child) > box > button.combo {
@@ -1364,7 +1364,7 @@ combobox > .linked:not(.vertical) > button:not(:only-child) {
 }
 
 button.combo:only-child {
-  border-radius: 8;
+  border-radius: 6px;
   font-weight: normal;
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: inset 0 0 0 2px transparent;
@@ -1409,7 +1409,7 @@ toolbar {
 frame.documents-dropdown, .app-notification, toolbar.osd {
   transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1);
   padding: 6px;
-  border-radius: 8;
+  border-radius: 6px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.14), 0 1px 6px rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0);
   background-color: #FFFFFF;
 }
@@ -1494,7 +1494,7 @@ searchbar > revealer > box {
 }
 
 .nemo-window .toolbar .linked:not(.vertical) > button, .nemo-window .primary-toolbar .linked:not(.vertical) > button:not(.text-button), headerbar .linked:not(.vertical) > button:not(.suggested-action):not(.destructive-action) {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 .nemo-window .toolbar button:focus, .nemo-window .primary-toolbar button:focus:not(.text-button), headerbar button:focus:not(.suggested-action):not(.destructive-action), .nemo-window .toolbar button:hover, .nemo-window .primary-toolbar button:hover:not(.text-button), headerbar button:hover:not(.suggested-action):not(.destructive-action), .nemo-window .toolbar button:active, .nemo-window .primary-toolbar button:active:not(.text-button), headerbar button:active:not(.suggested-action):not(.destructive-action), .nemo-window .toolbar button:checked, .nemo-window .primary-toolbar button:checked:not(.text-button), headerbar button:checked:not(.suggested-action):not(.destructive-action) {
@@ -1556,7 +1556,7 @@ searchbar > revealer > box {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1), color 75ms cubic-bezier(0, 0, 0.2, 1);
   background-color: #FFFFFF;
   color: rgba(0, 0, 0, 0.87);
-  border-radius: 14px 14px 0 0;
+  border-radius: 12px 12px 0 0;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0);
 }
 
@@ -1604,7 +1604,7 @@ searchbar > revealer > box {
 }
 
 .titlebar .linked:not(.vertical) > entry {
-  border-radius: 8;
+  border-radius: 6px;
   margin-left: 3px;
   margin-right: 3px;
 }
@@ -1707,7 +1707,7 @@ searchbar > revealer > box {
   min-height: 24px;
   padding: 6px;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0);
-  border-radius: 14px 14px 0 0;
+  border-radius: 12px 12px 0 0;
 }
 
 .tiled .titlebar.default-decoration, .maximized .titlebar.default-decoration, .fullscreen .titlebar.default-decoration {
@@ -1758,7 +1758,7 @@ headerbar stackswitcher {
 }
 
 headerbar button, headerbar button.image-button {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 headerbar separator.titlebutton {
@@ -1783,7 +1783,7 @@ headerbar .entry-tag, headerbar .photos-entry-tag, headerbar .documents-entry-ta
 }
 
 headerbar.windowhandle viewswitcher button:not(.titlebutton):not(.suggested-action):not(.destructive-action) {
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
   margin: 0;
   min-width: 120px;
   padding: 0;
@@ -1838,7 +1838,7 @@ headerbar.windowhandle viewswitchertitle > squeezer > viewswitcher > box.horizon
   padding-left: 6px;
   padding-right: 6px;
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #333333 0%, transparent 0%) 0 0 0/0 0 0px;
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 .caja-pathbar button:checked,
@@ -1974,7 +1974,7 @@ treeview.view.trough:selected:hover {
 treeview.view header button {
   padding: 2px 6px;
   border: none;
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 treeview.view header button:not(:focus):not(:hover):not(:active) {
@@ -2029,7 +2029,7 @@ menubar > menuitem,
   min-height: 20px;
   padding: 4px 8px;
   color: rgba(0, 0, 0, 0.6);
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 menubar > menuitem:hover,
@@ -2060,7 +2060,7 @@ menu,
   padding: 6px;
   background-color: #FFFFFF;
   background-clip: border-box;
-  border-radius: 14px;
+  border-radius: 12px;
   border: 1px solid #e0e0e0;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0);
 }
@@ -2079,7 +2079,7 @@ menu menuitem,
   color: rgba(0, 0, 0, 0.87);
   font: initial;
   text-shadow: none;
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 menu menuitem:hover,
@@ -2169,7 +2169,7 @@ menu > arrow.top,
 .menu > arrow.top,
 .context-menu > arrow.top {
   margin-top: 0;
-  border-radius: 8;
+  border-radius: 6px;
   -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
 }
 
@@ -2178,7 +2178,7 @@ menu > arrow.bottom,
 .context-menu > arrow.bottom {
   margin-top: 8px;
   margin-bottom: -12px;
-  border-radius: 8;
+  border-radius: 6px;
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
@@ -2210,7 +2210,7 @@ popover.background {
   transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1);
   padding: 0;
   background-color: #FFFFFF;
-  border-radius: 14px;
+  border-radius: 12px;
 }
 
 popover.background, .csd popover.background {
@@ -2253,27 +2253,27 @@ popover.background.combo viewport.frame > list > row {
 }
 
 popover.background.combo viewport.frame > list > row:first-child {
-  border-radius: 14px 14px 0 0;
+  border-radius: 12px 12px 0 0;
 }
 
 popover.background.combo viewport.frame > list > row:last-child {
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 popover.background .linked > button:not(.radio) {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 popover.background .linked > button:not(.radio):first-child {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 popover.background .linked > button:not(.radio):last-child {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 popover.background .linked > button:not(.radio):only-child {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 popover.background.menu button,
@@ -2281,7 +2281,7 @@ popover.background button.model {
   min-height: 32px;
   min-width: 48px;
   padding: 0 8px;
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 popover.background separator {
@@ -2305,7 +2305,7 @@ tabbox > tab, notebook > header tab {
   background-clip: padding-box;
   color: rgba(0, 0, 0, 0.6);
   font-weight: 500;
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 tabbox > tab:hover, notebook > header tab:hover {
@@ -2334,16 +2334,16 @@ frame > paned > notebook > header, notebook.frame > header {
 
 notebook, notebook.frame {
   background-color: #FFFFFF;
-  border-radius: 14px;
+  border-radius: 12px;
 }
 
 notebook.frame frame > border {
   border: none;
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 notebook.frame frame > list row.activatable {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 notebook > header {
@@ -2351,7 +2351,7 @@ notebook > header {
   background-color: rgba(0, 0, 0, 0.04);
   padding: 3px;
   margin: 3px;
-  border-radius: 11px;
+  border-radius: 9px;
 }
 
 notebook > header.top > tabs > arrow {
@@ -2403,7 +2403,7 @@ notebook > header.left > tabs > arrow.up, notebook > header.right > tabs > arrow
 notebook > header > tabs > arrow {
   min-height: 16px;
   min-width: 16px;
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 notebook > header tab > box {
@@ -2458,7 +2458,7 @@ notebook > header.left tabs tab.reorderable-page, notebook > header.right tabs t
 
 notebook > stack:not(:only-child) {
   background-color: transparent;
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 /**************
@@ -2801,7 +2801,7 @@ radio:indeterminate {
 menu menuitem check {
   min-height: 16px;
   min-width: 16px;
-  border-radius: 8;
+  border-radius: 6px;
   -gtk-icon-source: -gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.svg"));
 }
 
@@ -3283,12 +3283,12 @@ progressbar.vertical progress {
 }
 
 progressbar trough {
-  border-radius: 8;
+  border-radius: 6px;
   background-color: rgba(0, 0, 0, 0.12);
 }
 
 progressbar progress {
-  border-radius: 8;
+  border-radius: 6px;
   background-color: #333333;
 }
 
@@ -3338,7 +3338,7 @@ levelbar.vertical.discrete block:not(:last-child) {
 }
 
 levelbar trough {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 levelbar block.low {
@@ -3385,7 +3385,7 @@ frame > border,
 
 frame > border.view,
 .frame.view {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 frame > border.flat,
@@ -3405,7 +3405,7 @@ actionbar > revealer > box {
 }
 
 .background.csd box.vertical > actionbar > revealer > box, .background.csd box.vertical > revealer > actionbar > revealer > box {
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 scrolledwindow viewport.frame {
@@ -3596,7 +3596,7 @@ calendar:disabled {
 }
 
 calendar:selected {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 calendar.header {
@@ -3606,7 +3606,7 @@ calendar.header {
 }
 
 calendar.button {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 calendar.highlight {
@@ -3647,8 +3647,8 @@ messagedialog checkbutton.text-button > check {
 }
 
 messagedialog.csd.background {
-  border-bottom-left-radius: 14px;
-  border-bottom-right-radius: 14px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 messagedialog.csd .dialog-action-box {
@@ -3656,7 +3656,7 @@ messagedialog.csd .dialog-action-box {
 }
 
 messagedialog.csd .dialog-action-box button, messagedialog.csd .dialog-action-box button:first-child, messagedialog.csd .dialog-action-box button:last-child {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 messagedialog.csd .dialog-action-box button:not(:last-child) {
@@ -3677,7 +3677,7 @@ messagedialog.csd .dialog-action-box button.destructive-action:not(:disabled) {
 
 .csd filechooser {
   background-color: #FFFFFF;
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 filechooser .dialog-action-box {
@@ -3696,7 +3696,7 @@ filechooser stack.view {
 
 filechooser stack.view scrolledwindow {
   background-color: transparent;
-  border-radius: 0 0 14px 0;
+  border-radius: 0 0 12px 0;
 }
 
 filechooser stack.view scrolledwindow list {
@@ -3717,7 +3717,7 @@ filechooser stack.view frame > border {
 
 .csd filechooser placessidebar {
   background: none;
-  border-bottom-left-radius: 14px;
+  border-bottom-left-radius: 12px;
 }
 
 filechooser actionbar, filechooser actionbar > revealer > box {
@@ -3757,7 +3757,7 @@ stacksidebar.sidebar list {
 stacksidebar.sidebar row {
   min-height: 32px;
   padding: 0 3px;
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 stacksidebar.sidebar row:selected {
@@ -3808,7 +3808,7 @@ placessidebar.sidebar row {
   min-height: 32px;
   margin: 0;
   padding: 0;
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 placessidebar.sidebar row > revealer {
@@ -4008,17 +4008,17 @@ infobar.error:hover > revealer > box {
  * Tooltips *
  ************/
 tooltip {
-  border-radius: 4;
+  border-radius: 3px;
   box-shadow: none;
 }
 
 tooltip.background {
-  background-color: rgba(10, 10, 10, 0.9);
+  background-color: rgba(52, 52, 52, 0.9);
   color: white;
 }
 
 tooltip.background.csd {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 tooltip decoration {
@@ -4035,43 +4035,43 @@ tooltip > box {
  * Color Chooser *
  *****************/
 colorswatch.top {
-  border-top-left-radius: 8;
-  border-top-right-radius: 8;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 colorswatch.top overlay {
-  border-top-left-radius: 8;
-  border-top-right-radius: 8;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 colorswatch.bottom {
-  border-bottom-left-radius: 8;
-  border-bottom-right-radius: 8;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 colorswatch.bottom overlay {
-  border-bottom-left-radius: 8;
-  border-bottom-right-radius: 8;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 colorswatch.left, colorswatch:first-child:not(.top) {
-  border-top-left-radius: 8;
-  border-bottom-left-radius: 8;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
 colorswatch.left overlay, colorswatch:first-child:not(.top) overlay {
-  border-top-left-radius: 8;
-  border-bottom-left-radius: 8;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
 colorswatch.right, colorswatch:last-child:not(.bottom) {
-  border-top-right-radius: 8;
-  border-bottom-right-radius: 8;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 colorswatch.right overlay, colorswatch:last-child:not(.bottom) overlay {
-  border-top-right-radius: 8;
-  border-bottom-right-radius: 8;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 colorswatch.dark {
@@ -4091,11 +4091,11 @@ colorswatch overlay:hover {
 }
 
 colorswatch#add-color-button {
-  border-radius: 8 8 0 0;
+  border-radius: 6px 6px 0 0;
 }
 
 colorswatch#add-color-button:only-child {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 colorswatch#add-color-button overlay {
@@ -4120,16 +4120,16 @@ colorswatch:disabled overlay {
 }
 
 colorswatch#editor-color-sample {
-  border-radius: 14px;
+  border-radius: 12px;
 }
 
 colorswatch#editor-color-sample overlay {
-  border-radius: 14px;
+  border-radius: 12px;
 }
 
 colorchooser .popover.osd {
   transition: box-shadow 75ms cubic-bezier(0, 0, 0.2, 1);
-  border-radius: 8;
+  border-radius: 6px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.14), 0 1px 6px rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0);
   background-color: #FFFFFF;
 }
@@ -4151,7 +4151,7 @@ colorchooser .popover.osd:backdrop {
 decoration {
   transition: none;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2), 0 10px 18px rgba(0, 0, 0, 0.14), 0 8px 24px rgba(0, 0, 0, 0.12), 0 0 50px transparent;
-  border-radius: 14px;
+  border-radius: 12px;
   margin: 10px;
 }
 
@@ -4174,12 +4174,12 @@ decoration:backdrop {
 }
 
 .csd.popup decoration {
-  border-radius: 14px;
+  border-radius: 12px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.14), 0 1px 6px rgba(0, 0, 0, 0.12);
 }
 
 tooltip.csd decoration {
-  border-radius: 14px;
+  border-radius: 12px;
   box-shadow: none;
   border: none;
 }
@@ -4251,7 +4251,7 @@ cursor-handle.insertion-cursor:dir(ltr), cursor-handle.insertion-cursor:dir(rtl)
   padding-left: 8px;
   padding-right: 8px;
   border: solid 1px rgba(0, 0, 0, 0.12);
-  border-radius: 9px;
+  border-radius: 7px;
   box-shadow: inset 0 -2px rgba(0, 0, 0, 0.12);
   background-color: #FFFFFF;
   color: rgba(0, 0, 0, 0.87);
@@ -4354,7 +4354,7 @@ popover.emoji-picker .emoji {
 
 popover.emoji-picker .emoji widget {
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 popover.emoji-picker .emoji widget:hover {
@@ -4388,7 +4388,7 @@ popover.emoji-completion .emoji:hover {
 
 .nautilus-window.background.csd {
   background-color: #FFFFFF;
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 .nautilus-window.background.csd headerbar {
@@ -4409,8 +4409,8 @@ popover.emoji-completion .emoji:hover {
 .nautilus-window.background.csd placessidebar > viewport.frame {
   background-color: #333333;
   color: white;
-  margin: 0 15px 14px 0;
-  border-radius: 0 14px 14px 0;
+  margin: 0 15px 12px 0;
+  border-radius: 0 12px 12px 0;
 }
 
 .nautilus-window.background.csd placessidebar > viewport.frame > list {
@@ -4421,7 +4421,7 @@ popover.emoji-completion .emoji:hover {
 }
 
 .nautilus-window.background.csd placessidebar > viewport.frame > list > row.activatable {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 .nautilus-window.background.csd placessidebar > viewport.frame > list > row.activatable, .nautilus-window.background.csd placessidebar > viewport.frame > list > row.activatable image.sidebar-icon, .nautilus-window.background.csd placessidebar > viewport.frame > list > row.activatable label.sidebar-label, .nautilus-window.background.csd placessidebar > viewport.frame > list > row.activatable button.sidebar-button {
@@ -4463,7 +4463,7 @@ popover.emoji-completion .emoji:hover {
 
 .nautilus-window.background.csd .nautilus-list-view {
   background-color: transparent;
-  border-radius: 14px;
+  border-radius: 12px;
 }
 
 .nautilus-window.background.csd notebook {
@@ -4472,7 +4472,7 @@ popover.emoji-completion .emoji:hover {
 
 .nautilus-window.background.csd notebook > stack {
   background-color: #FFFFFF;
-  border-radius: 14px;
+  border-radius: 12px;
 }
 
 .nautilus-window.background.csd notebook scrolledwindow > .view:not(:selected):not(:hover):not(:checked) {
@@ -4489,7 +4489,7 @@ popover.emoji-completion .emoji:hover {
 
 .nautilus-window.background.csd notebook placesview > actionbar {
   background-color: transparent;
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 .nautilus-window.background.csd notebook placesview > actionbar > revealer > box {
@@ -4505,7 +4505,7 @@ popover.emoji-completion .emoji:hover {
   padding: 0;
   margin: 6px;
   border-style: none;
-  border-radius: 8;
+  border-radius: 6px;
   background-color: #333333;
   color: white;
 }
@@ -4542,7 +4542,7 @@ popover.emoji-completion .emoji:hover {
 .path-bar-box {
   transition: background-color 75ms cubic-bezier(0, 0, 0.2, 1);
   margin: 6px 0;
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 .path-bar-box button {
@@ -4600,7 +4600,7 @@ popover.emoji-completion .emoji:hover {
 
 .windowhandle .linked.nautilus-path-bar {
   background-color: rgba(0, 0, 0, 0.04);
-  border-radius: 8;
+  border-radius: 6px;
   margin: 6px 0;
 }
 
@@ -4719,7 +4719,7 @@ window.org-gnome-gedit > overlay > box.vertical > paned.gedit-side-panel-paned >
 }
 
 window.org-gnome-gedit > overlay > box.vertical > paned.gedit-side-panel-paned > box.vertical > stack > grid.horizontal > scrolledwindow {
-  border-bottom-left-radius: 14px;
+  border-bottom-left-radius: 12px;
 }
 
 window.org-gnome-gedit > overlay > box.vertical > paned.gedit-side-panel-paned stack scrolledwindow viewport.frame list.gedit-document-panel {
@@ -4751,7 +4751,7 @@ window.org-gnome-gedit > overlay > box.vertical > paned.gedit-side-panel-paned s
 
 .gedit-side-panel-paned statusbar {
   border-top: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 .gedit-search-slider {
@@ -4760,11 +4760,11 @@ window.org-gnome-gedit > overlay > box.vertical > paned.gedit-side-panel-paned s
   background-color: #FFFFFF;
   color: rgba(0, 0, 0, 0.87);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.14), 0 1px 6px rgba(0, 0, 0, 0.12);
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 .gedit-search-slider .linked:not(.vertical) > entry {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 .gedit-search-slider .linked:not(.vertical) > entry .gedit-search-entry-occurrences-tag {
@@ -4850,23 +4850,23 @@ window.background.csd > stack > box > stack > box > scrolledwindow > viewport > 
 window.background.csd > stack > grid > scrolledwindow > viewport > box > frame > list, window.background.csd > stack > list,
 window.background.csd > stack > scrolledwindow > viewport > box > list,
 window.background.csd > box > stack > scrolledwindow > viewport > box > list, preferencesgroup list, .geary-accounts-editor-pane list, window.background.csd.unified > deck > deck > deck list, hdyleaflet list.view, hdyleaflet list.frame, leaflet list.view, leaflet list.frame, box.horizontal > stack.background list.view, box.horizontal > stack.background list.frame, hdyleaflet frame.view, leaflet frame.view, box.horizontal > stack.background frame.view, hdyleaflet stack.background scrolledwindow > viewport list, hdyleaflet overlay scrolledwindow > viewport list, leaflet stack.background scrolledwindow > viewport list, leaflet overlay scrolledwindow > viewport list, box.horizontal > stack.background stack.background scrolledwindow > viewport list, box.horizontal > stack.background overlay scrolledwindow > viewport list, hdyleaflet frame:not(.view) list:not(.contacts-contact-list), leaflet frame:not(.view) list:not(.contacts-contact-list), box.horizontal > stack.background frame:not(.view) list:not(.contacts-contact-list), list.tweak-group list, .tweak-group-startup, list.content:not(.conversation-listbox) {
-  border-radius: 9px;
+  border-radius: 7px;
   box-shadow: none;
   border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 window.background.csd stack stack stack frame > list row.activatable:first-child, window.background.csd > stack > list row.activatable:first-child, preferencesgroup list row.activatable:first-child, .geary-accounts-editor-pane list row.activatable:first-child, window.background.csd.unified > deck > deck > deck list row.activatable:first-child, hdyleaflet list.view row.activatable:first-child, hdyleaflet list.frame row.activatable:first-child, leaflet list.view row.activatable:first-child, leaflet list.frame row.activatable:first-child, box.horizontal > stack.background list.view row.activatable:first-child, box.horizontal > stack.background list.frame row.activatable:first-child, hdyleaflet frame.view list row.activatable:first-child, leaflet frame.view list row.activatable:first-child, box.horizontal > stack.background frame.view list row.activatable:first-child, hdyleaflet stack.background scrolledwindow > viewport list row.activatable:first-child, hdyleaflet overlay scrolledwindow > viewport list row.activatable:first-child, leaflet stack.background scrolledwindow > viewport list row.activatable:first-child, leaflet overlay scrolledwindow > viewport list row.activatable:first-child, box.horizontal > stack.background stack.background scrolledwindow > viewport list row.activatable:first-child, box.horizontal > stack.background overlay scrolledwindow > viewport list row.activatable:first-child, hdyleaflet frame:not(.view) list:not(.contacts-contact-list) row.activatable:first-child, leaflet frame:not(.view) list:not(.contacts-contact-list) row.activatable:first-child, box.horizontal > stack.background frame:not(.view) list:not(.contacts-contact-list) row.activatable:first-child, list.tweak-group list row.activatable:first-child, .tweak-group-startup row.activatable:first-child, list.content:not(.conversation-listbox) > row:first-child {
-  border-top-left-radius: 8;
-  border-top-right-radius: 8;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 window.background.csd stack stack stack frame > list row.activatable:last-child, window.background.csd > stack > list row.activatable:last-child, preferencesgroup list row.activatable:last-child, .geary-accounts-editor-pane list row.activatable:last-child, window.background.csd.unified > deck > deck > deck list row.activatable:last-child, hdyleaflet list.view row.activatable:last-child, hdyleaflet list.frame row.activatable:last-child, leaflet list.view row.activatable:last-child, leaflet list.frame row.activatable:last-child, box.horizontal > stack.background list.view row.activatable:last-child, box.horizontal > stack.background list.frame row.activatable:last-child, hdyleaflet frame.view list row.activatable:last-child, leaflet frame.view list row.activatable:last-child, box.horizontal > stack.background frame.view list row.activatable:last-child, hdyleaflet stack.background scrolledwindow > viewport list row.activatable:last-child, hdyleaflet overlay scrolledwindow > viewport list row.activatable:last-child, leaflet stack.background scrolledwindow > viewport list row.activatable:last-child, leaflet overlay scrolledwindow > viewport list row.activatable:last-child, box.horizontal > stack.background stack.background scrolledwindow > viewport list row.activatable:last-child, box.horizontal > stack.background overlay scrolledwindow > viewport list row.activatable:last-child, hdyleaflet frame:not(.view) list:not(.contacts-contact-list) row.activatable:last-child, leaflet frame:not(.view) list:not(.contacts-contact-list) row.activatable:last-child, box.horizontal > stack.background frame:not(.view) list:not(.contacts-contact-list) row.activatable:last-child, list.tweak-group list row.activatable:last-child, .tweak-group-startup row.activatable:last-child, list.content:not(.conversation-listbox) > row:last-child {
-  border-bottom-left-radius: 8;
-  border-bottom-right-radius: 8;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 window.background.csd stack stack stack frame > list row.activatable:only-child, window.background.csd > stack > list row.activatable:only-child, preferencesgroup list row.activatable:only-child, .geary-accounts-editor-pane list row.activatable:only-child, window.background.csd.unified > deck > deck > deck list row.activatable:only-child, hdyleaflet list.view row.activatable:only-child, hdyleaflet list.frame row.activatable:only-child, leaflet list.view row.activatable:only-child, leaflet list.frame row.activatable:only-child, box.horizontal > stack.background list.view row.activatable:only-child, box.horizontal > stack.background list.frame row.activatable:only-child, hdyleaflet frame.view list row.activatable:only-child, leaflet frame.view list row.activatable:only-child, box.horizontal > stack.background frame.view list row.activatable:only-child, hdyleaflet stack.background scrolledwindow > viewport list row.activatable:only-child, hdyleaflet overlay scrolledwindow > viewport list row.activatable:only-child, leaflet stack.background scrolledwindow > viewport list row.activatable:only-child, leaflet overlay scrolledwindow > viewport list row.activatable:only-child, box.horizontal > stack.background stack.background scrolledwindow > viewport list row.activatable:only-child, box.horizontal > stack.background overlay scrolledwindow > viewport list row.activatable:only-child, hdyleaflet frame:not(.view) list:not(.contacts-contact-list) row.activatable:only-child, leaflet frame:not(.view) list:not(.contacts-contact-list) row.activatable:only-child, box.horizontal > stack.background frame:not(.view) list:not(.contacts-contact-list) row.activatable:only-child, list.tweak-group list row.activatable:only-child, .tweak-group-startup row.activatable:only-child, list.content:not(.conversation-listbox) > row:only-child {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 window.background.csd stack stack stack frame > list row.activatable:focus, window.background.csd > stack > list row.activatable:focus, preferencesgroup list row.activatable:focus, .geary-accounts-editor-pane list row.activatable:focus, window.background.csd.unified > deck > deck > deck list row.activatable:focus, hdyleaflet list.view row.activatable:focus, hdyleaflet list.frame row.activatable:focus, leaflet list.view row.activatable:focus, leaflet list.frame row.activatable:focus, box.horizontal > stack.background list.view row.activatable:focus, box.horizontal > stack.background list.frame row.activatable:focus, hdyleaflet frame.view list row.activatable:focus, leaflet frame.view list row.activatable:focus, box.horizontal > stack.background frame.view list row.activatable:focus, hdyleaflet stack.background scrolledwindow > viewport list row.activatable:focus, hdyleaflet overlay scrolledwindow > viewport list row.activatable:focus, leaflet stack.background scrolledwindow > viewport list row.activatable:focus, leaflet overlay scrolledwindow > viewport list row.activatable:focus, box.horizontal > stack.background stack.background scrolledwindow > viewport list row.activatable:focus, box.horizontal > stack.background overlay scrolledwindow > viewport list row.activatable:focus, hdyleaflet frame:not(.view) list:not(.contacts-contact-list) row.activatable:focus, leaflet frame:not(.view) list:not(.contacts-contact-list) row.activatable:focus, box.horizontal > stack.background frame:not(.view) list:not(.contacts-contact-list) row.activatable:focus, list.tweak-group list row.activatable:focus, .tweak-group-startup row.activatable:focus, list.content:not(.conversation-listbox) > row:focus {
@@ -4876,7 +4876,7 @@ window.background.csd stack stack stack frame > list row.activatable:focus, wind
 window.background.csd > box.vertical > overlay > stack > box.vertical > box.horizontal > revealer > stack > list > row.activatable,
 window.background.csd > box.vertical > overlay > stack > box.vertical > box.horizontal > revealer > stack > scrolledwindow > viewport.frame > list > row.activatable,
 window.background.csd > box.vertical > overlay > stack > box.vertical > box.horizontal > revealer > stack > box.vertical > stack > scrolledwindow > viewport.frame > list > row.activatable, hdyleaflet > box.vertical > scrolledwindow > viewport.frame list:not(.view):not(.tweak-group) row.activatable, leaflet > box.vertical > scrolledwindow > viewport.frame list:not(.view):not(.tweak-group) row.activatable, box.horizontal > stack.background > box.vertical > scrolledwindow > viewport.frame list:not(.view):not(.tweak-group) row.activatable, list.navigation-sidebar > row {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 window.background.csd > box.vertical > overlay > stack > box.vertical > box.horizontal > revealer > stack > list > row.activatable:selected,
@@ -4900,7 +4900,7 @@ window.background.csd > box.vertical > overlay > stack > box.vertical > box.hori
 }
 
 .csd .tweak-categories {
-  border-bottom-left-radius: 14px;
+  border-bottom-left-radius: 12px;
 }
 
 .csd.maximized .tweak-categories, .csd.tiled .tweak-categories {
@@ -4935,7 +4935,7 @@ leaflet > box > scrolledwindow > viewport.frame > list.navigation-sidebar {
 }
 
 .tweak-group-startup row.tweak-startup {
-  border-radius: 8;
+  border-radius: 6px;
   background-color: transparent;
   background-image: none;
 }
@@ -4969,23 +4969,23 @@ hdyleaflet.titlebar > .titlebar.tweak-titlebar-right + separator {
  ************************/
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child:not(:only-child),
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child:not(:only-child) {
-  border-top-left-radius: 14px;
+  border-top-left-radius: 12px;
 }
 
 window.background.csd > headerbar.titlebar > leaflet > headerbar:last-child:not(:only-child),
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:last-child:not(:only-child) {
-  border-top-right-radius: 14px;
+  border-top-right-radius: 12px;
 }
 
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child:only-child, window.background.csd > headerbar.titlebar > leaflet > headerbar:last-child:only-child,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child:only-child,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:last-child:only-child {
-  border-top-right-radius: 14px;
-  border-top-left-radius: 14px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
 }
 
 window.background.csd > stack:not(.titlebar) > stack.background {
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 window.background.csd > leaflet > stack.background,
@@ -4998,7 +4998,7 @@ window.background.csd > leaflet > stack.background > widget > box.vertical > box
 window.background.csd > hdyleaflet > stack.background > widget > box.vertical > box.vertical > scrolledwindow > viewport.frame,
 window.background.csd > box.horizontal > stack.background > widget > box.vertical > box.vertical > scrolledwindow > viewport.frame {
   background-color: #FFFFFF;
-  border-bottom-right-radius: 14px;
+  border-bottom-right-radius: 12px;
 }
 
 window.background.csd > leaflet > stack.background > widget > box.vertical > box.vertical > scrolledwindow > viewport.frame > box.vertical.view,
@@ -5011,7 +5011,7 @@ window.background.csd > leaflet > box.vertical > scrolledwindow.view,
 window.background.csd > hdyleaflet > box.vertical > scrolledwindow.view,
 window.background.csd > box.horizontal > box.vertical > scrolledwindow.view {
   background-color: #FFFFFF;
-  border-bottom-left-radius: 14px;
+  border-bottom-left-radius: 12px;
 }
 
 window.background.csd > leaflet > box.vertical > scrolledwindow.view > viewport.frame > stack,
@@ -5074,7 +5074,7 @@ window.background.csd.tiled > box.horizontal > box.vertical > scrolledwindow.vie
 }
 
 dialog.background.csd > box.vertical.dialog-vbox > notebook > stack > box.horizontal > notebook > stack {
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 dialog.background.csd.maximized > box.vertical.dialog-vbox > notebook > stack > box.horizontal > notebook > stack, dialog.background.csd.tiled > box.vertical.dialog-vbox > notebook > stack > box.horizontal > notebook > stack {
@@ -5103,11 +5103,11 @@ hdyleaflet frame.view list, leaflet frame.view list, box.horizontal > stack.back
  ************************/
 window#gnome-system-monitor.background.csd > box.vertical > stack {
   background-color: #FFFFFF;
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > revealer > actionbar > revealer > box {
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 window#gnome-system-monitor.background:not(.csd) > box.vertical > headerbar {
@@ -5119,11 +5119,11 @@ window#gnome-system-monitor.background:not(.csd) > box.vertical > headerbar {
  ************************/
 stack > grid.vertical > scrolledwindow {
   border: none;
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 stack > grid.vertical > scrolledwindow > viewport.frame list {
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 stack > grid.vertical scrolledwindow.frame.emptyGrid {
@@ -5134,7 +5134,7 @@ stack > grid.vertical scrolledwindow.frame.emptyGrid {
  * Gnome Contacts *
  ******************/
 window.background.csd scrolledwindow.contacts-contact-form {
-  border-bottom-right-radius: 14px;
+  border-bottom-right-radius: 12px;
 }
 
 /************************
@@ -5145,7 +5145,7 @@ tabbox {
   background-color: rgba(0, 0, 0, 0.04);
   padding: 3px;
   margin: 3px;
-  border-radius: 11px;
+  border-radius: 9px;
 }
 
 tabbox > tab button {
@@ -5161,19 +5161,19 @@ tabbox > tab button {
  *****************/
 #weather-page,
 #weekly-forecast-frame {
-  border-bottom-right-radius: 14px;
+  border-bottom-right-radius: 12px;
 }
 
 #weather-page-content-view {
-  border-bottom-right-radius: 14px;
-  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
 }
 
 /***************
  * Gnome Music *
  ***************/
 window.background.csd box.vertical > overlay > stack.background {
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 /****************
@@ -5256,7 +5256,7 @@ window.background > box.vertical > toolbar.primary-toolbar > toolitem > .linked 
 stack.view.polari-entry-area {
   background-color: #FFFFFF;
   border-top: 1px solid rgba(0, 0, 0, 0.12);
-  border-bottom-right-radius: 14px;
+  border-bottom-right-radius: 12px;
 }
 
 stack:disabled.view.polari-entry-area {
@@ -5313,7 +5313,7 @@ popover.popover-selector list {
 }
 
 popover.popover-selector list row {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 popover.popover-selector list row image:dir(ltr) {
@@ -5333,7 +5333,7 @@ popover.popover-selector list row .accel:dir(rtl) {
 }
 
 omnibar.linked:not(.vertical) entry {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 omnibar:not(:hover):not(:active) entry {
@@ -5377,11 +5377,11 @@ popover.messagepopover .popover-action-area button {
 }
 
 popover.messagepopover .popover-action-area button:first-child {
-  border-bottom-left-radius: 8;
+  border-bottom-left-radius: 6px;
 }
 
 popover.messagepopover .popover-action-area button:last-child {
-  border-bottom-right-radius: 8;
+  border-bottom-right-radius: 6px;
 }
 
 popover.messagepopover .popover-content-area {
@@ -5471,7 +5471,7 @@ dockoverlayedge.right-edge docktab:checked {
 
 pillbox {
   background-color: #FFFFFF;
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 layoutpane entry.search {
@@ -5719,19 +5719,19 @@ box.vertical > revealer > toolbar.search-bar button > widget {
  * Document Viewer *
  *******************/
 window.background.csd evview.view.content-view {
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 /*******************
  * Archive Manager *
  *******************/
 .background.csd > grid.horizontal > paned.horizontal > scrolledwindow {
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
   background-color: #FFFFFF;
 }
 
 .background.csd > grid.horizontal > paned.horizontal > box.vertical > scrolledwindow {
-  border-radius: 0 0 0 14px;
+  border-radius: 0 0 0 12px;
   background-color: #FFFFFF;
 }
 
@@ -5739,7 +5739,7 @@ window.background.csd evview.view.content-view {
  * Terminal *
  ************/
 terminal-window decoration {
-  border-radius: 14px 14px 0 0;
+  border-radius: 12px 12px 0 0;
 }
 
 terminal-window.background.csd, terminal-window.background.csd.maximized {
@@ -5761,7 +5761,7 @@ window.background > box.vertical > box.horizontal > frame > border {
 }
 
 window.background > box.vertical > box.horizontal > frame > scrolledwindow > viewport.frame list {
-  border-bottom-left-radius: 14px;
+  border-bottom-left-radius: 12px;
 }
 
 window.background > box.vertical > box.horizontal > stack > widget > notebook.frame {
@@ -5769,11 +5769,11 @@ window.background > box.vertical > box.horizontal > stack > widget > notebook.fr
 }
 
 window.background > box.vertical > box.horizontal > stack > widget > notebook.frame > stack {
-  border-bottom-right-radius: 14px;
+  border-bottom-right-radius: 12px;
 }
 
 .tilix-background, .tilix-background vte-terminal {
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 /*********
@@ -5853,7 +5853,7 @@ window.background.csd > grid.horizontal > paned.horizontal > scrolledwindow > tr
  * Fractal *
  ***********/
 .background.csd.main-window .sidebar.rooms-sidebar {
-  border-bottom-left-radius: 14px;
+  border-bottom-left-radius: 12px;
 }
 
 /********
@@ -5880,8 +5880,8 @@ list.categories {
 .transparent-bg + stack overlay > label {
   min-height: 24px;
   padding: 0 4px;
-  border-radius: 8;
-  background-color: #030303;
+  border-radius: 6px;
+  background-color: #242424;
   color: white;
 }
 
@@ -5897,23 +5897,23 @@ button.title label {
  *********/
 window.background.csd.geary-main-window > deck > overlay > box.vertical > paned.horizontal > box.sidebar.vertical,
 window#GearyMainWindow.background.csd > deck > overlay > box.vertical > paned.horizontal > box.sidebar.vertical {
-  border-bottom-left-radius: 14px;
+  border-bottom-left-radius: 12px;
 }
 
 window.background.csd.geary-main-window > deck > overlay > box.vertical > paned.horizontal > box.sidebar.vertical statusbar,
 window#GearyMainWindow.background.csd > deck > overlay > box.vertical > paned.horizontal > box.sidebar.vertical statusbar {
-  border-bottom-left-radius: 14px;
+  border-bottom-left-radius: 12px;
 }
 
 window.background.csd.geary-main-window stack#conversation_viewer,
 window#GearyMainWindow.background.csd stack#conversation_viewer {
-  border-bottom-right-radius: 14px;
+  border-bottom-right-radius: 12px;
 }
 
 window.background.csd.geary-main-window stack#conversation_viewer scrolledwindow.geary-conversation-scroller viewport.frame list.conversation-listbox,
 window#GearyMainWindow.background.csd stack#conversation_viewer scrolledwindow.geary-conversation-scroller viewport.frame list.conversation-listbox {
   background: none;
-  border-bottom-right-radius: 14px;
+  border-bottom-right-radius: 12px;
 }
 
 window.background.csd.geary-main-window stack#conversation_viewer .geary-expanded,
@@ -5977,12 +5977,12 @@ window#GearyMainWindow.background.csd stack#conversation_viewer .geary-composer-
 
 .geary-main-window.unified frame.geary-conversation-frame scrolledwindow treeview.view {
   border: 1px solid transparent;
-  border-radius: 8;
+  border-radius: 6px;
   padding: 6px;
 }
 
 .geary-main-window.unified frame.geary-conversation-frame scrolledwindow treeview.view:selected, .geary-main-window.unified frame.geary-conversation-frame scrolledwindow treeview.view:active {
-  border-radius: 8;
+  border-radius: 6px;
   background-color: #333333;
   color: white;
 }
@@ -6030,7 +6030,7 @@ window.background.csd > stack > grid > scrolledwindow > viewport > box > frame >
 
 window.background.csd > stack > box > box > list,
 window.background.csd > stack > box > stack > scrolledwindow > viewport > list {
-  border-bottom-left-radius: 14px;
+  border-bottom-left-radius: 12px;
 }
 
 window.background.csd > stack > box > .sidebar > scrolledwindow > viewport > list {
@@ -6045,16 +6045,16 @@ dialog.background.csd > headerbar.titlebar {
 }
 
 dialog.background.csd > box.vertical.dialog-vbox > grid.horizontal > scrolledwindow.frame > viewport.frame list:first-child {
-  border-radius: 0 0 0 14px;
+  border-radius: 0 0 0 12px;
 }
 
 dialog.background.csd > box.vertical.dialog-vbox > grid.horizontal > scrolledwindow.frame > viewport.frame list:last-child {
-  border-radius: 0 0 14px 0;
+  border-radius: 0 0 12px 0;
 }
 
 dialog.background.csd > box.vertical.dialog-vbox > stack > scrolledwindow,
 dialog.background.csd > box.vertical.dialog-vbox > stack > stack > scrolledwindow {
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
   background-color: #FFFFFF;
 }
 
@@ -6064,7 +6064,7 @@ dialog.background.csd > box.vertical.dialog-vbox > stack > stack > scrolledwindo
 }
 
 dialog.background.csd > box.vertical.dialog-vbox > stack > scrolledwindow > viewport.frame > list {
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 dialog.background.csd > box.vertical.dialog-vbox > stack > scrolledwindow > viewport.frame > list row.activatable:not(:hover):not(:selected):not(:active) {
@@ -6072,19 +6072,19 @@ dialog.background.csd > box.vertical.dialog-vbox > stack > scrolledwindow > view
 }
 
 dialog.background.csd > box.vertical.dialog-vbox > stack toolbar.toolbar {
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 dialog.background.csd > box.vertical.dialog-vbox > notebook > stack {
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 12px 12px;
 }
 
 dialog.background.csd stack scrolledwindow.frame {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 dialog.background.csd stack scrolledwindow.frame textview.view {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 dialog.background.csd stack scrolledwindow.frame textview.view > text {
@@ -6092,7 +6092,7 @@ dialog.background.csd stack scrolledwindow.frame textview.view > text {
 }
 
 dialog.background.csd stack scrolledwindow viewport.frame.view {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 window.background.csd.unified headerbar {
@@ -6110,7 +6110,7 @@ window.background.csd.unified > decoration-overlay {
 window.background.csd.unified,
 window.background.csd.unified > decoration,
 window.background.csd.unified > decoration-overlay {
-  border-radius: 14px;
+  border-radius: 12px;
 }
 
 window.background.csd.unified.tiled > decoration-overlay, window.background.csd.unified.tiled-top > decoration-overlay, window.background.csd.unified.tiled-right > decoration-overlay, window.background.csd.unified.tiled-bottom > decoration-overlay, window.background.csd.unified.tiled-left > decoration-overlay, window.background.csd.unified.maximized > decoration-overlay, window.background.csd.unified.fullscreen > decoration-overlay {
@@ -6205,7 +6205,7 @@ window.background > box.vertical > scrolledwindow > widget toolbar button {
 }
 
 window.background > box.vertical > scrolledwindow > widget toolbar button {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 /************
@@ -6269,7 +6269,7 @@ window.background.chromium menu menuitem {
 }
 
 tooltip.background.chromium {
-  background-color: #0a0a0a;
+  background-color: #343434;
 }
 
 /***********
@@ -6299,7 +6299,7 @@ tooltip.background.chromium {
 #MozillaGtkWidget > widget > entry,
 #MozillaGtkWidget > widget > button > button {
   border: 1px solid #e0e0e0;
-  border-radius: 8;
+  border-radius: 6px;
   box-shadow: none;
 }
 
@@ -6518,7 +6518,7 @@ UnityDecoration {
 UnityDecoration .top {
   padding: 0 2px;
   border-style: none;
-  border-radius: 14px 14px 0 0;
+  border-radius: 12px 12px 0 0;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0);
   background-color: #FFFFFF;
   color: rgba(0, 0, 0, 0.87);
@@ -6709,7 +6709,7 @@ PanelApplet.wnck-applet .wnck-pager:selected {
 
 #MatePanelPopupWindow {
   border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 9px;
+  border-radius: 7px;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0);
   background-color: #FFFFFF;
 }
@@ -6755,7 +6755,7 @@ na-tray-applet {
 
 .mate-panel-applet-slider {
   border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 9px;
+  border-radius: 7px;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0);
   background-color: #FFFFFF;
 }
@@ -6874,7 +6874,7 @@ na-tray-applet {
  * CAJA File manager *
  *********************/
 .caja-navigation-window button.toggle.image-button {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 .caja-pathbar button {
@@ -6906,13 +6906,13 @@ na-tray-applet {
 }
 
 .caja-canvas-item {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 .caja-desktop.view .entry,
 .caja-navigation-window .view .entry {
   border: none;
-  border-radius: 8;
+  border-radius: 6px;
   background-color: rgba(0, 0, 0, 0.04);
   background-image: none;
   color: rgba(0, 0, 0, 0.87);
@@ -6924,7 +6924,7 @@ na-tray-applet {
 }
 
 .caja-desktop.view .entry {
-  background-color: #0F0F0F;
+  background-color: #2C2C2C;
   color: white;
   caret-color: currentColor;
 }
@@ -7010,7 +7010,7 @@ na-tray-applet {
 /* mate-screensaver lock dialog */
 .lock-dialog {
   border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 9px;
+  border-radius: 7px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.14), 0 1px 6px rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0);
   background-color: #FFFFFF;
 }
@@ -7025,8 +7025,8 @@ na-tray-applet {
 
 /* multimedia OSD */
 MsdOsdWindow.background.osd {
-  border-radius: 8;
-  background-color: rgba(10, 10, 10, 0.9);
+  border-radius: 6px;
+  background-color: rgba(52, 52, 52, 0.9);
   color: white;
 }
 
@@ -7048,7 +7048,7 @@ MsdOsdWindow.background.osd .progressbar {
 }
 
 .budgie-settings-window list.sidebar {
-  border-radius: 0 0 0 14px;
+  border-radius: 0 0 0 12px;
 }
 
 .budgie-settings-window buttonbox.inline-toolbar {
@@ -7056,14 +7056,14 @@ MsdOsdWindow.background.osd .progressbar {
 }
 
 .budgie-settings-window buttonbox.inline-toolbar button {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 .budgie-popover {
   border-style: solid;
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.3);
-  border-radius: 8;
+  border-radius: 6px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.14), 0 1px 6px rgba(0, 0, 0, 0.12);
   background-color: #FFFFFF;
 }
@@ -7093,7 +7093,7 @@ MsdOsdWindow.background.osd .progressbar {
 }
 
 .budgie-popover row button {
-  border-radius: 2px;
+  border-radius: 0px;
 }
 
 .budgie-popover scrolledwindow.sidebar.categories {
@@ -7103,7 +7103,7 @@ MsdOsdWindow.background.osd .progressbar {
 .budgie-popover scrolledwindow.sidebar:not(.categories) {
   background-color: rgba(0, 0, 0, 0.04);
   border-right: none;
-  border-bottom-left-radius: 8;
+  border-bottom-left-radius: 6px;
 }
 
 .budgie-popover scrolledwindow.sidebar:not(.categories) list > row.activatable {
@@ -7111,8 +7111,8 @@ MsdOsdWindow.background.osd .progressbar {
 }
 
 .budgie-popover.bottom scrolledwindow.sidebar:not(.categories) {
-  padding-top: 8;
-  border-top-left-radius: 8;
+  padding-top: 6px;
+  border-top-left-radius: 6px;
   border-bottom-left-radius: 0;
 }
 
@@ -7126,7 +7126,7 @@ MsdOsdWindow.background.osd .progressbar {
 }
 
 .budgie-popover button {
-  border-radius: 2px;
+  border-radius: 0px;
 }
 
 .budgie-popover button.flat:not(.image-button) {
@@ -7134,7 +7134,7 @@ MsdOsdWindow.background.osd .progressbar {
   padding: 0 8px;
   color: rgba(0, 0, 0, 0.87);
   font-weight: normal;
-  border-radius: 2px;
+  border-radius: 0px;
 }
 
 .budgie-popover button.flat:not(.image-button):disabled {
@@ -7179,7 +7179,7 @@ MsdOsdWindow.background.osd .progressbar {
 .budgie-popover.user-menu > frame.container > box.vertical row.activatable:first-child {
   margin-bottom: 3px;
   outline-width: 0;
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 .budgie-popover.user-menu > frame.container > box.vertical row.activatable:first-child button.indicator-item {
@@ -7284,7 +7284,7 @@ MsdOsdWindow.background.osd .progressbar {
   min-height: 24px;
   min-width: 24px;
   padding: 0;
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 .budgie-panel button.budgie-menu-launcher {
@@ -7331,7 +7331,7 @@ MsdOsdWindow.background.osd .progressbar {
 }
 
 .budgie-panel.transparent {
-  background-color: #030303;
+  background-color: #242424;
 }
 
 .budgie-panel button {
@@ -7609,11 +7609,11 @@ calendar.raven-calendar {
 }
 
 calendar.raven-calendar:selected {
-  border-radius: 8;
+  border-radius: 6px;
 }
 
 .raven-mpris {
-  background-color: #030303;
+  background-color: #242424;
   color: white;
 }
 
@@ -7648,13 +7648,13 @@ calendar.raven-calendar:selected {
 .drop-shadow {
   margin: 5px 9px;
   padding: 3px;
-  border-radius: 14px;
+  border-radius: 12px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.14), 0 1px 6px rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0);
   background-color: #FFFFFF;
 }
 
 .drop-shadow .linked > button {
-  border-radius: 14px;
+  border-radius: 12px;
 }
 
 .budgie-session-dialog,
@@ -7669,7 +7669,7 @@ calendar.raven-calendar:selected {
 .budgie-polkit-dialog decoration,
 .budgie-run-dialog.background.csd,
 .budgie-run-dialog decoration {
-  border-radius: 14px 14px 14px 14px;
+  border-radius: 12px 12px 12px 12px;
 }
 
 .budgie-session-dialog label:not(:last-child),
@@ -7692,13 +7692,13 @@ calendar.raven-calendar:selected {
 .budgie-session-dialog .linked.horizontal > button:first-child,
 .budgie-polkit-dialog .linked.horizontal > button:first-child,
 .budgie-run-dialog .linked.horizontal > button:first-child {
-  border-bottom-left-radius: 14px;
+  border-bottom-left-radius: 12px;
 }
 
 .budgie-session-dialog .linked.horizontal > button:last-child,
 .budgie-polkit-dialog .linked.horizontal > button:last-child,
 .budgie-run-dialog .linked.horizontal > button:last-child {
-  border-bottom-right-radius: 14px;
+  border-bottom-right-radius: 12px;
 }
 
 .budgie-polkit-dialog .message {
@@ -7791,7 +7791,7 @@ wnck-pager:selected {
 }
 
 XfdesktopIconView.view {
-  border-radius: 8;
+  border-radius: 6px;
   background-color: transparent;
   color: white;
 }
@@ -7814,7 +7814,7 @@ XfdesktopIconView.view .rubberband {
 
 #xfwm-tabwin {
   padding: 12px;
-  border-radius: 8;
+  border-radius: 6px;
   -XfwmTabwinWidget-icon-size: 64px;
   -XfwmTabwinWidget-preview-size: 64px;
 }
@@ -7845,7 +7845,7 @@ XfdesktopIconView.view .rubberband {
 }
 
 window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane {
-  border-bottom-left-radius: 14px;
+  border-bottom-left-radius: 12px;
 }
 
 window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane treeview.view:not(:hover):not(:selected) {
@@ -7856,7 +7856,7 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
  * LightDM GTK+ Greeter *
  ************************/
 #panel_window {
-  background-color: #0F0F0F;
+  background-color: #2C2C2C;
   color: white;
 }
 
@@ -7889,7 +7889,7 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
 #shutdown_dialog,
 #restart_dialog {
   margin: 8px;
-  border-radius: 8;
+  border-radius: 6px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.14), 0 1px 6px rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0);
   background-color: #FFFFFF;
 }
@@ -7972,7 +7972,7 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
 }
 
 .nemo-window .nemo-window-pane widget.entry {
-  border-radius: 8;
+  border-radius: 6px;
   background-color: rgba(0, 0, 0, 0.04);
 }
 
@@ -7980,7 +7980,7 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
   padding: 0;
   background-color: #333333;
   color: white;
-  border-radius: 0 14px 14px 0;
+  border-radius: 0 12px 12px 0;
 }
 
 .nemo-window paned > .sidebar > scrolledwindow.frame treeview.view:not(:selected) {
@@ -8006,7 +8006,7 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
 
 .nemo-window paned > .sidebar > scrolledwindow.frame {
   border: none;
-  border-radius: 0 14px 14px 0;
+  border-radius: 0 12px 12px 0;
 }
 
 .nemo-window paned > .sidebar > scrolledwindow.frame treeview.view {
@@ -8048,14 +8048,14 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > scrolledwind
 
 .nemo-window notebook > stack > box > overlay
 .floating-bar.bottom.left {
-  border-top-right-radius: 8;
-  border-bottom-right-radius: 8;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .nemo-window notebook > stack > box > overlay
 .floating-bar.bottom.right {
-  border-top-left-radius: 8;
-  border-bottom-left-radius: 8;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
 .nemo-window notebook > stack > box > overlay
