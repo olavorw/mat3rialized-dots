@@ -71,6 +71,11 @@ if [ -n "$selected_wall" ]; then
 
   matugen image "$selected_wall"
 
+  # Restart the polkit agent because GTK colors were updated
+  killall -9 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+  /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
   notify-send "Theme Applied" "Wallpaper and theme have been updated successfully"
 fi
 
