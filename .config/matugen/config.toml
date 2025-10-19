@@ -64,6 +64,10 @@ output_path = '~/.config/wlogout/styles/matugen.css'
 # input_path = '~/.config/matugen/templates/qtct-colors.conf'
 # output_path = '~/.config/qt6ct/colors/matugen.conf'
 
+[templates.discord]
+input_path = '~/.config/matugen/templates/midnight-discord.css'
+output_path = '~/.var/app/dev.vencord.Vesktop/config/vesktop/themes/matugen.css'
+
 [templates.kvlibadwaita]
 input_path = '~/.config/matugen/templates/kv-libadwaita-theme.kvconfig'
 output_path = '~/.config/Kvantum/KvLibadwaita/KvLibadwaitaDark.kvconfig'
