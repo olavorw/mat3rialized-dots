@@ -84,15 +84,24 @@ body {
     --text-4: {{colors.on_surface_variant.default.hex | set_lightness: -30.0}}; /* icon buttons and channels */
     --text-5: {{colors.outline.default.hex}}; /* muted channels/chats and timestamps */
 
-    /* background and dark colors */
-    --bg-1: {{colors.secondary_container.default.hsla | set_alpha: 0.8}}; /* dark buttons when clicked */
-    --bg-2: {{colors.secondary_container.default.hsla | set_alpha: 0.7}}; /* dark buttons */
-    --bg-3: {{colors.surface_container_low.default.hsla | set_alpha: 0.5}}; /* spacing, secondary elements */
-    --bg-4: {{colors.surface.default.hsla | set_alpha: 0.4}}; /* main background color */
-    --hover: {{colors.secondary_container.default.hsla | set_alpha: 0.5}}; /* channels and buttons when hovered */
-    --active: {{colors.secondary_container.default.hsla | set_alpha: 0.7}}; /* channels and buttons when clicked or selected */
-    --active-2: {{colors.secondary_container.default.hsla | set_alpha: 0.6}}; /* extra state for transparent buttons */
-    --message-hover: {{colors.surface.default.hsla | set_alpha: 0.4}}; /* messages when hovered */
+    /* background and dark colors (with the transparency) */
+    --bg-1: {{colors.secondary_container.default.hsla | set_alpha: 0.8}};
+    --bg-2: {{colors.secondary_container.default.hsla | set_alpha: 0.7}}; 
+    --bg-3: {{colors.surface_container_low.default.hsla | set_alpha: 0.9}}; 
+    --bg-4: {{colors.surface.default.hsla | set_alpha: 0.4}};
+    --hover: {{colors.secondary_container.default.hsla | set_alpha: 0.5}}; 
+    --active: {{colors.secondary_container.default.hsla | set_alpha: 0.7}}; 
+    --active-2: {{colors.secondary_container.default.hsla | set_alpha: 0.6}}; 
+    --message-hover: {{colors.surface.default.hsla | set_alpha: 0.4}}; 
+    /* Without the extra transparency */
+    /* --bg-1: {{colors.secondary_container.default.hsla}}; */
+    /* --bg-2: {{colors.secondary_container.default.hsla}}; */
+    /* --bg-3: {{colors.surface_container_low.default.hsla}}; */
+    /* --bg-4: {{colors.surface.default.hsla}}; */
+    /* --hover: {{colors.secondary_container.default.hsla}}; */
+    /* --active: {{colors.secondary_container.default.hsla}}; */
+    /* --active-2: {{colors.secondary_container.default.hsla}}; */
+    /* --message-hover: {{colors.surface.default.hsla}}; */
 
     /* accent colors */
     --accent-1: {{colors.tertiary.default.hex}}; /* links and other accent text */
