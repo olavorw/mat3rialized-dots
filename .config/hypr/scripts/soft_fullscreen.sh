@@ -14,6 +14,7 @@ if [[ "$STATE" == "1" ]]; then
   killall -SIGUSR1 waybar
   sed -i "/^$WS /d" "$STATE_FILE"
   echo "$WS 0" >>"$STATE_FILE"
+  notify-send "Soft fullscreen" "Hyprland soft fullscreen mode enabled"
 else
   # Turn gaps on and radius to your desired value (e.g., 10)
   hyprctl keyword general:gaps_in 7
@@ -22,4 +23,5 @@ else
   killall -SIGUSR1 waybar
   sed -i "/^$WS /d" "$STATE_FILE"
   echo "$WS 1" >>"$STATE_FILE"
+  notify-send "Soft fullscreen" "Hyprland soft fullscreen mode disabled"
 fi

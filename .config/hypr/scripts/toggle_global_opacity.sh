@@ -12,10 +12,12 @@ if [[ "$STATE" == "1" ]]; then
   hyprctl keyword decoration:inactive_opacity 1
   sed -i "/^$WS /d" "$STATE_FILE"
   echo "$WS 0" >>"$STATE_FILE"
+  notify-send "Global opacity" "Hyprland global opacity has changed all windows' opacity to 100%"
 else
   # Turn gaps on and radius to your desired value (e.g., 10)
   hyprctl keyword decoration:active_opacity 0.9
   hyprctl keyword decoration:inactive_opacity 0.8
   sed -i "/^$WS /d" "$STATE_FILE"
   echo "$WS 1" >>"$STATE_FILE"
+  notify-send "Global opacity" "Hyprland global opacity has changed all windows' opacity to default transparency"
 fi
