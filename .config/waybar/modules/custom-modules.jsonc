@@ -1,0 +1,190 @@
+{
+  "custom/launcher": {
+    "format": "󰣇",
+  },
+  "custom/yubilock": {
+    "return-type": "json",
+    "interval": 5,
+    "exec": "$HOME/.config/waybar/scripts/yubilock/yubikey-status.sh",
+    "on-click": "$HOME/.config/waybar/scripts/yubilock/yubilock-toggle.sh",
+    "tooltip": true,
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "inactive": "",
+    },
+  },
+  "custom/waybar": {
+    "format": "󱔓",
+    "tooltip": true,
+    "tooltip-format": "LMB: Waybar layouts\nRMB: Waybar styles",
+    "on-click": "$HOME/.config/waybar/scripts/select_layout.sh",
+    "on-click-right": "$HOME/.config/waybar/scripts/select_style.sh"
+  },
+  // TODO: Make these scripts
+  "custom/keyboard": {
+    "exec": "~/.config/waybar/scripts/keyboard_lang.sh",
+    "interval": 1,
+    "format": "{}",
+    "tooltip": true,
+    "on-click": "~/.config/waybar/scripts/cycle_input.sh"
+  },
+  "custom/weather": {
+    "exec": "${HOME}/.config/waybar/scripts/get_weather.sh",
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": true,
+    "interval": 3600
+  },
+  "custom/file_manager": {
+    "format": "",
+    "on-click": "thunar & disown",
+    "tooltip": true,
+    "tooltip-format": "Launch thunar",
+  },
+  "custom/tty": {
+    "format": "",
+    "on-click": "kitty & disown",
+    "tooltip": true,
+    "tooltip-format": "Launch kitty",
+  },
+  "custom/browser": {
+    "format": "󰾔",
+    "on-click": "xdg-open https://",
+    "tooltip": true,
+    "tooltip-format": "Launch browser",
+  },
+  "custom/theming": {
+    "format": "",
+    "on-click": "$HOME/.local/bin/walset.sh",
+    // "on-click-middle": "$HOME/.config/colorschemes/change-theme.sh"
+    "tooltip": true,
+    "tooltip-format": "LMB: Wallpaper menu",
+  },
+  "custom/hypridle": {
+    "exec": "sh -c 'pgrep -x hypridle >/dev/null && echo \"󰒲\" || echo \"󰒳\"'",
+    "format": "{text}",
+    "interval": 5,
+    "on-click": "sh -c 'pkill -x hypridle || (hypridle >/dev/null 2>&1 & disown)'",
+    "tooltip": false
+  },
+  // TODO: This hyprmenu
+  "custom/hyprmenu": {
+    "format": "",
+    "on-click": "",
+    "on-click-middle": "",
+    "on-click-right": "",
+    "tooltip": true,
+    "tooltip-format": "",
+  },
+  // This is a custom cava visualizer
+  "custom/cava_mviz": {
+    "exec": "$HOME/.config/waybar/scripts/cava.sh",
+    "format": "{}"
+  },
+  "custom/playerctl": {
+    "format": "<span>{}</span>",
+    "return-type": "json",
+    "max-length": 25,
+    "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}}  {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "on-click-middle": "playerctl play-pause",
+    "on-click": "playerctl previous",
+    "on-click-right": "playerctl next",
+    "scroll-step": 5.0,
+    "on-scroll-up": "$HOME/.scripts/volume.sh --inc",
+    "on-scroll-down": "$HOME/.scripts/volume.sh --dec",
+    "smooth-scrolling-threshold": 1,
+  },
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "wlogout -b 5",
+    "on-click-right": "$HOME/.scripts/change-blur.sh",
+    "tooltip": true,
+    "tooltip-format": "Logout Menu",
+  },
+  "custom/reboot": {
+    "format": "󰜉",
+    "on-click": "systemctl reboot",
+    "tooltip": true,
+    "tooltip-format": "Left Click: Reboot",
+  },
+  "custom/quit": {
+    "format": "󰗼",
+    "on-click": "hyprctl dispatch exit",
+    "tooltip": true,
+    "tooltip-format": "Left Click: Exit Hyprland",
+  },
+  "custom/swaync": {
+    // Icons:    and  
+    "tooltip": true,
+    "tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "",
+      "dnd-notification": "",
+      "dnd-none": "",
+      "inhibited-notification": "󱅫",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "",
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true,
+  },
+  "custom/swaync#2": {
+    // Alternate icon style ( / )
+    "tooltip": true,
+    "tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󰅸",
+      "none": "",
+      "dnd-notification": "",
+      "dnd-none": "",
+      "inhibited-notification": "󰅸",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+  "custom/protonvpn": {
+    "exec": "$HOME/.config/waybar/scripts/protonvpn.sh",
+    "return-type": "json",
+    "interval": 5,
+    "on-click": "protonvpn-app",
+  },
+  "custom/media": {
+    "format": "{}",
+    "escape": true,
+    "return-type": "json",
+    "max-length": 40,
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl stop",
+    "smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null", // Script in resources/custom_modules folder
+  },
+  // NOTE:! This is mainly for Arch and Arch Based Distros  depend: pacman-contrib
+  // Other Distro dont have notifications but can use to check for update for any other distro
+  "custom/updater": {
+    "format": " {}",
+    "exec": "checkupdates | wc -l",
+    "exec-if": "[[ $(checkupdates | wc -l) ]]",
+    "interval": 43200, // (Arch Linux will try to check 12 hrs interval only
+    "on-click": "kitty --hold 'sudo pacman -Syu'; pkill SIGRTMIN+8 waybar",
+    "tooltip": true,
+    "tooltip-format": "Update System",
+  },
+}
