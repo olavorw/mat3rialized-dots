@@ -77,13 +77,24 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 # Plugin Edit
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 
+# environment variables (only put them here if they don't need a DE to run, eg are still useful even in TTY only mode)
+export EDITOR=nvim
+
+alias f="lf"
+alias gc="git clone"
+alias ls="lsd"
+alias lsa="lsd -A"
+alias v="nvim"
+alias zshconf="$EDITOR ~/.zshrc && source ~/.zshrc"
+alias fe='thunar . & disown'
+
 # Example Alias
 # alias dots='git --git-dir=/home/olavorw/.dotfiles/ --work-tree /home/olavorw'
 
-# FE (File Explorer)
-alias fe='thunar . & disown'
-
 source $ZSH/oh-my-zsh.sh
+
+eval "$(zoxide init zsh)"
+eval "$(fzf --zsh)"
 
 # source $ZSH/oh-my-zsh.sh
 
