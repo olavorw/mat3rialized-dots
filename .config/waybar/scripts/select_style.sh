@@ -4,7 +4,6 @@ IFS=$'\n\t'
 # Define directories
 waybar_styles="$HOME/.config/waybar/styles"
 waybar_style="$HOME/.config/waybar/style.css"
-waybar_scripts="$HOME/.config/waybar/scripts"
 
 # Function to display menu options
 menu() {
@@ -19,12 +18,15 @@ menu() {
 # Apply selected configuration
 apply_config() {
   ln -sf "$waybar_styles/$1" "$waybar_style"
-  "${waybar_scripts}/launch.sh" &
+  pkill waybar
+  killall -9 waybar
+  waybar &
+  disown
 }
 
 # Main function
 main() {
-  choice=$(menu | rofi -theme "$HOME/.config/rofi/launchers/type-2/style-1.rasi" -dmenu -p "WB Styles")
+  choice=$(menu | rofi -theme "$HOME/.config/rofi/launchers/type-1/style-3.rasi" -dmenu -p "Styles")
 
   if [[ -z "$choice" ]]; then
     echo "No option selected. Exiting."

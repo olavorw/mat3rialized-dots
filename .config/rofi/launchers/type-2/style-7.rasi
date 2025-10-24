@@ -17,22 +17,27 @@ configuration {
 
 /*****----- Global Properties -----*****/
 @import                          "../shared/matugen.rasi"
-@import                          "../shared/fonts.rasi"
+// @import                          "../shared/fonts.rasi"
+
+* {
+font: "SF Display Pro Propo 13";  
+}
 
 /*****----- Main Window -----*****/
 window {
     transparency:                "real";
-    location:                    center;
-    anchor:                      center;
+    location:                    south;
+    anchor:                      south;
     fullscreen:                  false;
-    width:                       750px;
+    width:                       1000px;
+    height:                      561px;
     x-offset:                    0px;
     y-offset:                    0px;
 
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border-radius:               20px;
+    border-radius:               20px 20px 0px 0px;
     background-color:            @background;
     cursor:                      "default";
 }

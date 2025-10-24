@@ -10,14 +10,19 @@
 /*****----- Configuration -----*****/
 configuration {
 	modi:                       "drun";
-    show-icons:                 true;
+    show-icons:                 false;
     display-drun:               "";
 	drun-display-format:        "{name}";
 }
 
 /*****----- Global Properties -----*****/
 @import                          "../shared/matugen.rasi"
-@import                          "../shared/fonts.rasi"
+// @import                          "../shared/fonts.rasi"
+
+* {
+padding: 6px;
+font: "SF Display Pro Propo 11";  
+}
 
 /*****----- Main Window -----*****/
 window {
@@ -57,7 +62,7 @@ inputbar {
     enabled:                     true;
     spacing:                     10px;
     margin:                      0px;
-    padding:                     15px;
+    padding:                     8px;
     border:                      0px solid;
     border-radius:               12px;
     border-color:                @selected;
