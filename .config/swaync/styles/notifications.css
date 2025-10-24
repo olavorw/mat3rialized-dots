@@ -1,8 +1,8 @@
 @define-color text            @inverse_surface;
-@define-color background-alt  @background;
+@define-color background-alt  alpha(@background, 1);
 @define-color selected        @on_secondary;
-@define-color hover           @on_secondary_fixed_variant;
-@define-color urgent          @on_secondary_fixed;
+@define-color hover           alpha(@selected, 1);
+@define-color urgent          @on_error;
 
 * {
 
@@ -23,16 +23,16 @@
 
 .notification-row {
   outline: none;
-  margin: 0;
+  margin: 20px;
   padding: 0px;
 }
 
 .floating-notifications.background .notification-row .notification-background {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: alpha(@background, 0.8);
   box-shadow: 0 0 8px 0 rgba(0,0,0,.6);
-  border: 1px solid @selected;
-  border-radius: 24px;
-  margin: 16px;
+  /* border: 2px solid @primary; */
+  border-radius: 20px;
+  margin: 15px;
   padding: 0;
 }
 
@@ -54,8 +54,8 @@
 }
 
 .floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action {
-  border-radius: 8px;
-  background-color: @background-alt ;
+  border-radius: 2px;
+  background-color: @background-alt;
   margin: 6px;
   border: 1px solid transparent;
 }
@@ -77,19 +77,19 @@
 
 .summary {
   font-weight: 800;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .body {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .floating-notifications.background .notification-row .notification-background .close-button {
   margin: 6px;
   padding: 2px;
-  border-radius: 6px;
+  border-radius: 20px;
   background-color: transparent;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 }
 
 .floating-notifications.background .notification-row .notification-background .close-button:hover {
