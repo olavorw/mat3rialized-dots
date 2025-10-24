@@ -8,7 +8,6 @@ PKGS=(
   hypridle
 
   foot
-  fzf
   grim
   chafa
   jq
@@ -31,12 +30,29 @@ PKGS=(
   bluez
   bluez-utils
 
+  selectdefaultapplication-git
+
+  ctpv
+  rsync
+  7zip
+  atool
+  jq
+  ffmpeg
+  exiftool
+  fzf
+  fd
+  bat
+
   # Fonts
   noto-fonts-cjk
   noto-fonts-emoji
 
   lf
   rofimoji
+  wtype
+
+  zoxide
+  lsd
 
   # GTK theme optional
   adw-gtk-theme
@@ -45,7 +61,7 @@ PKGS=(
   brightnessctl
   btop
   cava
-  celluloid
+  mpv
   ristretto
   cliphist
   cmatrix
