@@ -15,7 +15,7 @@
 @define-color module_bg alpha(@inverse_on_surface, 0.3); /* Default Module Background */
 @define-color module_hover_bg alpha(@on_secondary, 0.45); /* Module Hover */
 @define-color button_bg alpha(@secondary, 0.1); /* Button Default */
-@define-color button_hover_bg @primary; /* Button Hover */
+@define-color button_hover_bg @secondary; /* Button Hover */
 @define-color button_hover_fg @surface;
 @define-color accent_color alpha(@on_primary_fixed, 0.9); /* Accent Active */
 @define-color accent_color_hover @on_secondary; /* Accent Hover */
@@ -43,6 +43,7 @@
   box-shadow: none;
   text-shadow: none;
   outline: none;
+  transition: color 0.15s ease, background-color 0.15s ease;
 }
 
 /* ── 2. Control Center Container ─────────────────────────────────── */
@@ -99,6 +100,9 @@
   transition: background-color 0.15s ease;
 }
 .widget-title button:hover,
+.widget-title button:hover *,
+.widget-title label:hover *,
+.widget-title button:active *,
 .widget-title button:active {
   background-color: @button_hover_bg;
   color: @button_hover_fg;
@@ -146,9 +150,10 @@
   font-size: 16px;
   min-width: 34px;
   min-height: 34px;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition: background-color 0.15s ease;
 }
-.widget-mpris .widget-mpris-player button:hover {
+.widget-mpris .widget-mpris-player button:hover,
+.widget-mpris .widget-mpris-player button:hover * {
   background-color: @button_hover_bg;
   color: @button_hover_fg;
   /* color: @icon_primary; */
@@ -210,16 +215,18 @@ scale slider {
   color: @icon_secondary;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
+.widget-buttons-grid > flowbox > flowboxchild > button:hover *,
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
-  background-color: @button_hover_bg;
   color: @button_hover_fg;
+  background-color: @button_hover_bg;
 }
 .widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked {
-  background-color: @accent_color;
-  color: white;
+  background-color: @primary;
+  color: @button_hover_fg;
 }
 .widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked:hover {
-  background-color: @accent_color_hover;
+  background-color: @primary;
+  color: @button_hover_fg;
 }
 
 /* ── 7. Notification Center ─────────────────────────────────────── */
@@ -349,6 +356,8 @@ scale slider {
   padding: 8px 18px;
   transition: background-color 0.15s ease;
 }
+.floating-notifications .notification-action button:hover *,
+.floating-notifications .notification-alt-actions button:hover *,
 .floating-notifications .notification-action button:hover,
 .floating-notifications .notification-alt-actions button:hover {
   background-color: @button_hover_bg;
