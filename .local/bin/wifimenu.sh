@@ -94,9 +94,9 @@ display_menu() {
     ;;
   'rofi')
     case $form in
-    1) rofi -dmenu -i -p "$prompt" ;;
-    2) rofi -dmenu -p "$prompt" ;;
-    3) rofi -dmenu -password -p "$prompt" ;;
+    1) rofi -dmenu -theme ~/.config/rofi/launchers/type-1/style-3.rasi -i -p "$prompt" ;;
+    2) rofi -dmenu -theme ~/.config/rofi/launchers/type-1/style-3.rasi -p "$prompt" ;;
+    3) rofi -dmenu -theme ~/.config/rofi/launchers/type-1/style-3.rasi -password -p "$prompt" ;;
     esac
     ;;
   'wmenu')
@@ -525,7 +525,7 @@ menu_main() {
         options="$disable_message\n${interfaces[1]:+$interface_message ${interface_to_use}\n}$known_connections_message\n${wireguard:+${wireguard_message}\n}$hidden_message"
       fi
 
-      echo "$tr_scanning_networks"
+      notify-send "$tr_scanning_networks"
       wifi_list=$(nmcli --colors no --get-values SECURITY,SIGNAL,SSID,IN-USE device wifi list --rescan auto ifname $interface_to_use | awk -F ':' \
         -v wifi_1="$icon_wifi_1" \
         -v wifi_2="$icon_wifi_2" \
@@ -737,16 +737,16 @@ command -v ${custom_opts[launcher]:-$launcher} &>/dev/null || {
 }
 
 # Icon variables
-icon_dragon="${icon_dragon:-$([ -z "$emoji" ] && echo  || echo 🐉)}"
+icon_dragon="${icon_dragon:-$([ -z "$emoji" ] && echo 󰒄 || echo 🐉)}"
 icon_config="${icon_config:-$([ -z "$emoji" ] && echo  || echo ⚙️)}"
-icon_close="${icon_close:-$([ -z "$emoji" ] && echo  || echo ❌)}"
-icon_check="${icon_check:-$([ -z "$emoji" ] && echo  || echo ✅)}"
-icon_eye="${icon_eye:-$([ -z "$emoji" ] && echo 󰛐 || echo 👁️)}"
-icon_eye_closed="${icon_eye_closed:-$([ -z "$emoji" ] && echo 󰛑 || echo 🙈)}"
-icon_saved="${icon_saved:-$([ -z "$emoji" ] && echo  || echo 💾)}"
+icon_close="${icon_close:-$([ -z "$emoji" ] && echo "  Back" || echo ❌)}"
+icon_check="${icon_check:-$([ -z "$emoji" ] && echo 󰄬 || echo ✅)}"
+icon_eye="${icon_eye:-$([ -z "$emoji" ] && echo 󰈈 || echo 👁️)}"
+icon_eye_closed="${icon_eye_closed:-$([ -z "$emoji" ] && echo 󰈉 || echo 🙈)}"
+icon_saved="${icon_saved:-$([ -z "$emoji" ] && echo 󰆓 || echo 💾)}"
 icon_automatic="${icon_automatic:-$([ -z "$emoji" ] && echo 󱣲 || echo 🤖)}"
-icon_wifi_enable="${icon_wifi_enable:-$([ -z "$emoji" ] && echo 󰖩 || echo 🌇)}"
-icon_wifi_disable="${icon_wifi_disable:-$([ -z "$emoji" ] && echo 󰖪 || echo 🌃)}"
+icon_wifi_enable="${icon_wifi_enable:-$([ -z "$emoji" ] && echo 󰤨 || echo 🌇)}"
+icon_wifi_disable="${icon_wifi_disable:-$([ -z "$emoji" ] && echo 󰤭 || echo 🌃)}"
 icon_wifi_1="${icon_wifi_1:-$([ -z "$emoji" ] && echo 󰤪 || echo 🚀🔒)}"
 icon_wifi_2="${icon_wifi_2:-$([ -z "$emoji" ] && echo 󰤤 || echo 🚗🔒)}"
 icon_wifi_3="${icon_wifi_3:-$([ -z "$emoji" ] && echo 󰤡 || echo 🦽🔒)}"
@@ -759,7 +759,7 @@ icon_4_2="${icon_4_2:-$([ -z "$emoji" ] && echo 󰲦 || echo 🔍4️⃣)}"
 icon_6_1="${icon_6_1:-$([ -z "$emoji" ] && echo 󰎳 || echo 🔧6️⃣)}"
 icon_6_2="${icon_6_2:-$([ -z "$emoji" ] && echo 󰲪 || echo 🔍6️⃣)}"
 icon_plug="${icon_plug:-$([ -z "$emoji" ] && echo 󱘖 || echo 🔌)}"
-icon_trash="${icon_trash:-$([ -z "$emoji" ] && echo  || echo 🗑️)}"
+icon_trash="${icon_trash:-$([ -z "$emoji" ] && echo 󰩹 || echo 🗑️)}"
 icon_pen="${icon_pen:-$([ -z "$emoji" ] && echo 󰑕 || echo 📝)}"
 icon_wireless="${icon_wireless:-$([ -z "$emoji" ] && echo 󰑩 || echo 🛜)}"
 icon_net_1="${icon_net_1:-$([ -z "$emoji" ] && echo 󰩠 || echo 🤖)}"
@@ -768,8 +768,8 @@ icon_net_3="${icon_net_3:-$([ -z "$emoji" ] && echo 󰀑 || echo 🏠)}"
 icon_net_4="${icon_net_4:-$([ -z "$emoji" ] && echo 󰖟 || echo 🌐)}"
 icon_net_5="${icon_net_5:-$([ -z "$emoji" ] && echo 󰌘 || echo 💻)}"
 icon_unlock="${icon_unlock:-$([ -z "$emoji" ] && echo  || echo 🔓)}"
-icon_on="${icon_on:-$([ -z "$emoji" ] && echo  || echo 🟢)}"
-icon_off="${icon_off:-$([ -z "$emoji" ] && echo  || echo 🔴)}"
+icon_on="${icon_on:-$([ -z "$emoji" ] && echo 󰗠 || echo 🟢)}"
+icon_off="${icon_off:-$([ -z "$emoji" ] && echo 󰅙 || echo 🔴)}"
 
 # Messages with icons
 submenu_message="$icon_config  $tr_submenu_message"
