@@ -35,6 +35,9 @@ PKGS=(
   noto-fonts-cjk
   noto-fonts-emoji
 
+  lf
+  rofimoji
+
   # GTK theme optional
   adw-gtk-theme
 
