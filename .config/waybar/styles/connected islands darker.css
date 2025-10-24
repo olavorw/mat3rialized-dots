@@ -40,7 +40,7 @@ tooltip label {
   border-radius: 20px;
   margin: 8px 8px 0px 6px;
   padding: 0px 15px;
-  color: @primary;
+  color: @primary; /* Can't decide between primary and primary_fixed*/
   /* padding: 10px 10px 2px; */
 }
 

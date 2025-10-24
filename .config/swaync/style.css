@@ -9,15 +9,16 @@
 /* ── 1. Palette & Globals (Using @define-color) ──────────────────── */
 
 @define-color theme_fg @inverse_surface; /* Primary Text */
-@define-color theme_fg_secondary @on_surface_variant; /* Secondary Text */
+@define-color theme_fg_secondary @on_surface; /* Secondary Text */
 @define-color theme_bg @background; /* Panel/Background */
 @define-color popup_bg alpha(@background, 0.8); /* Floating Notification Background */
-@define-color module_bg @background; /* Default Module Background */
-@define-color module_hover_bg @surface; /* Module Hover */
-@define-color button_bg @on_secondary_fixed; /* Button Default */
-@define-color button_hover_bg alpha(@on_secondary, 0.40); /* Button Hover */
-@define-color accent_color alpha(@on_primary_fixed, 0.8); /* Accent Active */
-@define-color accent_color_hover @primary; /* Accent Hover */
+@define-color module_bg alpha(@inverse_on_surface, 0.3); /* Default Module Background */
+@define-color module_hover_bg alpha(@on_secondary, 0.45); /* Module Hover */
+@define-color button_bg alpha(@secondary, 0.1); /* Button Default */
+@define-color button_hover_bg alpha(@primary, 0.7); /* Button Hover */
+@define-color button_hover_fg @surface; /* TODO: Make it work with surface so that the colors for the stuff actually change! */
+@define-color accent_color alpha(@on_primary_fixed, 0.9); /* Accent Active */
+@define-color accent_color_hover @on_secondary; /* Accent Hover */
 @define-color border_light alpha(@primary, 0.18);
 @define-color border_dark alpha(@surface_container_low 0.06);
 @define-color border_medium alpha(@border_light, 0.5); /* Approx rgba(255, 255, 255, 0.09) */
@@ -49,8 +50,8 @@
   background-color: alpha(@popup_bg, 0.8);
   margin: 30px;
   /* border: 1px solid @border_medium; */
-  border-top-color: @border_light;
-  border-bottom-color: @border_dark;
+  /* border-top-color: @border_light; */
+  /* border-bottom-color: @border_dark; */
   border-radius: 20px;
   padding: 28px;
   min-width: 300px;
@@ -80,7 +81,7 @@
   margin-bottom: 8px;
 }
 .widget-title label {
-  font-family: 'Inter';
+  font-family: 'SF Pro Display';
   font-size: 17px;
   font-weight: 500;
   color: @theme_fg_secondary;
@@ -100,6 +101,7 @@
 .widget-title button:hover,
 .widget-title button:active {
   background-color: @button_hover_bg;
+  color: @button_hover_fg;
 }
 
 /* ── 4. MPRIS Widget ────────────────────────────────────────────── */
@@ -148,9 +150,10 @@
 }
 .widget-mpris .widget-mpris-player button:hover {
   background-color: @button_hover_bg;
-  color: @icon_primary;
+  color: @button_hover_fg;
+  /* color: @icon_primary; */
 }
-.widget-mpris .widget-mpris-player button:disabled {
+.widget-mpris .widget-mpris-player button:disabled * {
   color: alpha(@icon_secondary, 0.3);
 }
 
@@ -199,7 +202,7 @@ scale slider {
   background: none;
 }
 .widget-buttons-grid > flowbox > flowboxchild > button {
-  background-color: rgba(0,0,0, 0.7);
+  background-color: @button_bg;
   border-radius: 66px;
   padding: 14px;
   min-width: 24px;
@@ -208,8 +211,8 @@ scale slider {
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
-  background-color: rgba(20,20,20, 0.45);
-  color: @icon_primary;
+  background-color: @button_hover_bg;
+  color: @button_hover_fg;
 }
 .widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked {
   background-color: @accent_color;
@@ -255,7 +258,9 @@ scale slider {
   margin-left: 12px;
 }
 .control-center .close-button {
-  background-color: alpha(@secondary_container, 9);
+  background-color: transparent;
+  color: transparent;
+  display: none;
   border-radius: 50%;
   min-width: 24px;
   min-height: 24px;
@@ -263,10 +268,12 @@ scale slider {
 }
 .control-center .close-button:hover {
   background-color: alpha(@source_color, 9);
+  color: @inverse_on_surface;
 }
 .control-center .close-button image {
     /* margin-right: 12px; /* Adjust this value for desired spacing */ */
-  color: @icon_secondary;
+  color: transparent;
+  display: none;
 }
 
 .control-center .notification image {
@@ -313,14 +320,19 @@ scale slider {
 .floating-notifications .close-button {
   background-color: transparent;
   border-radius: 50%;
-  min-width: 28px;
-  min-height: 28px;
+  max-width: 0;
+  /* min-width: 28px; */
+  /* min-height: 28px; */
   transition: background-color 0.15s ease;
 }
-.floating-notifications .close-button:hover {
-  background-color: @close_button_hover_bg;
-}
+/* .floating-notifications .close-button:hover { */
+/*   color: @icon_secondary; */
+/* } */
 .floating-notifications .close-button image {
+  color: transparent;
+  transition: color 0.15s ease;
+}
+.floating-notifications .close-button image:hover {
   color: @icon_secondary;
 }
 .floating-notifications .notification-alt-actions {
@@ -340,4 +352,5 @@ scale slider {
 .floating-notifications .notification-action button:hover,
 .floating-notifications .notification-alt-actions button:hover {
   background-color: @button_hover_bg;
+  color: @button_hover_fg;
 }
