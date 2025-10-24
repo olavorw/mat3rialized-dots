@@ -15,8 +15,8 @@
 @define-color module_bg alpha(@inverse_on_surface, 0.3); /* Default Module Background */
 @define-color module_hover_bg alpha(@on_secondary, 0.45); /* Module Hover */
 @define-color button_bg alpha(@secondary, 0.1); /* Button Default */
-@define-color button_hover_bg alpha(@primary, 0.7); /* Button Hover */
-@define-color button_hover_fg @surface; /* TODO: Make it work with surface so that the colors for the stuff actually change! */
+@define-color button_hover_bg @primary; /* Button Hover */
+@define-color button_hover_fg @surface;
 @define-color accent_color alpha(@on_primary_fixed, 0.9); /* Accent Active */
 @define-color accent_color_hover @on_secondary; /* Accent Hover */
 @define-color border_light alpha(@primary, 0.18);
