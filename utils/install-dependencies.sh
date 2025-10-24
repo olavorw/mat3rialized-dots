@@ -62,7 +62,7 @@ PKGS=(
   btop
   cava
   mpv
-  ristretto
+  imv
   cliphist
   cmatrix
   composer
@@ -95,7 +95,6 @@ PKGS=(
   slurp
   stow
   swww
-  thunar
   udiskie
   tree
   ttf-jetbrains-mono-nerd
