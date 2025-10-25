@@ -1,7 +1,7 @@
 /* ===== IMPORTS & VARIABLES ===== */
 @import "./colors/matugen.css";
 
-@define-color background_surface alpha(@background, 1);
+@define-color background_surface alpha(@background, 0.9);
 
 /* ===== GLOBAL STYLES ===== */
 * {
@@ -37,7 +37,7 @@ tooltip label {
 .modules-left,
 .modules-right {
       background-color: transparent;
-  border-radius: 20px;
+  border-radius: 50px;
   margin: 8px 8px 0px 6px;
   padding: 0px 15px;
 
@@ -67,7 +67,7 @@ tooltip label {
   color: alpha(@secondary, 0);
   box-shadow: none;
   text-shadow: none;
-  padding: 2px 7px 2px 7px;
+  padding: 3px 7px 3px 7px;
   border-radius: 20px;
   animation: gradient_f 20s ease-in infinite;
   transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
