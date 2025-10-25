@@ -1,0 +1,44 @@
+{
+  "include": [
+    "$HOME/.config/waybar/modules/workspaces.jsonc",
+    "$HOME/.config/waybar/modules/separators.jsonc",
+    "$HOME/.config/waybar/modules/modules.jsonc",
+    "$HOME/.config/waybar/modules/groups.jsonc",
+    "$HOME/.config/waybar/modules/custom-modules.jsonc"
+  ],
+  "layer": "bottom",
+  "exclusive": true,
+  "passthrough": false,
+  "position": "top",
+  "spacing": 4,
+  "fixed-center": true,
+  "ipc": true,
+  "margin-top": 5,
+  "margin-left": 15,
+  "margin-right": 15,
+  "reload_style_on_change": true,
+  "modules-left": [
+    "clock",
+    // "custom/separator#blank",
+    "tray",
+    "mpris"
+  ],
+  "modules-center": [
+    "group/arch_drawer",
+    // "custom/separator#dot-line",
+    "hyprland/workspaces#numbers",
+    // "custom/separator#dot-line",
+    "custom/swaync"
+  ],
+  "modules-right": [
+    "network",
+    "group/laptop_modules",
+    // "custom/separator#blank",
+    // "group/performance_drawer",
+    // "custom/separator#line",
+    "group/audio"
+    // "custom/separator#dot-line",
+    // "custom/separator#blank",
+    // "custom/power",
+  ]
+}
