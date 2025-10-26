@@ -20,6 +20,10 @@ echo "Copying dotfiles over using updater.sh in the root directory of these dots
 echo "Setting up hyprpm (hyprland plugins)"
 ./hyprplugins.sh
 
+# font uwu
+echo "Installing fonts"
+./install-sf-pro-fonts.sh
+
 # flatpak
 echo "Installing flatpaks"
 ./flatpak.sh
@@ -35,6 +39,9 @@ echo "Cloning neovim config"
 # Install zsh plugins
 echo "Installing zsh plugins"
 ./zsh.sh
+
+# omz
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # UFW FIrewallified
 echo "Activating firewall"
