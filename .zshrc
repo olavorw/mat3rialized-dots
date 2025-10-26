@@ -68,30 +68,30 @@ ZSH_THEME="gnzh"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-# Plugin Edit
+
+# Plugin options
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
+
+source $ZSH/oh-my-zsh.sh
 
 # environment variables (only put them here if they don't need a DE to run, eg are still useful even in TTY only mode)
 export EDITOR=nvim
 
 alias f="lf"
 alias gc="git clone"
+alias v="nvim"
+
+# no need for l or la because it somehow works..?
 alias ls="lsd"
 alias lsa="lsd -A"
-alias v="nvim"
+
 alias zshconf="$EDITOR ~/.zshrc && source ~/.zshrc"
-alias fe='thunar . & disown'
 
-# Example Alias
-# alias dots='git --git-dir=/home/olavorw/.dotfiles/ --work-tree /home/olavorw'
-
-source $ZSH/oh-my-zsh.sh
+# don't use thunar anymore
+# alias fe='thunar . & disown'
 
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
