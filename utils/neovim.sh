@@ -8,5 +8,5 @@ if ! command -v git &>/dev/null; then
 fi
 
 echo "cloning neovim config"
-git clone "https://github.com/olavorw/neovim.git" "$HOME/.config/nvim"
+git clone "https://github.com/olavorw/nvim.git" "$HOME/.config/nvim"
 echo "lazyvim installed"
