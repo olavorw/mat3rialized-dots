@@ -6,6 +6,7 @@ PKGS=(
   hyprshade
   hyprlock
   hypridle
+  cpio
 
   foot
   grim
