@@ -160,9 +160,9 @@ ask_password() {
   declare wifi_password="$icon_eye"
   until [[ -z "$wifi_password" || "$wifi_password" == !(${icon_eye_closed}*|${icon_eye}*) ]]; do
     if [[ "$wifi_password" =~ ^$icon_eye_closed ]]; then
-      wifi_password=$(echo -e "$icon_eye${middle_option}\n$icon_close" | display_menu 3 "$tr_ask_password_prompt")
+      wifi_password=$(echo -e "$icon_eye   Show${middle_option}\n$icon_close" | display_menu 3 "$tr_ask_password_prompt")
     else
-      wifi_password=$(echo -e "$icon_eye_closed${middle_option}\n$icon_close" | display_menu 2 "$tr_ask_password_prompt")
+      wifi_password=$(echo -e "$icon_eye_closed   Hide${middle_option}\n$icon_close" | display_menu 2 "$tr_ask_password_prompt")
     fi
   done
   echo "$wifi_password"
@@ -742,7 +742,7 @@ icon_config="${icon_config:-$([ -z "$emoji" ] && echo  || echo ⚙️)}"
 icon_close="${icon_close:-$([ -z "$emoji" ] && echo "  Back" || echo ❌)}"
 icon_check="${icon_check:-$([ -z "$emoji" ] && echo 󰄬 || echo ✅)}"
 icon_eye="${icon_eye:-$([ -z "$emoji" ] && echo 󰈈 || echo 👁️)}"
-icon_eye_closed="${icon_eye_closed:-$([ -z "$emoji" ] && echo 󰈉 || echo 🙈)}"
+icon_eye_closed="${icon_eye_closed:-$([ -z "$emoji" ] && echo 󰈉 || echo 🙈)}" # NOTE:
 icon_saved="${icon_saved:-$([ -z "$emoji" ] && echo 󰆓 || echo 💾)}"
 icon_automatic="${icon_automatic:-$([ -z "$emoji" ] && echo 󱣲 || echo 🤖)}"
 icon_wifi_enable="${icon_wifi_enable:-$([ -z "$emoji" ] && echo 󰤨 || echo 🌇)}"
@@ -767,7 +767,7 @@ icon_net_2="${icon_net_2:-$([ -z "$emoji" ] && echo 󰳘 || echo 🛣️)}"
 icon_net_3="${icon_net_3:-$([ -z "$emoji" ] && echo 󰀑 || echo 🏠)}"
 icon_net_4="${icon_net_4:-$([ -z "$emoji" ] && echo 󰖟 || echo 🌐)}"
 icon_net_5="${icon_net_5:-$([ -z "$emoji" ] && echo 󰌘 || echo 💻)}"
-icon_unlock="${icon_unlock:-$([ -z "$emoji" ] && echo  || echo 🔓)}"
+icon_unlock="${icon_unlock:-$([ -z "$emoji" ] && echo "   Connect" || echo 🔓)}" # NOTE:
 icon_on="${icon_on:-$([ -z "$emoji" ] && echo 󰗠 || echo 🟢)}"
 icon_off="${icon_off:-$([ -z "$emoji" ] && echo 󰅙 || echo 🔴)}"
 
