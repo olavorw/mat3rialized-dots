@@ -48,6 +48,19 @@
       "type": "memory",
       "key": "memory",
     },
+    // {
+    //   "type": "player",
+    //   "key": "player"
+    // },
+    {
+      "type": "media",
+      "key": "media"
+    },
+    {
+      "type": "bluetooth",
+      "showDisconnected": false,
+      "key": "device"
+    },
     "break",
     {
       "type": "colors",
