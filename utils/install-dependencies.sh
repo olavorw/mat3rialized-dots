@@ -31,6 +31,8 @@ PKGS=(
   bluez
   bluez-utils
 
+  syncnthing
+
   selectdefaultapplication-git
 
   ctpv

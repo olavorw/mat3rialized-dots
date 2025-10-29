@@ -54,3 +54,11 @@ echo "Setting papirus folder colors"
 # SSH
 echo "Setting up SSH"
 ./ssh.sh
+
+# Bluetooth
+echo "bluetoothing"
+./bluetooth.sh
+
+# Syncthing
+echo "syncing thing"
+./syncthing.sh
