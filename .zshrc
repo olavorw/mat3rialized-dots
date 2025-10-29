@@ -90,8 +90,7 @@ alias lsa="lsd -A"
 
 alias zshconf="$EDITOR ~/.zshrc && source ~/.zshrc"
 
-# don't use thunar anymore
-# alias fe='thunar . & disown'
+alias fe='thunar . & disown'
 
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
