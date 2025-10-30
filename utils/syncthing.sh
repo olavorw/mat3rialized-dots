@@ -2,8 +2,8 @@
 
 set -e
 
-if ! command -v ufw &>/dev/null; then
-  echo "Installing UFW..."
+if ! command -v syncthing &>/dev/null; then
+  echo "Installing SyncThingie..."
   sudo pacman -S --needed --noconfirm syncthing
 fi
 
