@@ -130,7 +130,7 @@
     "on-scroll-down": "hyprctl dispatch workspace e-1",
     "format": "  {icon}  {windows}", // add {icon} if you want the workspace number
     "format-window-separator": " ",
-    "window-rewrite-default": "",
+    "window-rewrite-default": "",
     "window-rewrite": {
       // Browser
       "class<zen>": "",
