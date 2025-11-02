@@ -128,11 +128,12 @@
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "format": "<sub> {icon} </sub>{windows}", // add {icon} if you want the workspace number
+    "format": "<sub>  {icon} </sub>{windows}<sub> </sub>", // add {icon} if you want the workspace number
     "format-window-separator": " ",
     "window-rewrite-default": "",
     "window-rewrite": {
       // Browser
+      "class<com.github.wwmm.easyeffects>": "󱡫",
       "class<zen>": "",
       "title<.*DuckDuckGo.*>": "󰜏",
       "title<.*amazon.*>": "",
