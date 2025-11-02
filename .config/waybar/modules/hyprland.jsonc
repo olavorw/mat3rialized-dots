@@ -123,14 +123,14 @@
     "all-outputs": true,
     "disable-scroll": true,
     "warp-on-scroll": false,
+    "show-empty": false,
     "sort-by-number": true,
-    "show-special": false,
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "format": "  {icon}  {windows}", // add {icon} if you want the workspace number
+    "format": "<sub> {icon} </sub>{windows}", // add {icon} if you want the workspace number
     "format-window-separator": " ",
-    "window-rewrite-default": "",
+    "window-rewrite-default": "",
     "window-rewrite": {
       // Browser
       "class<zen>": "",
