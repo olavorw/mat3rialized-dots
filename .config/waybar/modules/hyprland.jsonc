@@ -12,10 +12,7 @@
     "max-length": 64,
     "seperate-outputs": true,
   },
-
-
   /// WORKSPACES
-
   // ROMAN Numerals style
   "hyprland/workspaces#roman": {
     "active-only": false,
@@ -131,7 +128,7 @@
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "format": "{windows}", // add {icon} if you want the workspace number
+    "format": "  {icon}  {windows}", // add {icon} if you want the workspace number
     "format-window-separator": " ",
     "window-rewrite-default": "",
     "window-rewrite": {
