@@ -160,7 +160,6 @@ tooltip label { color: @inverse_surface; }
 #keyboard-state,
 #memory,
 #mode,
-#network,
 #power-profiles-daemon,
 #privacy,
 #pulseaudio,
@@ -170,6 +169,10 @@ tooltip label { color: @inverse_surface; }
 #tray,
 #wireplumber {
     margin: 0 0 0 10px;
+}
+
+#mpris {
+  margin: 0 10px 0 0;
 }
 
 /* ----------------------------------------------------------
