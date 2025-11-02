@@ -1,103 +1,107 @@
-/* ===== IMPORTS & VARIABLES ===== */
+/* ==========================================================
+   0. IMPORTS & VARIABLES
+============================================================ */
 @import "./colors/matugen.css";
 
 @define-color background_surface alpha(@background, 0.8);
 
-/* ===== GLOBAL STYLES ===== */
+/* ----------------------------------------------------------
+   1. GLOBAL (RESET) STYLES
+---------------------------------------------------------- */
 * {
-  font-family: "SF Pro Display", "JetBrainsMono Nerd Font Propo";
-  font-weight: bold;
-  min-height: 0;
-  font-size: 100%; /* set to 100% if font scaling is 1.00 using nwg-look */
-  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+    font-family: "SF Pro Display", "JetBrainsMono Nerd Font Propo";
+    font-weight: bold;
+    min-height: 0;
+    font-size: 100%;                /* when using nwg-look scaling = 1.00 */
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
 
-/* ===== WINDOW STYLES ===== */
+/* ----------------------------------------------------------
+   2. WINDOW / CONTAINER STYLES
+---------------------------------------------------------- */
 window#waybar,
 window#waybar.empty,
 window#waybar.empty #window {
-  background-color: transparent;
-  padding: 0px;
-  border: 0px;
+    background-color: transparent;
+    padding: 0px;
+    border: 0px;
 }
 
-/* ===== TOOLTIPS ===== */
+/* ----------------------------------------------------------
+   3. TOOLTIP STYLES
+---------------------------------------------------------- */
 tooltip {
-  color: @inverse_surface;
-  background: alpha(@background, 0.7);
-  border-radius: 6px;
+    color: @inverse_surface;
+    background: alpha(@background, 0.7);
+    border-radius: 6px;
 }
+tooltip label { color: @inverse_surface; }
 
-tooltip label {
-  color: @inverse_surface;
-}
-
-/* ===== MODULE GROUPS ===== */
+/* ----------------------------------------------------------
+   4. MODULE GROUPS (LEFT / CENTER / RIGHT)
+---------------------------------------------------------- */
 .modules-left,
 .modules-center,
 .modules-right {
     background-color: @background_surface;
-  border-radius: 20px;
-  margin: 8px 8px 0px 6px;
-  padding: 0px 15px;
-  color: @primary; /* Can't decide between primary and primary_fixed*/
-  /* padding: 10px 10px 2px; */
+    border-radius: 20px;
+    margin: 8px 8px 0 6px;
+    padding: 0 15px;
+    color: @primary;          /* choose between primary / primary_fixed */
 }
 
-/* ===== WORKSPACE & TASKBAR BUTTONS ===== */
-
+/* ----------------------------------------------------------
+   5. WORKSPACE & TASKBAR BUTTONS
+---------------------------------------------------------- */
 #workspaces {
-  border-radius: 20px;
-  padding: 8px 10px;
-  margin: 0 4px;
+    border-radius: 20px;
+    padding: 8px 10px;
+    margin: 0 4px;
 }
 
 #taskbar button,
 #workspaces button {
-  background-color: alpha(@secondary, 0.1);
-  color: alpha(@secondary, 0);
-  box-shadow: none;
-  text-shadow: none;
-  margin: 0px 3px;
-  padding: 1px 7px 0px 7px;
-  border-radius: 20px;
-  animation: gradient_f 20s ease-in infinite;
-  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+    background-color: alpha(@secondary, 0.1);
+    color: alpha(@secondary, 0);          /* invisible text until hover */
+    box-shadow: none;                     /* remove default styling */
+    text-shadow: none;
+    margin: 0 3px;
+    padding: 1px 7px 0 7px;
+    border-radius: 20px;
+    animation: gradient_f 20s ease-in infinite;
+    transition:
+        all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
-
 #taskbar button:hover,
 #workspaces button:hover {
-  color: @surface;
-  font-weight: 900;
-  background-color: @secondary;
-  padding: 0px 10px;
-  border-radius: 10px;
-  animation: gradient_f 20s ease-in infinite;
-  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+    color: @surface;
+    font-weight: 900;
+    background-color: @secondary;
+    padding: 0 10px;
+    border-radius: 10px;
+    transition:
+        all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
-
 #taskbar button.active,
 #workspaces button.active {
-  color: @surface;
-  font-weight: 900;
-  background-color: @primary;
-  padding: 0px 20px;
-  border-radius: 5px;
-  animation: gradient_f 20s ease-in infinite;
-  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+    color: @surface;
+    font-weight: 900;
+    background-color: @primary;
+    padding: 0 20px;
+    border-radius: 5px;
+    transition:
+        all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
-
 #workspaces button.urgent {
-  background-color: @error;
-  color: @surface;
-  border-radius: 10px;
+    background-color: @error;
+    color: @surface;
+    border-radius: 10px;
 }
+#workspaces button.persistent { border-radius: 10px; }
 
-#workspaces button.persistent {
-  border-radius: 10px;
-}
-
-/* ===== INDIVIDUAL MODULES ===== */
+/* ----------------------------------------------------------
+   6. INDIVIDUAL MODULE SELECTORS
+---------------------------------------------------------- */
 #backlight,
 #backlight-slider,
 #battery,
@@ -154,10 +158,12 @@ tooltip label {
 #tray,
 #window,
 #wireplumber {
-  margin: 0 0 0 10px;
+    margin: 0 0 0 10px;
 }
 
-/* ===== SEPARATORS ===== */
+/* ----------------------------------------------------------
+   7. SEPARATORS
+---------------------------------------------------------- */
 #custom-separator.dot-line,
 #custom-separator.dot,
 #custom-separator.line,
@@ -166,57 +172,44 @@ tooltip label {
 #custom-separator.blank_3,
 #custom-arrow1,
 #custom-arrow2 {
-  margin: 0 4px;
+    margin: 0 4px;
 }
 
-
-/* ===== MODULE-SPECIFIC OVERRIDES ===== */
-
-/* ===== STATE INDICATORS ===== */
+/* ----------------------------------------------------------
+   8. STATE / INDICATOR OVERRIDES
+---------------------------------------------------------- */
 #custom-hypridle.notactive,
-#idle_inhibitor.activated {
-  color: #39ff14;
-}
+#idle_inhibitor.activated { color: #39ff14; }
 
-#pulseaudio.muted {
-  color: @error;
-}
+#pulseaudio.muted        { color: @error; }
+#temperature.critical    { color: @error; }
+#battery.critical:not(.charging) { color: @error; }
 
-#temperature.critical {
-  color: @error;
-}
-
-#battery.critical:not(.charging) {
-  color: @error;
-}
-
-/* ===== SLIDER STYLES ===== */
+/* ----------------------------------------------------------
+   9. SLIDER STYLES
+---------------------------------------------------------- */
 #backlight-slider slider,
 #pulseaudio-slider slider {
-  min-width: 0px;
-  min-height: 0px;
-  opacity: 0;
-  background-image: none;
-  border: none;
-  box-shadow: none;
+    min-width: 0;
+    min-height: 0;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
 }
-
 #backlight-slider trough,
 #pulseaudio-slider trough {
-  min-width: 80px;
-  min-height: 5px;
-  border-radius: 5px;
+    min-width: 80px;
+    min-height: 5px;
+    border-radius: 5px;
 }
-
 #backlight-slider highlight,
 #pulseaudio-slider highlight {
-  min-height: 10px;
-  border-radius: 5px;
+    min-height: 10px;
+    border-radius: 5px;
 }
 
-/* ===== ANIMATIONS ===== */
-@keyframes blink {
-  to {
-    color: #000000;
-  }
-}
+/* ----------------------------------------------------------
+   10. ANIMATIONS
+---------------------------------------------------------- */
+@keyframes blink { to { color: #000; } }

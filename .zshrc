@@ -80,9 +80,11 @@ source $ZSH/oh-my-zsh.sh
 # environment variables (only put them here if they don't need a DE to run, eg are still useful even in TTY only mode)
 export EDITOR=nvim
 
+alias find="fd"
 alias f="lf"
 alias gc="git clone"
 alias v="nvim"
+alias cat="bat"
 
 # no need for l or la because it somehow works..?
 alias ls="lsd"

@@ -21,16 +21,17 @@
     "clock",
     // "custom/separator#blank",
     "tray",
-    "mpris"
+    "hyprland/workspaces#numbers",
   ],
   "modules-center": [
     "group/arch_drawer",
+    "hyprland/window#title",
     // "custom/separator#dot-line",
-    "hyprland/workspaces#numbers",
     // "custom/separator#dot-line",
     "custom/swaync"
   ],
   "modules-right": [
+    "mpris",
     "network",
     "group/laptop_modules",
     // "custom/separator#blank",

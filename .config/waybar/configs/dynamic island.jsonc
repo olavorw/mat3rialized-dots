@@ -1,6 +1,6 @@
 {
   "include": [
-    "$HOME/.config/waybar/modules/workspaces.jsonc",
+    "$HOME/.config/waybar/modules/hyprland.jsonc",
     "$HOME/.config/waybar/modules/separators.jsonc",
     "$HOME/.config/waybar/modules/groups.jsonc",
     "$HOME/.config/waybar/modules/custom-modules.jsonc"
