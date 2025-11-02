@@ -25,7 +25,7 @@
   ],
   "modules-center": [
     "group/arch_drawer",
-    "hyprland/window#title",
+    "hyprland/window#icon",
     // "custom/separator#dot-line",
     // "custom/separator#dot-line",
     "custom/swaync"

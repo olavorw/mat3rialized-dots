@@ -1,10 +1,16 @@
 {
   /// WINDOWS
+  "hyprland/window#icon": {
+    "format": "{title}",
+    "max-length": 64,
+    "icon-size": 20,
+    "seperate-outputs": true,
+    "icon": true
+  },
   "hyprland/window#title": {
     "format": "{title}",
     "max-length": 64,
     "seperate-outputs": true,
-    "icon": true
   },
 
 
