@@ -14,6 +14,18 @@
       "custom/updater",
     ]
   },
+  "group/mpris-group": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "mpris",
+      "transition-left-to-right": true
+    },
+    "modules": [
+      "mpris",
+      "custom/cava_mviz",
+    ]
+  },
   "group/performance": {
     "orientation": "horizontal",
     "modules": [

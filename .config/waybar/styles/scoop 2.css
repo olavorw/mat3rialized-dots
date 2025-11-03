@@ -1,0 +1,280 @@
+/* ==========================================================
+   0. IMPORTS & VARIABLES
+============================================================ */
+@import "./colors/matugen.css";
+
+@define-color background_surface alpha(@background, 0.8);
+
+/* ----------------------------------------------------------
+   1. GLOBAL (RESET) STYLES
+---------------------------------------------------------- */
+* {
+    font-family: "SF Pro Display", "JetBrainsMono Nerd Font Propo";
+    font-weight: bold;
+    min-height: 0;
+    font-size: 100%;                /* when using nwg-look scaling = 1.00 */
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+}
+
+/* ----------------------------------------------------------
+   2. WINDOW / CONTAINER STYLES
+---------------------------------------------------------- */
+window#waybar,
+window#waybar.empty,
+window#waybar.empty #window {
+    background-color: transparent;
+    padding: 0px;
+    border: 0px;
+}
+
+/* ----------------------------------------------------------
+   3. TOOLTIP STYLES
+---------------------------------------------------------- */
+tooltip {
+    color: @inverse_surface;
+    background: alpha(@background, 0.7);
+    border-radius: 6px;
+}
+tooltip label { color: @inverse_surface; }
+
+/* ----------------------------------------------------------
+   4. MODULE GROUPS (LEFT / CENTER / RIGHT)
+---------------------------------------------------------- */
+.modules-left,
+.modules-right {
+    background-color: transparent;
+    border-radius: 20px;
+    margin: 8px 8px 0 6px;
+    /* padding: 8 15px; */
+    color: @primary;          /* choose between primary / primary_fixed */
+}
+
+.modules-center {
+    background-color: @background_surface;
+    border-radius: 20px;
+    margin: 8px 8px 0 6px;
+    color: @primary;          /* choose between primary / primary_fixed */
+}
+
+/* ----------------------------------------------------------
+   5a. WINDOW
+---------------------------------------------------------- */
+#window {
+    color: @primary;
+    background-color: alpha(@secondary_fixed, 0.065);
+    padding: 0 13;
+    margin: 5px 0;
+    border-radius: 20px;
+    transition:
+        all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+/* ----------------------------------------------------------
+   5b. WORKSPACE & TASKBAR BUTTONS
+---------------------------------------------------------- */
+#workspaces {
+    background-color: alpha(@background_surface, 1);
+    border-radius: 20px;
+    /* padding: 0 0; */
+    margin: 0 0 0 10px;
+}
+
+#taskbar button,
+#workspaces button {
+    /* margin: 0 3px; */
+    /* background-color: alpha(@secondary, 0.1); */
+    color: alpha(@secondary, 0.5);          /* invisible text until hover */
+    box-shadow: none;                     /* remove default styling */
+    text-shadow: none;
+    padding: 6.5px 13px 6.5px 13px;
+    border-radius: 20px;
+    animation: gradient_f 20s ease-in infinite;
+    transition:
+        all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+#taskbar button:hover,
+#workspaces button:hover {
+    font-weight: 900;
+    background-color: alpha(@secondary, 0.1);
+    border-radius: 50px;
+    padding: 6.5px 13px 6.5px 13px;
+    transition:
+        all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+#taskbar button.active,
+#workspaces button.active {
+    color: @surface;
+    font-weight: 900;
+    background-color: @primary;
+    border-radius: 20px;
+    transition:
+        all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+#workspaces button.urgent {
+    background-color: @error;
+    color: @surface;
+}
+#workspaces button.persistent { border-radius: 20px; }
+
+/* ----------------------------------------------------------
+   5c. MPRIS REGIONAL SELECTOR
+---------------------------------------------------------- */
+
+
+#mpris-group {
+  background-color: transparent;
+  color: @surface;
+  padding: 0 15px;
+  border-radius: 20px;
+  margin: 0 10px 0 0;
+}
+
+#custom-cava_mvis,
+#mpris {
+  background-color: @primary;
+  margin: 0 15px 0 0;
+}
+
+
+/* ----------------------------------------------------------
+   6. INDIVIDUAL MODULE SELECTORS
+---------------------------------------------------------- */
+#backlight,
+#backlight-slider,
+#battery,
+#bluetooth,
+#cpu,
+#custom-acrylicctl,
+#custom-backlight,
+#custom-browser,
+#custom-cycle_wall,
+#custom-dot_update,
+#custom-file_manager,
+#custom-hint,
+#custom-keybinds,
+#custom-keyboard,
+#custom-media,
+#custom-playerctl,
+#custom-power,
+#custom-power_vertical,
+#custom-quit,
+#custom-reboot,
+#custom-settings,
+#custom-spotify,
+#custom-tty,
+#custom-protonvpn,
+#custom-weather,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.default,
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.severe,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.sunnyDay,
+/* #custom-yubilock, */
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mode,
+#power-profiles-daemon,
+#privacy,
+#pulseaudio-slider,
+#taskbar,
+#temperature,
+#wireplumber {
+    padding: 0 15px 0 0px;
+    background-color: @background_surface;
+}
+
+#custom-hyprmenu,
+#custom-waybar,
+#custom-hypridle,
+#custom-updater,
+#custom-swaync,
+#custom-launcher {
+    border-radius: 20px;
+    padding: 0 15px;
+    /* background-color: @background_surface; */
+}
+
+#tray {
+    padding: 0 15px 0 0;
+    background-color: @background_surface;
+    border-radius: 0 20px 20px 0;
+}
+
+#pulseaudio {
+    border-radius: 0 20px 20px 0;
+    padding: 0 15px 0 0;
+    background-color: @background_surface;   
+}
+
+#network {
+    border-radius: 20px 0 0 20px;
+    padding: 0 15px;
+    background-color: @background_surface;   
+}
+
+#clock {
+    padding: 8 15px;
+    border-radius: 20px 0 0 20px;
+    background-color: @background_surface;
+}
+
+
+/* ----------------------------------------------------------
+   7. SEPARATORS
+---------------------------------------------------------- */
+#custom-separator.dot-line,
+#custom-separator.dot,
+#custom-separator.line,
+#custom-separator.blank,
+#custom-separator.blank_2,
+#custom-separator.blank_3,
+#custom-arrow1,
+#custom-arrow2 {
+    margin: 0 4px;
+}
+
+/* ----------------------------------------------------------
+   8. STATE / INDICATOR OVERRIDES
+---------------------------------------------------------- */
+#custom-hypridle.notactive,
+#idle_inhibitor.activated { color: #39ff14; }
+
+#pulseaudio.muted        { color: @error; }
+#temperature.critical    { color: @error; }
+#battery.critical:not(.charging) { color: @error; }
+
+/* ----------------------------------------------------------
+   9. SLIDER STYLES
+---------------------------------------------------------- */
+#backlight-slider slider,
+#pulseaudio-slider slider {
+    min-width: 0;
+    min-height: 0;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+#backlight-slider trough,
+#pulseaudio-slider trough {
+    min-width: 80px;
+    min-height: 5px;
+    border-radius: 5px;
+}
+#backlight-slider highlight,
+#pulseaudio-slider highlight {
+    min-height: 10px;
+    border-radius: 5px;
+}
+
+/* ----------------------------------------------------------
+   10. ANIMATIONS
+---------------------------------------------------------- */
+@keyframes blink { to { color: #000; } }

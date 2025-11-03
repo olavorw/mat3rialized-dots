@@ -1,0 +1,222 @@
+/* ===== IMPORTS & VARIABLES ===== */
+@import "./colors/matugen.css";
+
+@define-color background_surface alpha(@background, 0.8);
+
+/* ===== GLOBAL STYLES ===== */
+* {
+  font-family: "SF Pro Display", "JetBrainsMono Nerd Font Propo";
+  font-weight: bold;
+  min-height: 0;
+  font-size: 100%; /* set to 100% if font scaling is 1.00 using nwg-look */
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+}
+
+/* ===== WINDOW STYLES ===== */
+window#waybar,
+window#waybar.empty,
+window#waybar.empty #window {
+  background-color: transparent;
+  padding: 0px;
+  border: 0px;
+}
+
+/* ===== TOOLTIPS ===== */
+tooltip {
+  color: @inverse_surface;
+  background: alpha(@background, 0.7);
+  border-radius: 6px;
+}
+
+tooltip label {
+  color: @inverse_surface;
+}
+
+/* ===== MODULE GROUPS ===== */
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: @background_surface;
+  border-radius: 20px;
+  margin: 8px 8px 0px 6px;
+  padding: 0px 15px;
+  color: @primary;
+  /* padding: 10px 10px 2px; */
+}
+
+/* ===== WORKSPACE & TASKBAR BUTTONS ===== */
+
+#workspaces {
+  border-radius: 20px;
+  padding: 8px 10px;
+  margin: 0 4px;
+}
+
+#taskbar button,
+#workspaces button {
+  background-color: alpha(@secondary, 0.1);
+  color: alpha(@secondary, 0);
+  box-shadow: none;
+  text-shadow: none;
+  margin: 0px 3px;
+  padding: 1px 7px 0px 7px;
+  border-radius: 20px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#taskbar button:hover,
+#workspaces button:hover {
+  color: @surface;
+  font-weight: 900;
+  background-color: @secondary;
+  padding: 0px 10px;
+  border-radius: 10px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#taskbar button.active,
+#workspaces button.active {
+  color: @surface;
+  font-weight: 900;
+  background-color: @primary;
+  padding: 0px 20px;
+  border-radius: 5px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#workspaces button.urgent {
+  background-color: @error;
+  color: @surface;
+  border-radius: 10px;
+}
+
+#workspaces button.persistent {
+  border-radius: 10px;
+}
+
+/* ===== INDIVIDUAL MODULES ===== */
+#backlight,
+#backlight-slider,
+#battery,
+#bluetooth,
+#cpu,
+#custom-acrylicctl,
+#custom-backlight,
+#custom-browser,
+#custom-cava_mviz,
+#custom-cycle_wall,
+#custom-dot_update,
+#custom-file_manager,
+#custom-hint,
+#custom-hypridle,
+#custom-keybinds,
+#custom-keyboard,
+#custom-media,
+#custom-hyprmenu,
+#custom-playerctl,
+#custom-power,
+#custom-power_vertical,
+#custom-quit,
+#custom-reboot,
+#custom-settings,
+#custom-spotify,
+#custom-tty,
+#custom-updater,
+#custom-protonvpn,
+#custom-waybar,
+#custom-weather,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.default,
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.severe,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.sunnyDay,
+#custom-yubilock,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mode,
+#mpris,
+#power-profiles-daemon,
+#privacy,
+#pulseaudio,
+#pulseaudio-slider,
+#taskbar,
+#temperature,
+#tray,
+#window,
+#wireplumber {
+  margin: 0 0 0 10px;
+}
+
+/* ===== SEPARATORS ===== */
+#custom-separator.dot-line,
+#custom-separator.dot,
+#custom-separator.line,
+#custom-separator.blank,
+#custom-separator.blank_2,
+#custom-separator.blank_3,
+#custom-arrow1,
+#custom-arrow2 {
+  margin: 0 4px;
+}
+
+
+/* ===== MODULE-SPECIFIC OVERRIDES ===== */
+
+/* ===== STATE INDICATORS ===== */
+#custom-hypridle.notactive,
+#idle_inhibitor.activated {
+  color: #39ff14;
+}
+
+#pulseaudio.muted {
+  color: @error;
+}
+
+#temperature.critical {
+  color: @error;
+}
+
+#battery.critical:not(.charging) {
+  color: @error;
+}
+
+/* ===== SLIDER STYLES ===== */
+#backlight-slider slider,
+#pulseaudio-slider slider {
+  min-width: 0px;
+  min-height: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+
+#backlight-slider trough,
+#pulseaudio-slider trough {
+  min-width: 80px;
+  min-height: 5px;
+  border-radius: 5px;
+}
+
+#backlight-slider highlight,
+#pulseaudio-slider highlight {
+  min-height: 10px;
+  border-radius: 5px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes blink {
+  to {
+    color: #000000;
+  }
+}
