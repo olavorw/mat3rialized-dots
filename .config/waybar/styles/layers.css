@@ -46,7 +46,7 @@ tooltip label { color: @inverse_surface; }
     background-color: @background_surface;
     border-radius: 20px;
     margin: 8px 8px 0 6px;
-    padding: 8 15px;
+    padding: 5px 15px;
     color: @primary;          /* choose between primary / primary_fixed */
 }
 
@@ -111,6 +111,7 @@ tooltip label { color: @inverse_surface; }
 }
 #workspaces button.persistent { border-radius: 10px; }
 
+
 /* ----------------------------------------------------------
    6. INDIVIDUAL MODULE SELECTORS
 ---------------------------------------------------------- */
@@ -160,6 +161,7 @@ tooltip label { color: @inverse_surface; }
 #keyboard-state,
 #memory,
 #mode,
+#mpris,
 #power-profiles-daemon,
 #privacy,
 #pulseaudio,
@@ -167,12 +169,24 @@ tooltip label { color: @inverse_surface; }
 #taskbar,
 #temperature,
 #tray,
+#window,
 #wireplumber {
+    background-color: alpha(@secondary, 0.1);
+    border-radius: 20px;
+    padding: 0 10px;
     margin: 0 0 0 10px;
 }
 
-#mpris {
-  margin: 0 10px 0 0;
+#window {
+    color: @primary;
+    margin: 0 10px 0 10px;
+}
+
+#network,
+#clock {
+    background-color: alpha(@secondary, 0.1);
+    border-radius: 20px;
+    padding: 0 10px;
 }
 
 /* ----------------------------------------------------------
