@@ -120,6 +120,13 @@ tooltip label { color: @inverse_surface; }
    5c. MPRIS REGIONAL SELECTOR
 ---------------------------------------------------------- */
 
+#pulseaudio {
+  background-color: @primary;
+  color: @surface;
+  border-radius: 20px 0 0 20px;
+  padding: 8 0 8 15px; 
+}
+
 #custom-cava_mviz {
   background-color: @primary;
   color: @surface;
@@ -131,8 +138,7 @@ tooltip label { color: @inverse_surface; }
 #mpris {
   background-color: @primary;
   color: @surface;
-  border-radius: 20px 0 0 20px;
-  padding: 8 15px;
+  padding: 8 0 8 15px;
 }
 
 /* ----------------------------------------------------------
@@ -206,7 +212,7 @@ tooltip label { color: @inverse_surface; }
     border-radius: 0 20px 20px 0;
 }
 
-#pulseaudio {
+#custom-power {
     border-radius: 0 20px 20px 0;
     padding: 8 15px;
     background-color: @background_surface;   

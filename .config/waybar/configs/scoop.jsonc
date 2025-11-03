@@ -31,6 +31,7 @@
     "custom/swaync"
   ],
   "modules-right": [
+    "pulseaudio",
     "mpris",
     "custom/cava_mviz",
     "network",
@@ -38,9 +39,8 @@
     // "custom/separator#blank",
     // "group/performance_drawer",
     // "custom/separator#line",
-    "pulseaudio"
     // "custom/separator#dot-line",
     // "custom/separator#blank",
-    // "custom/power",
+    "custom/power"
   ]
 }
