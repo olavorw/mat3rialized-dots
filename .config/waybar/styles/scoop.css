@@ -207,14 +207,14 @@ tooltip label { color: @inverse_surface; }
 }
 
 #tray {
-    padding: 8 15px;
+    padding: 8 15px 8 0;
     background-color: @background_surface;
     border-radius: 0 20px 20px 0;
 }
 
 #custom-power {
     border-radius: 0 20px 20px 0;
-    padding: 8 15px;
+    padding: 8 15px 8 0;
     background-color: @background_surface;   
 }
 
