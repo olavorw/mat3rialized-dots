@@ -121,21 +121,27 @@ tooltip label { color: @inverse_surface; }
 ---------------------------------------------------------- */
 
 
-#mpris-group {
-  background-color: transparent;
-  color: transparent;
-  padding: 0 15px;
-  border-radius: 20px;
-  margin: 0 10px 0 0;
-}
 
-#custom-cava_mvis,
-#mpris {
+/* #custom-cava_mviz, */
+/* #mpris { */
+/*   color: @surface; */
+/*   background-color: @primary; */
+/*   margin: 0 10px 0 0; */
+/*   border-radius: 20px; */
+/*   padding: 0 15px; */
+/* } */
+
+#mpris-group {
   color: @surface;
   background-color: @primary;
-  margin: 0 15px 0 0;
+  margin: 0 10px 0 0;
+  border-radius: 20px;
+  padding: 0 15px;
 }
 
+#custom-cava_mviz {
+  margin: 0 0 0 15px;
+}
 
 /* ----------------------------------------------------------
    6. INDIVIDUAL MODULE SELECTORS
