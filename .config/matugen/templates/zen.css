@@ -1,0 +1,13 @@
+/*
+* Css Colors
+* Generated with Matugen
+*/
+:root {
+<* for name, value in colors *>
+    --{{name}}: {{value.default.hex}};
+<* endfor *>
+  --zen-main-browser-background-toolbar: var(--background) !important;
+  --zen-main-browser-background: var(--background) !important;
+  --zen-primary-color: var(--primary) !important;
+}
+

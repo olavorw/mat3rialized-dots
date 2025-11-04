@@ -11,6 +11,10 @@ output_path = '~/.config/waybar/colors/matugen.css'
 pre_hook = 'killall -9 waybar'
 post_hook = 'waybar &'
 
+[templates.zen]
+input_path = './templates/zen.css'
+output_path = '~/.zen/.shared/matugen.css'
+
 [templates.swaync]
 input_path = './templates/colors.css'
 output_path = '~/.config/swaync/colors/matugen.css'
