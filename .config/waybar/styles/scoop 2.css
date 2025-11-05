@@ -120,18 +120,7 @@ tooltip label { color: @inverse_surface; }
    5c. MPRIS REGIONAL SELECTOR
 ---------------------------------------------------------- */
 
-
-
-/* #custom-cava_mviz, */
-/* #mpris { */
-/*   color: @surface; */
-/*   background-color: @primary; */
-/*   margin: 0 10px 0 0; */
-/*   border-radius: 20px; */
-/*   padding: 0 15px; */
-/* } */
-
-#mpris-group {
+#mpris {
   color: @surface;
   background-color: @primary;
   margin: 0 10px 0 0;
