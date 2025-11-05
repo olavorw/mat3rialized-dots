@@ -4,15 +4,14 @@
 # 1. Hyprland / Wayland / Window‑manager essentials
 # -------------------------------------------------------------
 PKGS+=(
-  hyprland   # core compositor
-  hyprshade  # colour scheme for Hyprland
-  hyprlock   # lock screen
-  hypridle   # idle manager
-  hyprfreeze # suspend/hibernate helper
-  foot       # terminal emulator
-  grim       # screenshot tool
-  chafa      # ascii art renderer (for splash screens)
-  jq         # JSON processor
+  hyprland  # core compositor
+  hyprshade # colour scheme for Hyprland
+  hyprlock  # lock screen
+  hypridle  # idle manager
+  foot      # terminal emulator
+  grim      # screenshot tool
+  chafa     # ascii art renderer (for splash screens)
+  jq        # JSON processor
 
   polkit-gnome # policy‑kit GUI for privileged actions
   swaync       # notification daemon
