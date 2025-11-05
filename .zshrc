@@ -84,7 +84,7 @@ alias find="fd"
 alias f="lf"
 alias gc="git clone"
 alias v="nvim"
-alias cat="bat"
+# alias cat="bat"
 
 # no need for l or la because it somehow works..?
 alias ls="lsd"
