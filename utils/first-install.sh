@@ -5,7 +5,7 @@ echo "Installing the basics"
 # Install AUR helper
 echo "Attempting to install yay in 1 second using install-yay.sh in the utils folder"
 sleep 1
-./install-yay.sh
+./paru.sh
 
 # Install dependencies
 echo "Installing dependencies in 1 second"

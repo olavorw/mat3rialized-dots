@@ -6,7 +6,7 @@ set -e
 
 if ! command -v papirus-folders &>/dev/null; then
   echo "Installing papirus-folders"
-  yay -S --needed --noconfirm papirus-folders
+  paru -S --needed --noconfirm papirus-folders
 fi
 
 echo "Setting color"

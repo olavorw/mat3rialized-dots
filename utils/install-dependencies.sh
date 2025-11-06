@@ -172,9 +172,9 @@ PKGS+=(
 # End of PKGS array
 # -------------------------------------------------------------
 
-if command -v yay &>/dev/null; then
-  yay -S --needed --noconfirm "${PKGS[@]}"
+if command -v paru &>/dev/null; then
+  paru -S --needed --noconfirm "${PKGS[@]}"
 else
-  echo "yay not found. Install yay first or remove AUR packages section."
+  echo "paru not found. Install yay first or remove AUR packages section."
   exit 1
 fi
