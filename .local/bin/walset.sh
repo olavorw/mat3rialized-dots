@@ -35,7 +35,7 @@ else
     done
 
     # Add image files (without double formatting)
-    for file in *.jpg *.jpeg *.png *.webp; do
+    for file in *.jpg *.gif *.jpeg *.png *.webp; do
       [ -f "$file" ] && items+="$file\n"
     done
 
