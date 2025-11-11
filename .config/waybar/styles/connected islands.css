@@ -3,7 +3,7 @@
 ============================================================ */
 @import "./colors/matugen.css";
 
-@define-color background_surface alpha(@background, 0.4);
+@define-color background_surface alpha(@background, 0.65);
 
 /* ----------------------------------------------------------
    1. GLOBAL (RESET) STYLES
@@ -13,9 +13,7 @@
     font-weight: bold;
     min-height: 0;
     font-size: 100%;                /* when using nwg-look scaling = 1.00 */
-    font-feature-settings:
-        '"zero"', '"ss01"', '"ss02"',
-        '"ss03"', '"ss04"', '"ss05"', '"cv31"';
+        font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
 
 /* ----------------------------------------------------------
