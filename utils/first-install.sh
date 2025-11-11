@@ -59,6 +59,9 @@ echo "Setting up SSH"
 echo "bluetoothing"
 ./bluetooth.sh
 
+echo "clamav"
+./clamav.sh
+
 # Syncthing
 echo "syncing thing"
 ./syncthing.sh
