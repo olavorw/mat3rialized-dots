@@ -129,6 +129,9 @@ PKGS+=(
   tree           # directory tree viewer
   wl-clipboard   # clipboard integration
 
+  spotify
+  spicetify-cli
+
   wine                 # Windows compatibility layer
   winetricks           # helper for Wine
   wlogout              # logout menu
