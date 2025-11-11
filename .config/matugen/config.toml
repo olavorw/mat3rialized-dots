@@ -15,6 +15,11 @@ post_hook = 'waybar &'
 input_path = './templates/zen.css'
 output_path = '~/.zen/.shared/matugen.css'
 
+[templates.spicetify]
+input_path = '~/.config/matugen/templates/spicetify.ini'
+output_path = '~/.config/spicetify/Themes/Matugen/color.ini'
+post_hook = 'spicetify apply'
+
 [templates.swaync]
 input_path = './templates/colors.css'
 output_path = '~/.config/swaync/colors/matugen.css'

@@ -62,6 +62,9 @@ echo "bluetoothing"
 echo "clamav"
 ./clamav.sh
 
+echo "spto"
+./spotify.sh &
+
 # Syncthing
 echo "syncing thing"
 ./syncthing.sh
