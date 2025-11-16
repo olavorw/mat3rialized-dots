@@ -45,7 +45,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 # UFW FIrewallified
 echo "Activating firewall"
-./ufw.sh
+./nftables.sh
 
 # Papirus folders
 echo "Setting papirus folder colors"

@@ -145,10 +145,11 @@ PKGS+=(
   # -----------------------------------------------------------------
   # 9. Packages that need their own dedicated setup scripts
   # -----------------------------------------------------------------
-  flatpak   # app sandboxing system
-  fail2ban  # intrusion prevention
-  neovim    # editor (for your custom config)
-  ufw       # uncomplicated firewall
+  flatpak  # app sandboxing system
+  fail2ban # intrusion prevention
+  neovim   # editor (for your custom config)
+  nftables # firewall wich is better
+  # ufw       # uncomplicated firewall
   tailscale # zero‑trust VPN
 )
 
