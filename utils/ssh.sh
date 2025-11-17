@@ -9,7 +9,7 @@ set -e
 # Install OpenSSH
 if ! command -v sshd &>/dev/null; then
   echo "Installing OpenSSH..."
-  sudo pacman -S --needed --noconfirm openssh
+  sudo pacman -S --needed --noconfirm openssh fail2ban
 fi
 
 # Backup original sshd_config
