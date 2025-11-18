@@ -13,6 +13,15 @@ export ZSH="$HOME/.oh-my-zsh"
 # Default: robbyrussell
 ZSH_THEME="gnzh"
 
+# Options
+setopt auto_menu menu_complete # autocmp first menu match
+setopt auto_param_slash # add / instead of trailing space when dir is completed
+setopt autocd # cd on dir name
+setopt no_case_glob no_case_match # make cmp case insensitive
+setopt dot_glob # include dotfiles
+setopt extended_glob #match - # ^
+setopt interactive_comments # allow comments in shell
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/

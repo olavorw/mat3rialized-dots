@@ -1,12 +1,12 @@
 * {
-  background: rgba(14, 20, 21, 0.8);
-  background-alt: #3f4949;
-  foreground: #dde4e3;
-  selected: #80d4d6;
-  active: #80d4d6;
+  background: rgba(17, 20, 15, 1);
+  background-alt: #43483f;
+  foreground: #e1e4d9;
+  selected: #a8d292;
+  active: #a8d292;
   urgent: #ffb4ab;
 }
 
 inputbar {
-    background-image: url("/home/olavorw/Pictures/Wallpapers/Forest/a_wooden_stairs_in_a_forest.jpg", width);
+    background-image: url("/home/olavorw/Pictures/Wallpapers/Aurora/aurora-mountain-lake.jpg", width);
 }
