@@ -71,6 +71,8 @@ if [ -n "$selected_wall" ]; then
 
   matugen image "$selected_wall"
 
+  cp "$selected_wall" /var/tmp/current_wallpaper
+
   notify-send "Theme Applied" "Wallpaper and theme have been updated successfully"
 fi
 
